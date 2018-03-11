@@ -16,4 +16,9 @@ public class UserController {
     public String other(){
         return "other";
     }
+    //去iteye
+    @RequestMapping("iteye")
+    public String iteye(){
+        return "iteye";
+    }
 }
