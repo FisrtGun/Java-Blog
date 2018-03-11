@@ -19,7 +19,7 @@ To change this template use File | Settings | File Templates.
     <meta name="referrer" content="always">
     <meta name="msvalidate.01" content="3189512127C34C46BC74BED5852D45E4"/>
     <title>fg-专业IT技术社区</title>
-    <link ref="canonical" href="https://www.csdn.net/">
+    <link ref="canonical" href="/userController/index">
     <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <script src="../../statics/csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js"
             tppabs="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -50,7 +50,7 @@ To change this template use File | Settings | File Templates.
     <nav id="nav" class="clearfix" >
         <div class="clearfix" style="background-color: #fff">
             <div class="nav_com" style="background-color: #fff">
-                <ul style="height: 35px;" style="background-color: #fff">
+                <ul style="height: 35px;" style="background: #fff">
                     <li class="active"><a href="/userController/index" tppabs="https://www.csdn.net/">推荐</a></li>
                     <li class=""><a href="" tppabs="https://www.csdn.net/nav/newarticles">最新文章</a>
                     </li>
@@ -72,7 +72,7 @@ To change this template use File | Settings | File Templates.
                     <li class=""><a href="#" tppabs="https://www.csdn.net/nav/arch">架构</a></li>
                     <li class=""><a href="#" tppabs="https://www.csdn.net/nav/avi">音视频开发</a></li>
                     <li class=""><a href="#" tppabs="https://www.csdn.net/nav/sec">安全</a></li>
-                    <li class=""><a href="#" tppabs="https://www.csdn.net/nav/other">其他</a></li>
+                    <li class=""><a href="/userController/other" tppabs="/userController/other">其他</a></li>
                 </ul>
             </div>
         </div>
