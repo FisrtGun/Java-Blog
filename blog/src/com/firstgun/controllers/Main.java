@@ -16,4 +16,10 @@ public class Main {
     public String index(){
         return "index";
     }
+
+    //去新文章
+    @RequestMapping("/newstitle")
+    public String newstitle(){
+        return "newstitle";
+    }
 }

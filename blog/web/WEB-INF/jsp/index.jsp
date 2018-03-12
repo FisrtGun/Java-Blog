@@ -52,7 +52,7 @@ To change this template use File | Settings | File Templates.
             <div class="nav_com" style="background-color: #fff">
                 <ul style="height: 35px;" style="background: #fff">
                     <li class="active"><a href="/main/index" tppabs="https://www.csdn.net/">推荐</a></li>
-                    <li class=""><a href="" tppabs="https://www.csdn.net/nav/newarticles">最新文章</a>
+                    <li class=""><a href="newstitle" tppabs="https://www.csdn.net/nav/newarticles">最新文章</a>
                     </li>
                     <li class=""><a href="#" tppabs="https://www.csdn.net/nav/news">资讯</a></li>
                     <li class=""><a href="#" tppabs="https://www.csdn.net/nav/ai">人工智能</a></li>
