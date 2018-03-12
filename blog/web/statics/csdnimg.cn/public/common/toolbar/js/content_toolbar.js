@@ -118,7 +118,7 @@ var userAgent = navigator.userAgent.toLowerCase();
             <li class="tb_is1270hide"><a href="http://download.csdn.net/vip_code" title="下载VIP" target="_blank">VIP</a></li>\
             <li class="tb_is1330hide"><a href="http://huiyi.csdn.net/" title="活动" target="_blank">活动</a></li>\
             <li class="tb_is1400hide"><a href="http://job.csdn.net" title="招聘" target="_blank">招聘</a></li>\
-            <li class="tb_is1452hide"><a href="http://www.iteye.com" title="ITeye" target="_blank">ITeye</a></li>\
+            <li class="tb_is1452hide"><a href="iteye" title="ITeye" target="_blank">ITeye</a></li>\
             <li class="tb_is1513hide"><a href="//www.gitee.com" title="码云" target="_blank">码云</a></li>\
             <li class="tb_is1513hide"><a href="http://www.csto.com" title="CSTO" target="_blank">CSTO</a></li>\
             <li class="show-more">\
@@ -130,7 +130,7 @@ var userAgent = navigator.userAgent.toLowerCase();
                 <div class="tb_is1270show"><a href="http://download.csdn.net/vip_code" target="_blank">下载VIP</a></div>\
                 <div class="tb_is1330show"><a href="http://huiyi.csdn.net/" target="_blank">活动</a></div>\
                 <div class="tb_is1400show"><a href="http://job.csdn.net" target="_blank">招聘</a></div>\
-                <div class="tb_is1452show"><a href="http://www.iteye.com" target="_blank">ITeye</a></div>\
+                <div class="tb_is1452show"><a href="iteye" target="_blank">ITeye</a></div>\
                 <div class="tb_is1513show"><a href="//www.gitee.com" target="_blank">码云</a></div>\
                 <div class="tb_is1513show"><a href="http://www.csto.com" target="_blank">CSTO</a></div>\
               </div>\
