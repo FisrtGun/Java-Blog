@@ -59,7 +59,7 @@ To change this template use File | Settings | File Templates.
     <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
     <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
     <title>逼近亚马逊，2017年谷歌共销售了670万台智能音箱 | 行业 - CSDN博客</title>
-    <link href="http://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+      <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
               <script src="../../../statics/otherTxt/Amazon/js/baidu_search-1.0.0.js"  type="text/javascript"></script>
                       <link rel="stylesheet" href="../../../statics/otherTxt/css/htmledit_views-b569b0e3ef.css">
       </head>

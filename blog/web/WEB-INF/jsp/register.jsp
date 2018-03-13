@@ -14,7 +14,7 @@ To change this template use File | Settings | File Templates.
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-status-bar-style" content="yes">
-    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <script	type="text/javascript" src="../../statics/js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="../../statics/css/bootstrap.css" />
     <link rel="stylesheet" href="../../statics/css/common.css"/>

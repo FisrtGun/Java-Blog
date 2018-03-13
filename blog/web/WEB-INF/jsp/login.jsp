@@ -19,7 +19,7 @@ To change this template use File | Settings | File Templates.
 
     <!--历史页面专用-->
 
-    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <script>
         var CFG={
             BASE_URL : "https://csdnimg.cn/release/passport/",    //当前页面对应的虚拟路径,页面j

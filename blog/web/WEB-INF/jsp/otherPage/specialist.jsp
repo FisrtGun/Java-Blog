@@ -59,7 +59,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
     <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
     <title>8位专家预测人工智能在2018年如何改变工作和生活 | 观点 - CSDN博客</title>
-    <link href="http://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <script src="../../../statics/otherTxt/js/baidu_search-1.0.0.js"  type="text/javascript"></script>
     <link rel="stylesheet" href="../../../statics/otherTxt/css/htmledit_views-b569b0e3ef.css">
 </head>
