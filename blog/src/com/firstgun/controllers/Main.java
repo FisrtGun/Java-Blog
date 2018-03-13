@@ -47,6 +47,9 @@ public class Main {
     //去数据库
     @RequestMapping("db")
     public String db(){return "db";}
+    //去数据库的“一个MySQL表”
+    @RequestMapping("dbsub")
+    public String dbsub(){return "dbsub";}
     //去其他
     @RequestMapping("other")
     public String other(){
