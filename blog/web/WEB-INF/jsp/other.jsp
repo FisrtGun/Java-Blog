@@ -93,7 +93,7 @@ To change this template use File | Settings | File Templates.
                     <div class="list_con">
                         <div class="title">
                             <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed" data-feed-show="false" data-dsm="post">
-                                <a strategy="new" href="http://blog.csdn.net/McIl9G4065Q/article/details/79017958" target="_blank">
+                                <a strategy="new" href="Amazon" target="_blank">
                                     逼近亚马逊，2017年谷歌共销售了670万台智能音箱 | 行业                        </a>
                             </h2>
                             <div class="close_tag">
@@ -156,7 +156,7 @@ To change this template use File | Settings | File Templates.
                     <div class="list_con">
                         <div class="title">
                             <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed" data-feed-show="false" data-dsm="post">
-                                <a strategy="new" href="http://blog.csdn.net/McIl9G4065Q/article/details/79017959" target="_blank">
+                                <a strategy="new" href="specialist" target="_blank">
                                     8位专家预测人工智能在2018年如何改变工作和生活 | 观点                        </a>
                             </h2>
                             <div class="close_tag">

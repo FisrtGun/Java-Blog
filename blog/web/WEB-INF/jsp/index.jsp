@@ -17,7 +17,7 @@ To change this template use File | Settings | File Templates.
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="referrer"content="always">
     <meta name="msvalidate.01" content="3189512127C34C46BC74BED5852D45E4" />
-    <title>CSDN-专业IT技术社区</title>
+    <title>fg-专业IT技术社区</title>
     <link ref="canonical"  href="https://www.csdn.net/">
     <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <script src="../../statics/js/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -42,7 +42,7 @@ To change this template use File | Settings | File Templates.
                     <li class=""><a href="/nav/ai">人工智能</a></li>
                     <li class=""><a href="/nav/cloud">云计算/大数据</a></li>
                     <li class=""><a href="/nav/blockchain">区块链</a></li>
-                    <li class=""><a href="/nav/db">数据库</a></li>
+                    <li class=""><a href="db">数据库</a></li>
                     <li class=""><a href="/nav/career">程序人生</a></li>
                     <li class=""><a href="/nav/game">游戏开发</a></li>
                     <li class=""><a href="/nav/engineering">研发管理</a></li>
