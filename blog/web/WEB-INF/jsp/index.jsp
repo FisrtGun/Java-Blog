@@ -38,7 +38,7 @@ To change this template use File | Settings | File Templates.
                 <ul>
                     <li class="active"><a href="/">推荐</a></li>
                     <li class=""><a href="newstitle">最新文章</a></li>
-                    <li class=""><a href="/nav/news">资讯</a></li>
+                    <li class=""><a href="information">资讯</a></li>
                     <li class=""><a href="/nav/ai">人工智能</a></li>
                     <li class=""><a href="/nav/cloud">云计算/大数据</a></li>
                     <li class=""><a href="/nav/blockchain">区块链</a></li>
