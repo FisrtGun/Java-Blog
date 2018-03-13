@@ -670,7 +670,7 @@
                         <div class="title">
                             <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
                                 data-feed-show="false" data-dsm="post">
-                                <a strategy="hot" href="http://blog.csdn.net/u011277123/article/details/70837736"
+                                <a strategy="hot" href="dbsub"
                                    target="_blank">
                                     一个MySQL表真的最多只能够有24个字段吗？反正我不信 </a>
                             </h2>
