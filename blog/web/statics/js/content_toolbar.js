@@ -102,7 +102,7 @@ var _hmt = _hmt || [];
         <div class="container row center-block ">\
           <ul class="pull-left left-menu clearfix">\
             <li>\
-              <a href="//www.csdn.net" title="CSDN首页" target="_blank">\
+              <a href="index" title="pg首页" target="_blank">\
               <svg class="icon" aria-hidden="true">\
                   <use xlink:href="#toolbar-csdnlogo"></use>\
               </svg>  \
@@ -147,7 +147,7 @@ var _hmt = _hmt || [];
               </li>\
               <li class="write-bolg-btn csdn-tracking-statistics tracking-click" data-mod="popu_370"><a class="" href="http://mp.blog.csdn.net/postedit" target="_blank"><i class="iconfont-toolbar toolbar-icon_boke"></i><span>写博客</span></a></li>\
               <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1" target="_blank"><i class="iconfont-toolbar toolbar-icon_gitchatx"></i><span>发Chat</span></a></li>\
-              <li class="userinfo"><a href="https://passport.csdn.net/account/login">登录</a><span></span><a href="register">注册</a></li>\
+              <li class="userinfo"><a href="login">登录</a><span></span><a href="register">注册</a></li>\
               <li class="userLogin">\
                 <div class="loginCenter"><a href="login"><img class="login_img" src="'+currUser.avatar+'"><div class="toolbar-circle"></div></a></div>\
                 <div class="userControl">\
