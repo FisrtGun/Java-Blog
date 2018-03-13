@@ -47,4 +47,10 @@ public class Main {
     public String other(){
         return "other";
     }
+
+    //去写博客
+    @RequestMapping("writeblog")
+    public String writeblog(){
+        return "writeblog";
+    }
 }
