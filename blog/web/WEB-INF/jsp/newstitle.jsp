@@ -221,7 +221,7 @@
                         <div class="title">
                             <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
                                 data-feed-show="true" data-dsm="post">
-                                <a strategy="newarticles" href="http://blog.csdn.net/yhls110/article/details/79523097"
+                                <a strategy="newarticles" href="/personal/personblog"
                                 >
                                     浅谈新公司HR为什么需要入职者提供工资银行流水 </a>
                             </h2>
