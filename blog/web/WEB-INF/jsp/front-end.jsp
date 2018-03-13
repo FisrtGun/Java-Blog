@@ -182,6 +182,7 @@
                     <path d="M2 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm9 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm9 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
                           fill="#4F4F4F" fill-rule="evenodd"></path>
                 </svg>
+                <%--《》--%>
             </a>
                 <div class="more">
                     <div class="tb_is1090show"><a href="http://bbs.csdn.net/" target="_blank">论坛</a></div>
