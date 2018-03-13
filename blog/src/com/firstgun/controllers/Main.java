@@ -16,7 +16,16 @@ public class Main {
     public String index(){
         return "index";
     }
-
+    //注册
+    @RequestMapping("register")
+    public String register(){
+        return "register";
+    }
+    //登录
+    @RequestMapping("login")
+    public String login(){
+        return "login";
+    }
     //去iteye
     @RequestMapping("iteye")
     public String iteye(){
@@ -32,5 +41,10 @@ public class Main {
     @RequestMapping("csto")
     public String csto(){
         return "csto";
+    }
+    //去CSTO
+    @RequestMapping("other")
+    public String other(){
+        return "other";
     }
 }

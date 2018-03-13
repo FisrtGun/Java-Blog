@@ -21,7 +21,7 @@
     <meta name="msvalidate.01" content="3189512127C34C46BC74BED5852D45E4">
     <title>最新文章-FG</title>
     <link ref="canonical" href="https://www.csdn.net/nav/newarticles">
-    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <link rel="stylesheet" href="../../statics/css/content_toolbar.css">
     <link rel="stylesheet" href="../../statics/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../statics/css/avatar.css">
@@ -136,7 +136,7 @@
                     <li class=""><a href="https://www.csdn.net/nav/arch">架构</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/avi">音视频开发</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/sec">安全</a></li>
-                    <li class=""><a href="https://www.csdn.net/nav/other">其他</a></li>
+                    <li class=""><a href="other">其他</a></li>
                 </ul>
 
             </div>
