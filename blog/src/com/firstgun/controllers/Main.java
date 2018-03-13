@@ -31,7 +31,6 @@ public class Main {
     public String iteye(){
         return "iteye";
     }
-
     //去新文章
     @RequestMapping("/newstitle")
     public String newstitle(){
@@ -42,9 +41,25 @@ public class Main {
     public String csto(){
         return "csto";
     }
-    //去CSTO
+    //去vip
+    @RequestMapping("vip")
+    public String vip(){return "vip";}
+    //去数据库
+    @RequestMapping("db")
+    public String db(){return "db";}
+    //去其他
     @RequestMapping("other")
     public String other(){
         return "other";
+    }
+    //去其他的Amazon/亚马逊
+    @RequestMapping("Amazon")
+    public String Amazon(){
+        return "otherPage/Amazon";
+    }
+    //去其他的专家页面/specialist
+    @RequestMapping("specialist")
+    public String specialist(){
+        return "otherPage/specialist";
     }
 }

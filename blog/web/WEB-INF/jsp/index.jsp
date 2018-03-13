@@ -42,7 +42,7 @@ To change this template use File | Settings | File Templates.
                     <li class=""><a href="/nav/ai">人工智能</a></li>
                     <li class=""><a href="/nav/cloud">云计算/大数据</a></li>
                     <li class=""><a href="/nav/blockchain">区块链</a></li>
-                    <li class=""><a href="/nav/db">数据库</a></li>
+                    <li class=""><a href="db">数据库</a></li>
                     <li class=""><a href="/nav/career">程序人生</a></li>
                     <li class=""><a href="/nav/game">游戏开发</a></li>
                     <li class=""><a href="/nav/engineering">研发管理</a></li>
