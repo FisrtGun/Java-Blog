@@ -17,9 +17,20 @@ public class Main {
         return "index";
     }
 
+    //去iteye
+    @RequestMapping("iteye")
+    public String iteye(){
+        return "iteye";
+    }
+
     //去新文章
     @RequestMapping("/newstitle")
     public String newstitle(){
         return "newstitle";
+    }
+    //去CSTO
+    @RequestMapping("csto")
+    public String csto(){
+        return "csto";
     }
 }
