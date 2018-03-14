@@ -69,7 +69,7 @@
                 </div>
             </li>
         </ul>
-        <div class="pull-right login-wrap unlogin" id="logins" style="margin-left: -20px">
+        <div class="pull-right login-wrap unlogin" id="logins">
             <ul class="btns">
                 <li class="toolbar-tracking csdn-tracking-statistics tracking-click" data-mod="popu_369"><a href="#" style="padding:0"></a></li>
                 <li>
@@ -83,7 +83,7 @@
                 <li class="userinfo"><a href="login">登录</a><span></span><a href="register">注册</a></li>
                 <li class="userLogin">
                     <div class="loginCenter"><a href=""><img class="login_img" src="../../statics/${users.upicture}"><div class="toolbar-circle"></div></a></div>
-                <div style="float: left" id="exist"><a href="exist" >退出</a></div>
+                <div><a href="/mainController/exist" >退出</a></div>
                 </li>
             </ul>
         </div>
