@@ -25,6 +25,11 @@ public class MainController {
     public String index() {
         return "index";
     }
+    //去common
+    @RequestMapping("common")
+    public String common() {
+        return "common";
+    }
 
     //去注册
     @RequestMapping("register")

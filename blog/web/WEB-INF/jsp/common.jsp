@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -27,6 +28,7 @@
     <link rel="stylesheet" href="../../statics/css/avatar.css">
     <link href='../../statics/css/csdn_feed.css' rel='stylesheet' />
     <script src='../../statics/js/modernizr.js' type='text/javascript'></script>
+    <script src='../../statics/js/jquery-1.9.1.min.js' type='text/javascript'></script>
 </head>
 <body>
 <div class="csdn-toolbar csdn-toolbar tb_disnone ' + skin + fixed + '">
@@ -67,7 +69,7 @@
                 </div>
             </li>
         </ul>
-        <div class="pull-right login-wrap ">
+        <div class="pull-right login-wrap unlogin" id="logins">
             <ul class="btns">
                 <li class="toolbar-tracking csdn-tracking-statistics tracking-click" data-mod="popu_369"><a href="#" style="padding:0"></a></li>
                 <li>
@@ -76,18 +78,35 @@
                         <a href="//so.csdn.net/so/" target="_blank" class="btn-nobg-noborder btn-search"><i class="iconfont-toolbar toolbar-sousuo"></i></a>
                     </div>
                 </li>
-                <li class="write-bolg-btn csdn-tracking-statistics tracking-click" data-mod="popu_370"><a class="" href="http://mp.blog.csdn.net/postedit" target="_blank"><i class="iconfont-toolbar"></i><span>写博客</span></a></li>
-                <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1" target="_blank"><i class="iconfont-toolbar "></i><span>发Chat</span></a></li>
+                <li class="write-bolg-btn csdn-tracking-statistics tracking-click" data-mod="popu_370"><a class="" href="http://mp.blog.csdn.net/postedit" target="_blank"><i class="iconfont-toolbar toolbar-icon_boke"></i><span>写博客</span></a></li>
+                <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1" target="_blank"><i class="iconfont-toolbar toolbar-icon_gitchatx "></i><span>发Chat</span></a></li>
                 <li class="userinfo"><a href="login">登录</a><span></span><a href="register">注册</a></li>
                 <li class="userLogin">
-                    ${user1.upicture}
-                    <div class="loginCenter"><a href="">${user1.uname}<img class="login_img" src="${user1.upicture}"><div class="toolbar-circle"></div></a></div>
+                    <div class="loginCenter"><a href=""><img class="login_img" src="../../statics/${users.upicture}"><div class="toolbar-circle"></div></a></div>
                 </li>
             </ul>
         </div>
     </div>
 </div>
 <script type="text/javascript">
+    $(document).ready(function () {
+        var ll = ${error};
+            console.log(ll);
+        console.log(!ll);
+        unlogin();
+            function unlogin() {
+                if(ll==true||ll==null){
+                    $("#logins").addClass("unlogin")
+                }else {
+                    $("#logins").removeClass("unlogin");
+                }
+            }
+
+
+
+
+
+    })
 
 </script>
 </body>
