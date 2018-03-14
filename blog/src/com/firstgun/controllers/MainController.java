@@ -1,6 +1,8 @@
 package com.firstgun.controllers;
 
+import com.firstgun.entity.NewsTitle;
 import com.firstgun.entity.User;
+import com.firstgun.service.NewsTitleService;
 import com.firstgun.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @Author:
@@ -19,10 +22,18 @@ import javax.servlet.http.HttpServletRequest;
 public class MainController {
     @Resource
     private UserService userService;
+    @Resource
+    private NewsTitleService newsTitleService;
 
     //去首页
     @RequestMapping("index")
-    public String index() {
+    public String index(Model model) {
+        //新闻标题
+        List<NewsTitle> newsList = newsTitleService.getSelectNews();
+        model.addAttribute("newsList",newsList);
+        //今日推荐
+        List<NewsTitle> groom = newsTitleService.getGroom();
+        model.addAttribute("groom",groom);
         return "index";
     }
     //去common
@@ -71,7 +82,11 @@ public class MainController {
 
     //去新文章
     @RequestMapping("/newstitle")
-    public String newstitle() {
+    public String newstitle(Model model){
+        List<NewsTitle> newsList = newsTitleService.getSelectNews();
+        model.addAttribute("newsList",newsList);
+        List<NewsTitle> groom = newsTitleService.getGroom();
+        model.addAttribute("groom",groom);
         return "newstitle";
     }
 

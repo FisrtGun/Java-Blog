@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.firstgun.dao.NewsTitleMapper">
+    <!--添加博主发布的内容-->
+    <insert id="insertNews" parameterType="int">
+        INSERT INTO newstitle(`ntitle`,`nconten`,`ntab`,`narticle`) VALUES(#{ntitle},#{nconten},#{ntab},#{narticle});
+    </insert>
+    <!--获取博主发布的标题、博主、发布文章时间、作者头像图片路径-->
+    <select id="getSelectNews" resultType="NewsTitle">
+        SELECT ntitle,ntab,nauthor,nreads,ncreateTime,nauthor,nimg FROM newstitle ORDER BY ncreateTime limit 0,25;
+    </select>
+    <!--获取今日推荐的照片和标题-->
+    <select id="getGroom" resultType="NewsTitle">
+        SELECT ntitle,npicture,nauthor FROM newstitle ORDER BY ncreateTime limit 0,15;
+    </select>
+</mapper>
+ 
