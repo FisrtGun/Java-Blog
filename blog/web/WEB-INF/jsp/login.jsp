@@ -6,6 +6,7 @@ Time: 21:58
 To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,19 +86,20 @@ To change this template use File | Settings | File Templates.
                     <h3>帐号登录</h3>
                     <div class="user-info">
                         <div class="user-pass">
-
-                            <form id="fm1" action="https://passport.csdn.net/account/verify;jsessionid=31ABFDA290D79C3B11D8A412F38A9CA5.tomcat2" method="post">
+                            <form id="fm1" action="/mainController/dologin" method="post">
                                 <input type="hidden" id="gps" name="gps" value="" />
-                                <input id="username" name="username" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user-name" type="text" value=""/>
+                                <input id="uname" name="uname" tabindex="1" placeholder="输入用户名/邮箱/手机号" class="user-name" type="text" value=""/>
                                 <div class="mobile-auth" style="display:none"><span>该手机已绑定账号，可使用  </span><a href="" id="mloginurl" class="mobile-btn" >手机验证码登录</a></div>
-                                <input id="password" name="password" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off"/>
+                                <input id="upwd" name="upwd" tabindex="2" placeholder="输入密码" class="pass-word" type="password" value="" autocomplete="off"/>
 
 
 
 
-                                <div class="error-mess" style="display:none;">
-                                    <span class="error-icon"></span><span id="error-message"></span>
-                                </div>
+                                <c:if test="${error}" >
+                                    <div class="error-mess">
+                                        <span class="error-icon"></span><span id="error-message">用户名或者密码错误</span>
+                                    </div>
+                                </c:if>
 
 
 
@@ -115,7 +117,7 @@ To change this template use File | Settings | File Templates.
                                 <input type="hidden" name="execution" value="e1s1" />
                                 <input type="hidden" name="fkid" id="fkid" value="" />
                                 <input type="hidden" name="_eventId" value="submit" />
-                                <input class="logging" accesskey="l" value="登 录" tabindex="6" type="button" data-kuick='{"act":"csdn05","desc":"直接登录"}'/>
+                                <input class="logging" accesskey="l" value="登 录" tabindex="6" type="submit" data-kuick='{"act":"csdn05","desc":"直接登录"}'/>
 
                             </form>
                         </div>

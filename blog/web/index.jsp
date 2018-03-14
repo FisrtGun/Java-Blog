@@ -13,7 +13,7 @@
   <body onload="index()">
   <script type="text/javascript">
     function index() {
-       window.location="main/index";
+       window.location="mainController/index";
     }
   </script>
   </body>
