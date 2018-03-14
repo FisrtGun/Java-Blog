@@ -1089,46 +1089,58 @@ ul.feedlist_mod li div.ad-box.ad-img-box img.ad-icon {
     left: 0;
 }
 
-.slide-outer .hot .swapbox1 top
+.slide-outer .hot .swapbox1 {
+    top: 0;
+}
 
-0
-a, .slide-outer .hot .swapbox2 top
+a, .slide-outer .hot .swapbox2 {
+    top: 0;
+}
 
-0
-a, .slide-outer .hot .swapbox3 top
+a, .slide-outer .hot .swapbox3 {
+    top: 0;
+}
 
-0
-a, .slide-outer .hot .swapbox4 top
+a, .slide-outer .hot .swapbox4 {
+    top: 0;
+}
 
-0
-a, .slide-outer .hot .swapbox5 top
+a, .slide-outer .hot .swapbox5 {
+    top: 0;
+}
 
-0
-a, .slide-outer .hot .swapbox6 top
+a, .slide-outer .hot .swapbox6 {
+    top: 0;
+}
 
-0
 a {
     position: absolute
 }
 
-.slide-outer .hot .swapbox1 top
+.slide-outer .hot .swapbox1 {
+    top: 0;
+}
 
-0
-img, .slide-outer .hot .swapbox2 top
+img .slide-outer .hot .swapbox2 {
+    top: 0;
+}
 
-0
-img, .slide-outer .hot .swapbox3 top
+img .slide-outer .hot .swapbox3 {
+    top: 0;
+}
 
-0
-img, .slide-outer .hot .swapbox4 top
+img .slide-outer .hot .swapbox4 {
+    top: 0;
+}
 
-0
-img, .slide-outer .hot .swapbox5 top
+img .slide-outer .hot .swapbox5 {
+    top: 0;
+}
 
-0
-img, .slide-outer .hot .swapbox6 top
+img, .slide-outer .hot .swapbox6 {
+    top: 0;
+}
 
-0
 img {
     width: 300px;
     height: 200px
@@ -1901,8 +1913,8 @@ main .carousel .carousel-left .carousel-indicators {
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
-    -ms-flex-pack: left;
-    -webkit-box-pack: left;
+    /*-ms-flex-pack: left;*/
+    /*-webkit-box-pack: left;*/
     justify-content: left;
     padding-left: 0;
     margin-right: 15%;
