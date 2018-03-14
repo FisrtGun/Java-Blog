@@ -56,13 +56,13 @@
 	<!-- AOP 事务处理 开始 -->
 	<aop:aspectj-autoproxy />
 	<aop:config proxy-target-class="true">
-		<aop:pointcut expression="execution(* *com.bdqn.service..*(..))"
+		<aop:pointcut expression="execution(* *com.firstgun.service..*(..))"
 			id="transService" />
 		<aop:advisor pointcut-ref="transService" advice-ref="txAdvice" />
 	</aop:config>
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
-			<tx:method name="bdqn*" propagation="REQUIRED"
+			<tx:method name="firstgun*" propagation="REQUIRED"
 				rollback-for="Exception" />
 			<tx:method name="*" />
 		</tx:attributes>
@@ -70,7 +70,7 @@
 	<!-- AOP 事务处理 结束 -->
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.bdqn.dao" />
+		<property name="basePackage" value="com.firstgun.dao" />
 	</bean>
 
 </beans>

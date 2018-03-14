@@ -111,7 +111,7 @@ var _hmt = _hmt || [];
             <li><a href="//blog.csdn.net/" class="toolbar_to_feed" title="博客" target="_blank">博客</a></li>\
             <li><a href="//edu.csdn.net" title="学院" target="_blank">学院</a></li>\
             <li><a href="http://download.csdn.net" title="下载" target="_blank">下载</a></li>\
-            <li><a href="http://gitbook.cn/?ref=csdn" title="GitChat" target="_blank">GitChat</a></li>\
+            <li><a href="GitChat" title="GitChat" target="_blank">GitChat</a></li>\
             <li class="tb_is1090hide"><a href="http://bbs.csdn.net" title="论坛" target="_blank">论坛</a></li>\
             <li class="tb_is1150hide"><a href="http://ask.csdn.net" title="问答" target="_blank">问答</a></li>\
             <li class="tb_is1210hide"><a href="http://mall.csdn.net" title="商城" target="_blank">商城</a></li>\
