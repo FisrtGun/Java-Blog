@@ -36,6 +36,12 @@ public class Main {
     public String newstitle(){
         return "newstitle";
     }
+    //去资讯
+    @RequestMapping("/information")
+    public String information(){ return "information"; }
+    //去GitChat
+    @RequestMapping("/GitChat")
+    public String GitChat(){ return "gitchat_index"; }
     //去CSTO
     @RequestMapping("csto")
     public String csto(){
