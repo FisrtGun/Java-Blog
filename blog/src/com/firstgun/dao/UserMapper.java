@@ -13,4 +13,6 @@ public interface UserMapper {
     List<User> findAll();
     //输入用户名和密码获得对象
     User getUser(@Param("uname") String uname, @Param("upwd") String upwd);
+    //添加一个用户
+    int addUser(@Param("uname") String uname, @Param("upwd") String upwd,@Param("upicture") String upicture);
 }

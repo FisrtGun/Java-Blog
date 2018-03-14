@@ -17,6 +17,7 @@ To change this template use File | Settings | File Templates.
     <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <script	type="text/javascript" src="../../statics/js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="../../statics/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="../../statics/css/login.css" />
     <link rel="stylesheet" href="../../statics/css/common.css"/>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="../../statics/js/html5shiv.js"></script>
@@ -45,7 +46,7 @@ To change this template use File | Settings | File Templates.
         var okcalsses = [];
     </script>
     <link rel="stylesheet" href="../../statics/css/login_new.css"/>
-    <script type="text/javascript" src="../../statics/js/passport.js"></script>
+    <%--<script type="text/javascript" src="../../statics/js/passport.js"></script>--%>
 </head>
 <body>
 <div class="login_main">
@@ -73,43 +74,84 @@ To change this template use File | Settings | File Templates.
         <div class="login_c regist_c">
             <div class="login_c_t">欢迎注册</div>
             <div class="login_c_c regist_c_c">
-                <div class="regist_step">
+                <%--<div class="regist_step">
                     <label class="step_orange"><span><i>1</i></span><em>注册码</em></label><strong></strong>
                     <label><span><i>2</i></span><em>用户名及密码</em></label><strong></strong>
                     <label><span><i>3</i></span><em>完成</em></label>
-                </div>
-                <div class="offical">
-                    <h3>关注公众号，回复手机号获取注册码</h3>
+                </div>--%>
+                <%--<div class="offical">
+                    &lt;%&ndash;<h3>关注公众号，回复手机号获取注册码</h3>&ndash;%&gt;
                     <div class="offical_c">
                         <div class="offical_c_l">
                             <img src="../../statics/picture/coderlife.jpg">
                         </div>
                     </div>
-                </div>
+                </div>--%>
 
-
+                    <div style="height: 50px"></div>
 
                 <form id="PcForm"
-                      action="https://passport.csdn.net/account/mobileregister?action=mobileUserInfoView"
+                      action="doRegister"
                       method="post">
                     <div class="txt_wrap">
-                        <input type="text" placeholder="请输入注册码"
-                               class="txt_inpt pc_inpt" name="code"> <input
+                        <input type="text" placeholder="请输入用户名"
+                               class="txt_inpt pc_inpt" name="uname" id="uname">
+                        <div class="error-mess" style="width: 368px;display: none" id="errorName">
+                            <span class="error-icon"></span><span id="error-message">用户名不合格</span>
+                        </div>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $("#uname").focus(function () {
+                                        $("#errorName").css("display","none");
+                                })
+                                $("#uname").blur(function () {
+                                    var uname=$("#uname").val();
+                                    if(""==uname){
+                                        $("#errorName").css("display","inline-block");
+                                    }
+                                })
+
+                                $("#upwd").blur(function () {
+                                    var upwd=$("#upwd").val();
+                                    if(""==upwd){
+                                        $("#errorPwd").css("display","inline-block");
+                                    }
+                                })
+                                $("#upwd").focus(function () {
+                                    $("#errorPwd").css("display","none");
+                                })
+                            })
+                        </script>
+
+
+                        <div style="height: 50px"></div>
+
+
+
+                        <input type="text" placeholder="请输入密码"
+                               class="txt_inpt pc_inpt" name="upwd" id="upwd">
+                        <div class="error-mess"style="width: 368px;display: none"id="errorPwd">
+                            <span class="error-icon"></span><span id="error-messagepwd" >密码不合格</span>
+                        </div><input
                             type="hidden" name="agree" value="on">
 
-
+                        <c:if test="${num}==0" >
+                            <div class="error-mess" style="display: none" id="errormess">
+                                <span class="error-icon"></span><span id="error-message">注册失败</span>
+                            </div>
+                        </c:if>
 
                         <div class="veri_tips"></div>
 
 
                     </div>
-                    <input id="pcSec" accesskey="l" value="下一步" tabindex="6"
+                    <input id="pcSec" accesskey="l" value="登录" tabindex="6"
                            type="submit" class="next_btn next_step" data-kuick='{"act":"csdn06","desc":"下一步:设置用户名/密码"}'>
                 </form>
 
 
                 <div class="check clause">
-                    <span></span><em>我已仔细阅读并接受<a href="https://passport.csdn.net/account/mobileregister?action=registrationPolicyView" target="_blank">CSDN用户服务条款</a></em>
+                    <span></span><em>我已仔细阅读并接受<a href="https://passport.csdn.net/account/mobileregister?action=registrationPolicyView" target="_blank">fg用户服务条款</a></em>
                 </div>
             </div>
         </div>

@@ -36,7 +36,23 @@ public class MainController {
     public String register() {
         return "register";
     }
+    //注册
+    @RequestMapping("doRegister")
+    public String doRegister(User user,Model model,HttpServletRequest req) {
+        int num=userService.addUser(user.getUname(), user.getUpwd(), "images/fg.png");
+        User OneUser = userService.getUser(user.getUname(), user.getUpwd());
+        if (num>0){
+            model.addAttribute("num",num);
+            req.getSession().setAttribute("error", false);
+            req.getSession().setAttribute("users", OneUser);
+            return "doRegister";
+        }else {
+            model.addAttribute("num",num);
+            return "register";
+        }
 
+
+    }
     //去登录
     @RequestMapping("login")
     public String login() {
@@ -45,10 +61,8 @@ public class MainController {
     //实现登录功能
     @RequestMapping("dologin")
     public String dologin(User user, Model model, HttpServletRequest req) {
-        System.out.println(user);
         if (null != user.getUname()&&null!=user.getUpwd()) {
             User OneUser = userService.getUser(user.getUname(), user.getUpwd());
-            System.out.println(OneUser);
             if (OneUser == null) {
                 req.getSession().setAttribute("error", true);
                 return "login";
@@ -62,7 +76,13 @@ public class MainController {
             return "login";
         }
     }
-
+    //退出
+    @RequestMapping("exist")
+    public String exist(HttpServletRequest req){
+        req.getSession().setAttribute("error", true);
+        req.getSession().invalidate();
+        return "index";
+    }
     //去iteye
     @RequestMapping("iteye")
     public String iteye() {

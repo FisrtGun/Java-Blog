@@ -11,16 +11,18 @@ import java.util.List;
 public class UserServiceImp implements UserService{
     @Resource
     private UserMapper userMapper;
-
     @Override
     public List<User> findAll() {
         //从数据库获得用户的集合
         return userMapper.findAll();
     }
-
     @Override
     public User getUser(String uname, String upwd) {
         //输入用户名和密码得到用户
         return userMapper.getUser(uname,upwd) ;
+    }
+    @Override
+    public int addUser(String uname, String upwd, String upicture) {
+        return userMapper.addUser(uname,upwd,upicture);
     }
 }

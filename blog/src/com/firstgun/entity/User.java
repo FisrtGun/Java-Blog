@@ -14,6 +14,7 @@ public class User  implements Serializable{
     private String upwd;
     //个人图片路径
     private String upicture;
+
     public User() {
     }
 

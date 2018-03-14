@@ -20,7 +20,7 @@
             </trim>
         </select>
     <insert id="addUser" parameterType="User">
-      INSERT INTO USER(uname,upwd) VALUES(#{uname},#{upwd})
+      INSERT INTO USER(uname,upwd,upicture) VALUES(#{uname},#{upwd},#{upicture})
     </insert>
 </mapper>
  

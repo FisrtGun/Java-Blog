@@ -69,7 +69,7 @@
                 </div>
             </li>
         </ul>
-        <div class="pull-right login-wrap unlogin" id="logins">
+        <div class="pull-right login-wrap unlogin" id="logins" style="margin-left: -20px">
             <ul class="btns">
                 <li class="toolbar-tracking csdn-tracking-statistics tracking-click" data-mod="popu_369"><a href="#" style="padding:0"></a></li>
                 <li>
@@ -78,11 +78,12 @@
                         <a href="//so.csdn.net/so/" target="_blank" class="btn-nobg-noborder btn-search"><i class="iconfont-toolbar toolbar-sousuo"></i></a>
                     </div>
                 </li>
-                <li class="write-bolg-btn csdn-tracking-statistics tracking-click" data-mod="popu_370"><a class="" href="http://mp.blog.csdn.net/postedit" target="_blank"><i class="iconfont-toolbar toolbar-icon_boke"></i><span>写博客</span></a></li>
-                <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1" target="_blank"><i class="iconfont-toolbar toolbar-icon_gitchatx "></i><span>发Chat</span></a></li>
+                <li class="write-bolg-btn csdn-tracking-statistics tracking-click" data-mod="popu_370"><a class="" href="http://mp.blog.csdn.net/postedit" target="_blank"><i class="iconfont-toolbar"></i><span>写博客</span></a></li>
+                <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1" target="_blank"><i class="iconfont-toolbar "></i><span>发Chat</span></a></li>
                 <li class="userinfo"><a href="login">登录</a><span></span><a href="register">注册</a></li>
                 <li class="userLogin">
                     <div class="loginCenter"><a href=""><img class="login_img" src="../../statics/${users.upicture}"><div class="toolbar-circle"></div></a></div>
+                <div style="float: left" id="exist"><a href="exist" >退出</a></div>
                 </li>
             </ul>
         </div>
