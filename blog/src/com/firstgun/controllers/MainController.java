@@ -30,12 +30,13 @@ public class MainController {
     public String index(Model model) {
         //新闻标题
         List<NewsTitle> newsList = newsTitleService.getSelectNews();
-        model.addAttribute("newsList",newsList);
+        model.addAttribute("newsList", newsList);
         //今日推荐
         List<NewsTitle> groom = newsTitleService.getGroom();
-        model.addAttribute("groom",groom);
+        model.addAttribute("groom", groom);
         return "index";
     }
+
     //去common
     @RequestMapping("common")
     public String common() {
@@ -47,32 +48,38 @@ public class MainController {
     public String register() {
         return "register";
     }
+
     //注册
     @RequestMapping("doRegister")
-    public String doRegister(User user,Model model,HttpServletRequest req) {
-        int num=userService.addUser(user.getUname(), user.getUpwd(), "images/fg.png");
-        User OneUser = userService.getUser(user.getUname(), user.getUpwd());
-        if (num>0){
-            model.addAttribute("num",num);
-            req.getSession().setAttribute("error", false);
-            req.getSession().setAttribute("users", OneUser);
-            return "doRegister";
+    public String doRegister(User user, Model model, HttpServletRequest req) {
+        if (null != user.getUname() && null != user.getUpwd()&&user.getUname().length()>0&&user.getUpwd().length()>0) {
+            int num = userService.addUser(user.getUname(), user.getUpwd(), "images/fg.png");
+            User OneUser = userService.getUser(user.getUname(), user.getUpwd());
+            if (num > 0) {
+                model.addAttribute("num", num);
+                req.getSession().setAttribute("error", false);
+                req.getSession().setAttribute("users", OneUser);
+                return "doRegister";
+            } else {
+                model.addAttribute("num", num);
+                return "register";
+            }
         }else {
-            model.addAttribute("num",num);
+            req.getSession().setAttribute("error", true);
             return "register";
         }
-
-
     }
+
     //去登录
     @RequestMapping("login")
     public String login() {
         return "login";
     }
+
     //实现登录功能
     @RequestMapping("dologin")
     public String dologin(User user, Model model, HttpServletRequest req) {
-        if (null != user.getUname()&&null!=user.getUpwd()) {
+        if (null != user.getUname() && null != user.getUpwd()&&user.getUname().length()>0&&user.getUpwd().length()>0) {
             User OneUser = userService.getUser(user.getUname(), user.getUpwd());
             if (OneUser == null) {
                 req.getSession().setAttribute("error", true);
@@ -82,18 +89,21 @@ public class MainController {
                 req.getSession().setAttribute("error", false);
                 return "index";
             }
-        }else {
+        } else {
+            System.out.println(12345678);
             req.getSession().setAttribute("error", true);
             return "login";
         }
     }
+
     //退出
     @RequestMapping("exist")
-    public String exist(HttpServletRequest req){
+    public String exist(HttpServletRequest req) {
         req.getSession().setAttribute("error", true);
         req.getSession().invalidate();
         return "index";
     }
+
     //去iteye
     @RequestMapping("iteye")
     public String iteye() {
@@ -102,11 +112,11 @@ public class MainController {
 
     //去新文章
     @RequestMapping("/newstitle")
-    public String newstitle(Model model){
+    public String newstitle(Model model) {
         List<NewsTitle> newsList = newsTitleService.getSelectNews();
-        model.addAttribute("newsList",newsList);
+        model.addAttribute("newsList", newsList);
         List<NewsTitle> groom = newsTitleService.getGroom();
-        model.addAttribute("groom",groom);
+        model.addAttribute("groom", groom);
         return "newstitle";
     }
 

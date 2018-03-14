@@ -102,13 +102,7 @@
                     $("#logins").removeClass("unlogin");
                 }
             }
-
-
-
-
-
     })
-
 </script>
 </body>
 </html>

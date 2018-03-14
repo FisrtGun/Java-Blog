@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
 Created by IntelliJ IDEA.
 User: Administrator
@@ -12,31 +13,32 @@ To change this template use File | Settings | File Templates.
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="referrer" content="unsafe-url">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-status-bar-style" content="yes">
     <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
-    <script	type="text/javascript" src="../../statics/js/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="../../statics/css/bootstrap.css" />
-    <link type="text/css" rel="stylesheet" href="../../statics/css/login.css" />
+    <script type="text/javascript" src="../../statics/js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="../../statics/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="../../statics/css/login.css"/>
     <link rel="stylesheet" href="../../statics/css/common.css"/>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="../../statics/js/html5shiv.js"></script>
     <![endif]-->
     <script>
         var _hmt = _hmt || [];
-        (function() {
+        (function () {
             var hm = document.createElement("script");
             hm.src = "https://hm.baidu.com/hm.js?6bcd52f51e9b3dce32bec4a3997715ac";
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
-        var CFG={
-            BASE_URL : "https://csdnimg.cn/release/passport/",    //当前页面对应的虚拟路径,页面j
-            API_URL  : "https://passport.csdn.net/",               //当前项目默认的后端API地址
-            ROOT_URL  : "https://passport.csdn.net/",              //当前项目根路径, JS跳转
-            STATIC_URL : "https://csdnimg.cn/release/passport/",             //本项目静态资源
-            STATIC_GLOBAL_URL : "https://csdnimg.cn/",               //全局静态资源
-            TRACK_KUICK_ID : "0e1a1f29-37da-4c44-8a33-b4735dc85f10"
+        var CFG = {
+            BASE_URL: "https://csdnimg.cn/release/passport/",    //当前页面对应的虚拟路径,页面j
+            API_URL: "https://passport.csdn.net/",               //当前项目默认的后端API地址
+            ROOT_URL: "https://passport.csdn.net/",              //当前项目根路径, JS跳转
+            STATIC_URL: "https://csdnimg.cn/release/passport/",             //本项目静态资源
+            STATIC_GLOBAL_URL: "https://csdnimg.cn/",               //全局静态资源
+            TRACK_KUICK_ID: "0e1a1f29-37da-4c44-8a33-b4735dc85f10"
         }
     </script>
     <title>注册账号</title>
@@ -88,7 +90,7 @@ To change this template use File | Settings | File Templates.
                     </div>
                 </div>--%>
 
-                    <div style="height: 50px"></div>
+                <div style="height: 50px"></div>
 
                 <form id="PcForm"
                       action="doRegister"
@@ -102,23 +104,23 @@ To change this template use File | Settings | File Templates.
                         <script type="text/javascript">
                             $(document).ready(function () {
                                 $("#uname").focus(function () {
-                                        $("#errorName").css("display","none");
+                                    $("#errorName").css("display", "none");
                                 })
                                 $("#uname").blur(function () {
-                                    var uname=$("#uname").val();
-                                    if(""==uname){
-                                        $("#errorName").css("display","inline-block");
+                                    var uname = $("#uname").val();
+                                    if ("" == uname) {
+                                        $("#errorName").css("display", "inline-block");
                                     }
                                 })
 
                                 $("#upwd").blur(function () {
-                                    var upwd=$("#upwd").val();
-                                    if(""==upwd){
-                                        $("#errorPwd").css("display","inline-block");
+                                    var upwd = $("#upwd").val();
+                                    if ("" == upwd) {
+                                        $("#errorPwd").css("display", "inline-block");
                                     }
                                 })
                                 $("#upwd").focus(function () {
-                                    $("#errorPwd").css("display","none");
+                                    $("#errorPwd").css("display", "none");
                                 })
                             })
                         </script>
@@ -127,16 +129,16 @@ To change this template use File | Settings | File Templates.
                         <div style="height: 50px"></div>
 
 
-
                         <input type="text" placeholder="请输入密码"
                                class="txt_inpt pc_inpt" name="upwd" id="upwd">
-                        <div class="error-mess"style="width: 368px;display: none"id="errorPwd">
-                            <span class="error-icon"></span><span id="error-messagepwd" >密码不合格</span>
-                        </div><input
-                            type="hidden" name="agree" value="on">
+                        <div class="error-mess" style="width: 368px;display: none" id="errorPwd">
+                            <span class="error-icon"></span><span id="error-messagepwd">密码不合格</span>
+                        </div>
+                        <input
+                                type="hidden" name="agree" value="on">
 
-                        <c:if test="${num}==0" >
-                            <div class="error-mess" style="display: none" id="errormess">
+                        <c:if test="${error}">
+                            <div class="error-mess" id="errormess" style="width: 368px;">
                                 <span class="error-icon"></span><span id="error-message">注册失败</span>
                             </div>
                         </c:if>
@@ -146,26 +148,22 @@ To change this template use File | Settings | File Templates.
 
                     </div>
                     <input id="pcSec" accesskey="l" value="登录" tabindex="6"
-                           type="submit" class="next_btn next_step" data-kuick='{"act":"csdn06","desc":"下一步:设置用户名/密码"}'>
+                           type="submit" class="next_btn next_step">
                 </form>
 
 
                 <div class="check clause">
-                    <span></span><em>我已仔细阅读并接受<a href="https://passport.csdn.net/account/mobileregister?action=registrationPolicyView" target="_blank">fg用户服务条款</a></em>
+                    <span></span><em>我已仔细阅读并接受<a
+                        href="https://passport.csdn.net/account/mobileregister?action=registrationPolicyView"
+                        target="_blank">fg用户服务条款</a></em>
                 </div>
             </div>
         </div>
         <div class="login_copyright">京 ICP 证 09002463 号 | Copyright ©
-            1999-2018, CSDN.NET, All Rights Reserved</div>
+            1999-2018, CSDN.NET, All Rights Reserved
+        </div>
     </div>
 </div>
-
-
-
-
-
-
-
 
 
 <!--kucik deal report   位于公共jquery后面-->
@@ -174,25 +172,26 @@ To change this template use File | Settings | File Templates.
 
     var _kuickDeal = _kuickDeal || [];
     window._kuickDeal = _kuickDeal;
-    var onKDReadyFinish=function(){};
-    (function(){
+    var onKDReadyFinish = function () {
+    };
+    (function () {
         var _dealProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         var _sdkURL = _dealProtocol + 'deal.kuick.cn/sdk/v1/';
 
         _kuickDeal.push(['SDK_URL', _sdkURL]);
         _kuickDeal.push(['KUICK_API_URL', _dealProtocol + 'api.kuick.cn/api/v1.0']);
         _kuickDeal.push(['DEAL_API_URL', _dealProtocol + 'deal-api.kuick.cn/api/v1.0']);
-        _kuickDeal.push(['APP_KEY',CFG.TRACK_KUICK_ID]);
+        _kuickDeal.push(['APP_KEY', CFG.TRACK_KUICK_ID]);
         _kuickDeal.push(['LOG_LEVEL', '3']);
 
-        (function() {
-            if(typeof define === 'function' && define.amd) {
-                require([_sdkURL + 'kuickdeal-pc.min.js'], function(kd){
+        (function () {
+            if (typeof define === 'function' && define.amd) {
+                require([_sdkURL + 'kuickdeal-pc.min.js'], function (kd) {
                     window.kuickDeal = kd;
                 });
             } else {
                 var deal = document.createElement('script');
-                deal.type='text/javascript';
+                deal.type = 'text/javascript';
                 deal.async = false;
                 deal.src = _sdkURL + 'kuickdeal-pc.min.js';
                 var s = document.getElementsByTagName('script')[0];
@@ -200,10 +199,10 @@ To change this template use File | Settings | File Templates.
             }
         })();
     })();
-    var onKDReady = function(){
-        $("[data-kuick]").on("click",function(){
-            var data=$(this).data("kuick");
-            console.log("kuick track:",data);
+    var onKDReady = function () {
+        $("[data-kuick]").on("click", function () {
+            var data = $(this).data("kuick");
+            console.log("kuick track:", data);
             kuickDeal.onBehaviour(data.act, data.desc);
         })
 
@@ -212,10 +211,10 @@ To change this template use File | Settings | File Templates.
 
     }
 
-    if (typeof kuickDeal == "undefined"){
-        if(document.addEventListener){
+    if (typeof kuickDeal == "undefined") {
+        if (document.addEventListener) {
             document.addEventListener('KDReady', onKDReady, false);
-        } else if (document.attachEvent){
+        } else if (document.attachEvent) {
             document.attachEvent('KDReady', onKDReady);
             document.attachEvent('onKDReady', onKDReady);
         }
