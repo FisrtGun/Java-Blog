@@ -5,7 +5,6 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="blog" />
-          <element id="javaee-facet-classes" facet="blog/web/Web2" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="aliyun-java-sdk-core-3.3.1" />

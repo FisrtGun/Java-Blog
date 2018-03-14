@@ -4,12 +4,12 @@
       class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script charset="utf-8" src="js/b.js"></script>
-    <script charset="utf-8" src="js/b.js"></script>
-    <script src="js/hm.js"></script>
+    <script charset="utf-8" src="../../statics/js/b.js"></script>
+    <script charset="utf-8" src="../../statics/js/b.js"></script>
+    <script src="../../statics/js/hm.js"></script>
 
-    <script src="js/hm.js"></script>
-    <script src="js/tingyun-rum.js" type="text/javascript"></script>
+    <script src="../../statics/js/hm.js"></script>
+    <script src="../../statics/js/tingyun-rum.js" type="text/javascript"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport"
@@ -20,19 +20,19 @@
     <title>前端-CSDN</title>
     <link ref="canonical" href="https://www.csdn.net/nav/web">
     <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
-    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="js/tracking-1.0.2.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/main_flume.js"></script>
-    <link rel="stylesheet" href="css/content_toolbar.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/avatar.css">
-    <link href="css/csdn_feed.css" rel="stylesheet">
-    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="../../statics/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../../statics/js/tracking-1.0.2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../statics/js/main_flume.js"></script>
+    <link rel="stylesheet" href="../../statics/css/content_toolbar.css">
+    <link rel="stylesheet" href="../../statics/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../statics/css/avatar.css">
+    <link href="../../statics/css/csdn_feed.css" rel="stylesheet">
+    <script src="../../statics/js/modernizr.js" type="text/javascript"></script>
     <style type="text/css"></style>
     <style type="text/css"></style>
     <style type="text/css"></style>
-    <link rel="stylesheet" type="text/css" href="css/goTop.min.css">
-    <script src="php/get_ads.php" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../../statics/css/goTop.min.css">
+    <script src="../../statics/php/get_ads.php" type="text/javascript"></script>
 </head>
 <body data-category="web" data-host_type="www">
 <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
@@ -235,8 +235,8 @@
         </div>
     </div>
 </div>-->
-<script class="toolbar-s" type="text/javascript" src="js/iconfont.js"></script>
-<script id="toolbar-tpl-scriptId" prod="download" skin="black" src="js/content_toolbar.js"
+<script class="toolbar-s" type="text/javascript" src="../../statics/js/iconfont.js"></script>
+<script id="toolbar-tpl-scriptId" prod="download" skin="black" src="../../statics/js/content_toolbar.js"
         type="text/javascript" domain="http://blog.csdn.net"></script>
 <div class="container clearfix">
     <nav id="nav" class="clearfix">
@@ -275,7 +275,7 @@
                  data-con="ad_content_3535" style="width: 760px; height: 90px;">
                 <div style="line-height:0px;"><a target="_blank"
                                                  href="http://edu.csdn.net/topic/ai112?utm_source=home4"><img
-                        width="760" height="90" src="png/201802111150492024.png"></a>
+                        width="760" height="90" src="../../statics/png/201802111150492024.png"></a>
                     <div style="left: 0px; width: 26px; background: transparent url(&quot;//img-ads.csdn.net/2016/201608021757063065.png&quot;) no-repeat scroll right top; height: 16px;z-index: 12; position: relative; bottom: 16px;"></div>
                 </div>
             </div>
@@ -283,7 +283,7 @@
                  data-con="ad_content_3570" style="width: 300px; height: 90px;">
                 <div style="line-height:0px;"><a target="_blank"
                                                  href="https://edu.csdn.net/member?utm_source=button300..90"><img
-                        width="300" height="90" src="png/201803011431321228.png"></a>
+                        width="300" height="90" src="../../statics/png/201803011431321228.png"></a>
                     <div style="left: 0px; width: 26px; background: transparent url(&quot;//img-ads.csdn.net/2016/201608021757063065.png&quot;) no-repeat scroll right top; height: 16px;z-index: 12; position: relative; bottom: 16px;"></div>
                 </div>
             </div>
@@ -358,7 +358,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/playfreely" target="_blank" class="user_img">
-                                    <img src="jpg/1_playfreely.jpg" alt="playfreely" title="playfreely">
+                                    <img src="../../statics/jpg/1_playfreely.jpg" alt="playfreely" title="playfreely">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -441,7 +441,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/M7720EIoSi6oA9" target="_blank" class="user_img">
-                                    <img src="jpg/1_m7720eiosi6oa9.jpg" alt="M7720EIoSi6oA9"
+                                    <img src="../../statics/jpg/1_m7720eiosi6oa9.jpg" alt="M7720EIoSi6oA9"
                                          title="M7720EIoSi6oA9">
                                 </a>
                             </dt>
@@ -515,7 +515,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/ft8TmTk745FdTdA7IP" target="_blank" class="user_img">
-                                    <img src="jpg/1_ft8tmtk745fdtda7ip.jpg" alt="ft8TmTk745FdTdA7IP"
+                                    <img src="../../statics/jpg/1_ft8tmtk745fdtda7ip.jpg" alt="ft8TmTk745FdTdA7IP"
                                          title="ft8TmTk745FdTdA7IP">
                                 </a>
                             </dt>
@@ -588,7 +588,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/xishining" target="_blank" class="user_img">
-                                    <img src="jpg/1_xishining.jpg" alt="xishining" title="xishining">
+                                    <img src="../../statics/jpg/1_xishining.jpg" alt="xishining" title="xishining">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -671,7 +671,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/dzJx2EOtaA24Adr" target="_blank" class="user_img">
-                                    <img src="jpg/1_dzjx2eotaa24adr.jpg" alt="dzJx2EOtaA24Adr"
+                                    <img src="../../statics/jpg/1_dzjx2eotaa24adr.jpg" alt="dzJx2EOtaA24Adr"
                                          title="dzJx2EOtaA24Adr">
                                 </a>
                             </dt>
@@ -755,7 +755,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/r6Auo52bK" target="_blank" class="user_img">
-                                    <img src="jpg/1_r6auo52bk.jpg" alt="r6Auo52bK" title="r6Auo52bK">
+                                    <img src="../../statics/jpg/1_r6auo52bk.jpg" alt="r6Auo52bK" title="r6Auo52bK">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -827,7 +827,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/age12v" target="_blank" class="user_img">
-                                    <img src="jpg/1_age12v.jpg" alt="age12v" title="age12v">
+                                    <img src="../../statics/jpg/1_age12v.jpg" alt="age12v" title="age12v">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -898,7 +898,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/blogdevteam" target="_blank" class="user_img">
-                                    <img src="jpg/1_blogdevteam.jpg" alt="blogdevteam" title="blogdevteam">
+                                    <img src="../../statics/jpg/1_blogdevteam.jpg" alt="blogdevteam" title="blogdevteam">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -981,7 +981,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/GitChat" target="_blank" class="user_img">
-                                    <img src="jpg/1_gitchat.jpg" alt="GitChat" title="GitChat">
+                                    <img src="../../statics/jpg/1_gitchat.jpg" alt="GitChat" title="GitChat">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1064,7 +1064,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/cs729298" target="_blank" class="user_img">
-                                    <img src="jpg/1_cs729298.jpg" alt="cs729298" title="cs729298">
+                                    <img src="../../statics/jpg/1_cs729298.jpg" alt="cs729298" title="cs729298">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1135,7 +1135,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/Hudeyu777" target="_blank" class="user_img">
-                                    <img src="jpg/1_hudeyu777.jpg" alt="Hudeyu777" title="Hudeyu777">
+                                    <img src="../../statics/jpg/1_hudeyu777.jpg" alt="Hudeyu777" title="Hudeyu777">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1219,7 +1219,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/jx_521" target="_blank" class="user_img">
-                                    <img src="jpg/1_jx_521.jpg" alt="jx_521" title="jx_521">
+                                    <img src="../../statics/jpg/1_jx_521.jpg" alt="jx_521" title="jx_521">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1302,7 +1302,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/qq_38316918" target="_blank" class="user_img">
-                                    <img src="jpg/1_qq_38316918.jpg" alt="qq_38316918" title="qq_38316918">
+                                    <img src="../../statics/jpg/1_qq_38316918.jpg" alt="qq_38316918" title="qq_38316918">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1385,7 +1385,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/m0_37805167" target="_blank" class="user_img">
-                                    <img src="jpg/1_m0_37805167.jpg" alt="m0_37805167" title="m0_37805167">
+                                    <img src="../../statics/jpg/1_m0_37805167.jpg" alt="m0_37805167" title="m0_37805167">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1456,7 +1456,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/qq_37231097" target="_blank" class="user_img">
-                                    <img src="jpg/1_qq_37231097.jpg" alt="qq_37231097" title="qq_37231097">
+                                    <img src="../../statics/jpg/1_qq_37231097.jpg" alt="qq_37231097" title="qq_37231097">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1527,7 +1527,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/hIZ255enyGT1O4b8" target="_blank" class="user_img">
-                                    <img src="jpg/1_hiz255enygt1o4b8.jpg" alt="hIZ255enyGT1O4b8"
+                                    <img src="../../statics/jpg/1_hiz255enygt1o4b8.jpg" alt="hIZ255enyGT1O4b8"
                                          title="hIZ255enyGT1O4b8">
                                 </a>
                             </dt>
@@ -1671,7 +1671,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/VhWfR2u02Q" target="_blank" class="user_img">
-                                    <img src="jpg/1_vhwfr2u02q.jpg" alt="VhWfR2u02Q" title="VhWfR2u02Q">
+                                    <img src="../../statics/jpg/1_vhwfr2u02q.jpg" alt="VhWfR2u02Q" title="VhWfR2u02Q">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1742,7 +1742,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/Zhooson" target="_blank" class="user_img">
-                                    <img src="jpg/1_zhooson.jpg" alt="Zhooson" title="Zhooson">
+                                    <img src="../../statics/jpg/1_zhooson.jpg" alt="Zhooson" title="Zhooson">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1813,7 +1813,7 @@
                         <dl class="list_userbar">
                             <dt>
                                 <a href="http://blog.csdn.net/HUSHILIN001" target="_blank" class="user_img">
-                                    <img src="jpg/1_hushilin001.jpg" alt="HUSHILIN001" title="HUSHILIN001">
+                                    <img src="../../statics/jpg/1_hushilin001.jpg" alt="HUSHILIN001" title="HUSHILIN001">
                                 </a>
                             </dt>
                             <dd class="name">
@@ -1886,7 +1886,7 @@
                         </div>
                         <dl class="list_userbar">
                             <dt><a href="http://blog.csdn.net/ZabeNbRdit36243qNJX1" target="_blank"
-                                   class="user_img"><img src="jpg/1_zabenbrdit36243qnjx1.jpg" alt="趣味科技v"
+                                   class="user_img"><img src="../../statics/jpg/1_zabenbrdit36243qnjx1.jpg" alt="趣味科技v"
                                                          title="趣味科技v"></a></dt>
                             <dd class="name"><a href="http://blog.csdn.net/ZabeNbRdit36243qNJX1"
                                                 target="_blank">趣味科技v</a></dd>
@@ -1974,7 +1974,7 @@
                         </div>
                         <dl class="list_userbar">
                             <dt><a href="http://blog.csdn.net/O4dC8OjO7ZL6" target="_blank" class="user_img"><img
-                                    src="jpg/1_o4dc8ojo7zl6.jpg" alt="中兴开发者社区" title="中兴开发者社区"></a></dt>
+                                    src="../../statics/jpg/1_o4dc8ojo7zl6.jpg" alt="中兴开发者社区" title="中兴开发者社区"></a></dt>
                             <dd class="name"><a href="http://blog.csdn.net/O4dC8OjO7ZL6" target="_blank">中兴开发者社区</a>
                             </dd>
                             <dd class="time"><a target="_blank" class="csdn-tracking-statistics tracking-click"
@@ -2029,7 +2029,7 @@
                         <dl class="list_userbar">
                             <dd class="tag"><a href="https://www.csdn.net/nav/ai" target="_blank"></a></dd>
                             <dt><a href="http://blog.csdn.net/Y2c8YpZC15p" target="_blank" class="user_img"><img
-                                    src="jpg/1_y2c8ypzc15p.jpg" alt="微软研究院AI头条" title="微软研究院AI头条"></a></dt>
+                                    src="../../statics/jpg/1_y2c8ypzc15p.jpg" alt="微软研究院AI头条" title="微软研究院AI头条"></a></dt>
                             <dd class="name"><a href="http://blog.csdn.net/Y2c8YpZC15p" target="_blank">微软研究院AI头条</a>
                             </dd>
                             <dd class="time"><a target="_blank" class="csdn-tracking-statistics tracking-click"
@@ -2070,7 +2070,7 @@
                         </div>
                         <dl class="list_userbar">
                             <dt><a href="http://blog.csdn.net/vM199zkg3Y7150u5" target="_blank" class="user_img"><img
-                                    src="jpg/1_vm199zkg3y7150u5.jpg" alt="JavaScript_w"
+                                    src="../../statics/jpg/1_vm199zkg3y7150u5.jpg" alt="JavaScript_w"
                                     title="JavaScript_w"></a></dt>
                             <dd class="name"><a href="http://blog.csdn.net/vM199zkg3Y7150u5" target="_blank">JavaScript_w</a>
                             </dd>
@@ -2112,7 +2112,7 @@
                         </div>
                         <dl class="list_userbar">
                             <dt><a href="http://blog.csdn.net/wGL3k77y9fR1k61T1aS" target="_blank" class="user_img"><img
-                                    src="jpg/1_wgl3k77y9fr1k61t1as.jpg" alt="前端早读课" title="前端早读课"></a></dt>
+                                    src="../../statics/jpg/1_wgl3k77y9fr1k61t1as.jpg" alt="前端早读课" title="前端早读课"></a></dt>
                             <dd class="name"><a href="http://blog.csdn.net/wGL3k77y9fR1k61T1aS"
                                                 target="_blank">前端早读课</a></dd>
                             <dd class="time"><a target="_blank" class="csdn-tracking-statistics tracking-click"
@@ -2254,7 +2254,7 @@
                         <dl class="list_userbar">
                             <dd class="tag"><a href="https://www.csdn.net/nav/ai" target="_blank"></a></dd>
                             <dt><a href="http://blog.csdn.net/yH0VLDe8VG8ep9VGe" target="_blank" class="user_img"><img
-                                    src="jpg/1_yh0vlde8vg8ep9vge.jpg" alt="量子位" title="量子位"></a></dt>
+                                    src="../../statics/jpg/1_yh0vlde8vg8ep9vge.jpg" alt="量子位" title="量子位"></a></dt>
                             <dd class="name"><a href="http://blog.csdn.net/yH0VLDe8VG8ep9VGe" target="_blank">量子位</a>
                             </dd>
                             <dd class="time"><a target="_blank" class="csdn-tracking-statistics tracking-click"
@@ -2307,7 +2307,7 @@
                 </li>
             </ul>
             <div class="feed_loading" style="display: none;">
-                <img src="gif/feedLoading.gif" alt="I&#39;m loading" title="I&#39;m loading">
+                <img src="../../statics/gif/feedLoading.gif" alt="I&#39;m loading" title="I&#39;m loading">
             </div>
         </main>
 
@@ -2336,7 +2336,7 @@
                         <li>
                             <div class="img_box"><a href="http://mp.weixin.qq.com/s/gYVOtagdddkOYf27oE-F0Q"
                                                     target="_blank"><img
-                                    src="png/af8a709a82143a435c2505c1fe9acc97.png" alt=""></a></div>
+                                    src="../../statics/png/af8a709a82143a435c2505c1fe9acc97.png" alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a href="http://mp.weixin.qq.com/s/gYVOtagdddkOYf27oE-F0Q"
                                                             target="_blank">1分钟链圈 | 币安悬赏25万美元通缉黑客</a></h3>
@@ -2345,7 +2345,7 @@
                         <li>
                             <div class="img_box"><a
                                     href="http://blog.csdn.net/dqcfkyqdxym3f8rb0/article/details/79488152"
-                                    target="_blank"><img src="jpg/36a508d94ba797fc252b67261cf4fde9.jpg"
+                                    target="_blank"><img src="../../statics/jpg/36a508d94ba797fc252b67261cf4fde9.jpg"
                                                          alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a
@@ -2356,7 +2356,7 @@
                         <li>
                             <div class="img_box"><a
                                     href="http://blog.csdn.net/dqcfkyqdxym3f8rb0/article/details/78302688"
-                                    target="_blank"><img src="jpg/633575ce3e5cdf77ff89a22e747b5bb3.jpg"
+                                    target="_blank"><img src="../../statics/jpg/633575ce3e5cdf77ff89a22e747b5bb3.jpg"
                                                          alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a
@@ -2367,7 +2367,7 @@
                         <li>
                             <div class="img_box"><a href="http://mp.weixin.qq.com/s/0WVRK5XloDB3bCO8IabOTA"
                                                     target="_blank"><img
-                                    src="jpg/f1c9aca64561ae2b6d26ea3d6abc4588.jpg" alt=""></a></div>
+                                    src="../../statics/jpg/f1c9aca64561ae2b6d26ea3d6abc4588.jpg" alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a href="http://mp.weixin.qq.com/s/0WVRK5XloDB3bCO8IabOTA"
                                                             target="_blank">摩托罗拉再裁员！仍坚守模块化手机业务</a></h3>
@@ -2376,7 +2376,7 @@
                         <li>
                             <div class="img_box"><a href="http://mp.weixin.qq.com/s/ztMJc-bRAUpaze31hsVxGQ"
                                                     target="_blank"><img
-                                    src="jpg/3b1fca6be181efb23a9d75629a46c755.jpg" alt=""></a></div>
+                                    src="../../statics/jpg/3b1fca6be181efb23a9d75629a46c755.jpg" alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a href="http://mp.weixin.qq.com/s/ztMJc-bRAUpaze31hsVxGQ"
                                                             target="_blank">区块链的爆发仍为时尚早</a></h3>
@@ -2386,7 +2386,7 @@
                         <li>
                             <div class="img_box"><a href="http://blog.csdn.net/csdnsevenn/article/details/79154295"
                                                     target="_blank"><img
-                                    src="png/80f783d3a86393bd2bfa091c9c9d9323.png" alt=""></a></div>
+                                    src="../../statics/png/80f783d3a86393bd2bfa091c9c9d9323.png" alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a
                                         href="http://blog.csdn.net/csdnsevenn/article/details/79154295" target="_blank">职场泥潭
@@ -2406,7 +2406,7 @@
                         <li>
                             <div class="img_box"><a
                                     href="http://gitbook.cn/gitchat/activity/5a73da727648740c4c24ada0?utm_source=sy18030901"
-                                    target="_blank"><img src="jpg/70d8dfd3ba8c89236c747f181ea71b16.jpg"
+                                    target="_blank"><img src="../../statics/jpg/70d8dfd3ba8c89236c747f181ea71b16.jpg"
                                                          alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a
@@ -2417,7 +2417,7 @@
                         <li>
                             <div class="img_box"><a
                                     href="http://gitbook.cn/gitchat/geekbook/5a9cb0c0a80c047e76c23c4f?utm_source=sy18030801"
-                                    target="_blank"><img src="jpg/a7f37fbad97f3cdb0ee36c0fcd9628ae.jpg"
+                                    target="_blank"><img src="../../statics/jpg/a7f37fbad97f3cdb0ee36c0fcd9628ae.jpg"
                                                          alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a
@@ -2428,7 +2428,7 @@
                         <li>
                             <div class="img_box"><a href="https://edu.csdn.net/course/detail/6408?utm_source=home4"
                                                     target="_blank"><img
-                                    src="jpg/d53977a1da22a0ba27f38bf71f16d4f3.jpg" alt=""></a></div>
+                                    src="../../statics/jpg/d53977a1da22a0ba27f38bf71f16d4f3.jpg" alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a
                                         href="https://edu.csdn.net/course/detail/6408?utm_source=home4" target="_blank">互联网职业选择时应该注意什么？</a>
@@ -2438,7 +2438,7 @@
                         <li>
                             <div class="img_box"><a
                                     href="https://mp.weixin.qq.com/s?__biz=MzA4NDY3ODAwNA==&amp;mid=2651229425&amp;idx=4&amp;sn=c581cbba1d20c7d8b01ffdb9c0d698a1&amp;chksm=8411a8eab36621fc94bb989d233b6f55eee472e52a37c601840af0de9f89c7265cca52184573&amp;scene=0#rd?utm_source=home4"
-                                    target="_blank"><img src="jpg/fd7c5c8fd40a537feb63fb44df8cf5ea.jpg"
+                                    target="_blank"><img src="../../statics/jpg/fd7c5c8fd40a537feb63fb44df8cf5ea.jpg"
                                                          alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a
@@ -2448,7 +2448,7 @@
                         </li>
                         <li>
                             <div class="img_box"><a href="http://10086id.csdn.net/" target="_blank"><img
-                                    src="png/9b4ea6a8403891f274d3f8b714658744.png" alt=""></a></div>
+                                    src="../../statics/png/9b4ea6a8403891f274d3f8b714658744.png" alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a href="http://10086id.csdn.net/" target="_blank">每次登录都要验证，解密行业最新认证能力</a>
                                 </h3>
@@ -2456,7 +2456,7 @@
                         </li>
                         <li>
                             <div class="img_box"><a href="http://qualcomm.csdn.net/" target="_blank"><img
-                                    src="png/481f31224e31a114adbf35cbdde4b24b.png" alt=""></a></div>
+                                    src="../../statics/png/481f31224e31a114adbf35cbdde4b24b.png" alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a href="http://qualcomm.csdn.net/" target="_blank">详解骁龙X24：何止是快，是意义非凡</a>
                                 </h3>
@@ -2464,7 +2464,7 @@
                         </li>
                         <li>
                             <div class="img_box"><a href="http://ibmuniversity.csdn.net/" target="_blank"><img
-                                    src="png/fef6fa64e5d526bc9bc9e1522b9d020d.png" alt=""></a></div>
+                                    src="../../statics/png/fef6fa64e5d526bc9bc9e1522b9d020d.png" alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a href="http://ibmuniversity.csdn.net/" target="_blank">人工智能、机器学习和认知计算入门指南</a>
                                 </h3>
@@ -2486,7 +2486,7 @@
             <div class="right_box csdn-tracking-statistics" data-mod="popu_470" data-dsm="post">
                 <div class="feed_viewpoint" style="background-image: url(/images/viewpoint_bg.png)">
                     <a href="http://blog.csdn.net/pk.html?id=10570" target="_blank">
-                        <img src="png/mod_viewpoint.png" class="viewpoint_img" alt="csdn_viewpoint"
+                        <img src="../../statics/png/mod_viewpoint.png" class="viewpoint_img" alt="csdn_viewpoint"
                              title="csdn_viewpoint">
                         <h3>激光雷达与摄像头，未来哪种会成为自动驾驶的核心传感器呢？</h3>
                     </a>
@@ -2541,7 +2541,7 @@
                             <div class="img_box">
                                 <a href="http://gitbook.cn/gitchat/geekbook/5a3c7879902f0f2223e2526d?utm_source=sy18030802"
                                    target="_blank">
-                                    <img src="png/09a514f3769fffdc701c64cf58b74e6a.png"
+                                    <img src="../../statics/png/09a514f3769fffdc701c64cf58b74e6a.png"
                                          alt="AI 工程师职业指南【限时特惠中】">
                                 </a>
                             </div>
@@ -2556,7 +2556,7 @@
                             <div class="img_box">
                                 <a href="http://gitbook.cn/gitchat/geekbook/5a5c5e6a2be8c361148234e6?utm_source=sy18030102"
                                    target="_blank">
-                                    <img src="png/e1dfe3f73feaf3884fa39c99d412c587.png" alt="人工智能学术前沿">
+                                    <img src="../../statics/png/e1dfe3f73feaf3884fa39c99d412c587.png" alt="人工智能学术前沿">
                                 </a>
                             </div>
                             <div class="content">
@@ -2570,7 +2570,7 @@
                             <div class="img_box">
                                 <a href="http://gitbook.cn/gitchat/geekbook/5a5eb07bdff55721bc1dcaee?utm_source=sy18030101"
                                    target="_blank">
-                                    <img src="png/bd25fdc660dd7173d7619b5141c852fc.png" alt="深入浅出区块链">
+                                    <img src="../../statics/png/bd25fdc660dd7173d7619b5141c852fc.png" alt="深入浅出区块链">
                                 </a>
                             </div>
                             <div class="content">
@@ -2667,7 +2667,7 @@
                     <div class="right_box footer_box csdn-tracking-statistics" data-mod="popu_475" data-dsm="post"><h3
                             class="feed_new_tit"><span class="line"></span><span class="txt">联系我们</span></h3>
                         <div class="contact-box">
-                            <div class="img-box"><img src="png/csdn_cs_qr.png" alt="客服"></div>
+                            <div class="img-box"><img src="../../statics/png/csdn_cs_qr.png" alt="客服"></div>
                             <div class="contact-info"><h4>请扫描二维码联系客服</h4>
                                 <p>
                                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
@@ -2727,11 +2727,11 @@
         </aside>
     </div>
 </div>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../statics/js/bootstrap.min.js" type="text/javascript"></script>
 
-<script src="js/async-1.0.1.js"></script>
+<script src="../../statics/js/async-1.0.1.js"></script>
 
-<script src="js/tracking-1.0.1.js" type="text/javascript"></script>
+<script src="../../statics/js/tracking-1.0.1.js" type="text/javascript"></script>
 <script language="javascript" type="text/javascript">
     // Traffic Stats of the entire Web site By baidu
     var _hmt = _hmt || [];
@@ -2744,16 +2744,16 @@
     // Traffic Stats of the entire Web site By baidu end
 </script>
 
-<script src="js/publib_footer-1.0.3.js" data-isfootertrack="false"></script>
-<link rel="stylesheet" type="text/css" href="css/pub_footer_1.0.3.css">
-<script src="js/csdn_feed.min.js" type="text/javascript"></script>
-<script src="js/ab.plus.js"></script>
+<script src="../../statics/js/publib_footer-1.0.3.js" data-isfootertrack="false"></script>
+<link rel="stylesheet" type="text/css" href="../../statics/css/pub_footer_1.0.3.css">
+<script src="../../statics/js/csdn_feed.min.js" type="text/javascript"></script>
+<script src="../../statics/js/ab.plus.js"></script>
 <script>
     adhoc('init', {
         appKey: 'ADHOC_3f25bcb4-f154-4b7c-8a82-f79b81816578'
     })
 </script>
-<script src="js/goTop-v1.0.min.js"></script>
+<script src="../../statics/js/goTop-v1.0.min.js"></script>
 
 <div style="position:fixed; top:0; left:0; overflow:hidden;"><input style="position:absolute; left:-300px;" type="text"
                                                                     value="" id="focus_retriever" readonly="true"></div>
