@@ -275,7 +275,7 @@
                  data-con="ad_content_3535" style="width: 760px; height: 90px;">
                 <div style="line-height:0px;"><a target="_blank"
                                                  href="http://edu.csdn.net/topic/ai112?utm_source=home4"><img
-                        width="760" height="90" src="png/201802111150492024.png"></a>
+                        width="760" height="90" src="../../statics/png/201802111150492024.png"></a>
                     <div style="left: 0px; width: 26px; background: transparent url(&quot;//img-ads.csdn.net/2016/201608021757063065.png&quot;) no-repeat scroll right top; height: 16px;z-index: 12; position: relative; bottom: 16px;"></div>
                 </div>
             </div>
