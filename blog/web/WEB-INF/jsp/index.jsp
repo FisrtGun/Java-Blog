@@ -6,7 +6,6 @@ Time: 21:58
 To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="common.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +30,7 @@ To change this template use File | Settings | File Templates.
     <script src='../../statics/js/modernizr.js' type='text/javascript'></script>
 </head>
 <body data-category="home" data-host_type="www">
-<script id="toolbar-tpl-scriptId" prod="download" skin="black" src="../../statics/js/content_toolbar.js" type="text/javascript" domain="http://blog.csdn.net"></script>
+<jsp:include page="common.jsp" flush="true"></jsp:include>
 <div class="container clearfix">
     <nav id="nav" class="clearfix">
         <div class="clearfix">
