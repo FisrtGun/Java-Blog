@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0021)https://edu.csdn.net/ -->
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -110,6 +111,7 @@
     <script type="text/javascript" charset="utf-8" async=""
             src="../../statics/js/kuickdeal-behaviour.min.js"></script>
 </head>
+
 <body class="">
 <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
     <symbol id="icon-xiajiantou" viewBox="0 0 1024 1024">
@@ -158,7 +160,7 @@
         <path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024z m160-768L512 416 352 256l-96 96 160 160-160 160 96 96 160-160 160 160 96-96-160-160 160-160-96-96z"></path>
     </symbol>
 </svg>
-<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
+<%--<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
     <div class="container row center-block ">
         <ul class="pull-left left-menu clearfix">
             <li><a href="https://www.csdn.net/" title="CSDN首页" target="_blank">
@@ -237,7 +239,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div>--%>
 <script class="toolbar-s" type="text/javascript" src="../../statics/js/iconfont.js"></script>
 <script id="toolbar-tpl-scriptId" prod="download" skin="black" src="../../statics/js/content_toolbar.js"
         type="text/javascript" domain="https://edu.csdn.net/"></script>
@@ -1818,7 +1820,7 @@
 <!--返回顶部 结束-->
 <script type="text/javascript" src="../../statics/js/publib_footer-1.0.2.js"></script>
 <link rel="stylesheet" type="text/css" href="../../statics/css/pub_footer_2014.css">
-<div class="pub_fo">
+<%--<div class="pub_fo">
     <div id="pub_footerall" class="pub_footer_new">
         <dl>
             <dt></dt>
@@ -1845,7 +1847,7 @@
                     src="../../statics/gif/gongshang_logos.gif" alt="GongshangLogo" title=""></a></dd>
         </dl>
     </div>
-</div>
+</div>--%>
 <script id="noticeScript" type="text/javascript" btnid="header_notice_num" wrapid="note1" count="5" subcount="5"
         src="../../statics/js/notify.js"></script>
 <input type="hidden" id="aa_g_data_ids">
