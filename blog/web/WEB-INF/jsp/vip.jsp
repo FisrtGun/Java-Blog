@@ -211,7 +211,8 @@
             <a href="https://download.csdn.net/rankings">排行榜</a>
             <!-- <a href="https://download.csdn.net/help" >帮助</a> -->
             <!--<a href="https://download.csdn.net/advanced_search" >高级搜索</a>  -->
-            <a class=" current" href="https://download.csdn.net/vip_code">VIP</a>
+            <%--<a class=" current" href="https://download.csdn.net/vip_code">VIP</a>--%>
+            <a class=" current" href="vip">VIP</a>
             <a href="https://download.csdn.net/my">我的资源</a>
             <a class=" " href="https://download.csdn.net/upload">上传资源赚积分</a>
 
