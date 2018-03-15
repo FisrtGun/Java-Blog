@@ -78,7 +78,8 @@ public class MainController {
 
     //去登录
     @RequestMapping("login")
-    public String login() {
+    public String login(HttpServletRequest req) {
+        req.getSession().setAttribute("error", false);
         return "login";
     }
 
@@ -96,7 +97,6 @@ public class MainController {
                 return "index";
             }
         } else {
-            System.out.println(12345678);
             req.getSession().setAttribute("error", true);
             return "login";
         }
@@ -112,7 +112,12 @@ public class MainController {
 
     //去iteye
     @RequestMapping("iteye")
-    public String iteye() {
+    public String iteye(HttpServletRequest req) {
+        if (null!=req.getSession().getAttribute("users")){
+            req.getSession().setAttribute("error", false);
+        }else {
+            req.getSession().setAttribute("error", true);
+        }
         return "iteye";
     }
 

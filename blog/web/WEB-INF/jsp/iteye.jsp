@@ -55,13 +55,41 @@ To change this template use File | Settings | File Templates.
         <!--浮标-->
         <script type="text/javascript" ads-src="js/f5dc464880f542e0a90f8990ac024e9d.js" src="http://creatim.qtmojo.cn/td/AllyesDeliver.min.js" charset="gbk"></script>
         <!--浮标-->
-        <div class="clearfix"><div id="user_nav">
+        <div class="clearfix"><div id="user_nav" style="display: inline-block">
 
-            <a href="/login" class="welcome" title="登录">您还未登录 !</a>
-            <a href="/login">登录</a>
-            <a href="/signup" class="nobg">注册</a>
+
             <!--<a href="http://passport.csdn.net/account/mobileregister?from=http://www.iteye.com">注册</a>-->
         </div>
+            <script type="text/javascript" >
+                var ll=${error};
+                var user_nav=document.getElementById("user_nav");
+                if(ll){
+                    user_nav.innerHTML="<a href=\"login\" class=\"welcome\" title=\"登录\">您还未登录 !</a>\n" +
+                        "            <a href=\"login\">登录</a>\n" +
+                        "            <a href=\"register\" class=\"nobg\">注册</a>";
+                }else {
+                    user_nav.innerHTML="<a href=\"http://linss0621.iteye.com\" title=\"查看我的博客首页\" class=\"welcome\">欢迎${users.uname}</a>\n" +
+                        "                <a id=\"notifications_count\" href=\"http://my.iteye.com/notifications\">0</a>\n" +
+                        "                <a href=\"http://my.iteye.com/messages\" title=\"发送站内短信\">收件箱</a>\n" +
+                        "                <a href=\"http://my.iteye.com\" title=\"我的应用首页\">我的应用</a>\n" +
+                        "                <div class=\"quick_menu\" style=\"left: 746px; display: none;\">\n" +
+                        "                    <a href=\"http://my.iteye.com/feed\" title=\"我关注的好友动态消息\">我的关注</a>\n" +
+                        "                    <a href=\"http://my.iteye.com/mygroup\" title=\"我加入的群组最新话题\">我的群组</a>\n" +
+                        "                    <a href=\"http://my.iteye.com/myresume\" title=\"我的个人简历\">我的简历</a>\n" +
+                        "                    <a href=\"http://my.iteye.com/admin/album\" title=\"我的个人简历\">我的相册</a>\n" +
+                        "                    <a href=\"http://my.iteye.com/admin/link\" title=\"我收藏的网络资源链接\">我的收藏</a>\n" +
+                        "                    <a href=\"http://my.iteye.com/admin/code\" title=\"我收藏的代码\">我的代码</a>\n" +
+                        "                    <a href=\"http://my.iteye.com/admin/weibo\" title=\"用微博发表简短的话题\">我的微博</a>\n" +
+                        "                </div>\n" +
+                        "                <a href=\"http://linss0621.iteye.com/admin\" title=\"管理我的博客\">我的博客</a>\n" +
+                        "                <a href=\"http://my.iteye.com/profile\" title=\"修改我的个人设置\">设置</a>\n" +
+                        "                <a href=\"/logout\" class=\"nobg\" onclick=\"var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'put'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'Gw6JbEH3wcDfxRQtwvD6sQm4lwXRdmBre3PsW+fF7p0='); f.appendChild(s);f.submit();return false;\">退出</a>";
+                }
+            </script>
+
+            </div>
+
+
         </div>
         <div class="clearfix">
             <div id="branding">
@@ -72,7 +100,7 @@ To change this template use File | Settings | File Templates.
             </div>
         </div>
     </div>
-    <div id="content" class="clearfix">
+    <div id="content" class="clearfix" style="display: inline-block;width: 950px">
         <div id="main">
             <div id="news">
 
