@@ -113,6 +113,7 @@
 </head>
 
 <body class="">
+<jsp:include page="common.jsp" flush="true"></jsp:include>
 <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
     <symbol id="icon-xiajiantou" viewBox="0 0 1024 1024">
         <path d="M328.208 346.062h368.494c20.393 0 36.887 16.366 36.887 36.757 0 9.484-3.637 18.056-9.483 24.55L541.873 650.522c-12.211 16.105-35.2 19.484-51.438 7.275-2.859-2.08-5.324-4.547-7.274-7.275L298.853 404.772c-12.08-16.106-8.83-39.225 7.404-51.306 6.626-5.066 14.289-7.404 21.95-7.404z"></path>
