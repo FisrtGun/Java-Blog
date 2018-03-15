@@ -157,8 +157,15 @@ public class MainController {
 
     //去vip
     @RequestMapping("vip")
-    public String vip() {
-        return "vip";
+    public String vip(HttpServletRequest req) {
+        if ( null !=req.getSession().getAttribute("users")){
+            return "vip";
+
+        }else{
+            return "login";
+        }
+
+        /*return "vip";*/
     }
 
     //去数据库
