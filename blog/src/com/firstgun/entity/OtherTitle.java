@@ -177,7 +177,7 @@ public class OtherTitle implements Serializable {
 
     @Override
     public String toString() {
-        return "NewsTitle{" +
+        return "OtherTitle{" +
                 "nid=" + nid +
                 ", ntitle='" + ntitle + '\'' +
                 ", nconten='" + nconten + '\'' +
