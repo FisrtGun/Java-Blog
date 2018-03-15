@@ -83,7 +83,7 @@ To change this template use File | Settings | File Templates.
                         "                </div>\n" +
                         "                <a href=\"http://linss0621.iteye.com/admin\" title=\"管理我的博客\">我的博客</a>\n" +
                         "                <a href=\"http://my.iteye.com/profile\" title=\"修改我的个人设置\">设置</a>\n" +
-                        "                <a href=\"/logout\" class=\"nobg\" onclick=\"var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'put'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'Gw6JbEH3wcDfxRQtwvD6sQm4lwXRdmBre3PsW+fF7p0='); f.appendChild(s);f.submit();return false;\">退出</a>";
+                        "                <a href=\"iteyeExist\" class=\"nobg\" onclick=\"var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'put'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'Gw6JbEH3wcDfxRQtwvD6sQm4lwXRdmBre3PsW+fF7p0='); f.appendChild(s);f.submit();return false;\">退出</a>";
                 }
             </script>
 

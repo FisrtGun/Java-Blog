@@ -120,6 +120,18 @@ public class MainController {
         }
         return "iteye";
     }
+    //iteye页面的退出功能
+    @RequestMapping("iteyeExist")
+    public String iteyeExist(HttpServletRequest req){
+        req.getSession().setAttribute("error", true);
+        req.getSession().invalidate();
+        if (null!=req.getSession().getAttribute("users")){
+            req.getSession().setAttribute("error", false);
+        }else {
+            req.getSession().setAttribute("error", true);
+        }
+        return "iteye";
+    }
 
     //去新文章
     @RequestMapping("/newstitle")
