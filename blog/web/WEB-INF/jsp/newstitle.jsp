@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <!-- saved from url=(0036)https://www.csdn.net/nav/newarticles -->
 <html lang="en" style=""
@@ -36,7 +36,8 @@
 </head>
 <body data-category="newarticles" data-host_type="www">
 <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;"></svg>
-<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
+<jsp:include page="common.jsp" flush="true"></jsp:include>
+<%--<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
     <div class="container row center-block ">
         <ul class="pull-left left-menu clearfix">
             <li><a href="#" title="CSDN首页" >
@@ -45,7 +46,7 @@
             <li><a href="#" class="toolbar_to_feed" title="博客">博客</a></li>
             <li><a href="#" title="学院">学院</a></li>
             <li><a href="#" title="下载" >下载</a></li>
-            <li><a href="# title="GitChat" >GitChat</a></li>
+            <li><a href="#" title="GitChat">GitChat</a></li>
             <li class="tb_is1090hide"><a href="#" title="论坛" >论坛</a></li>
             <li class="tb_is1150hide"><a href="#" title="问答" >问答</a></li>
             <li class="tb_is1210hide"><a href="#" title="商城" >商城</a></li>
@@ -113,7 +114,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div>--%>
 <div class="container clearfix">
     <nav id="nav" class="clearfix">
         <div class="clearfix">
@@ -178,7 +179,7 @@
             <div class="feed-fix-box">
                 <div class="scroll-fixbar clearfix csdn-tracking-statistics" data-mod="popu_463" data-dsm="post"
                      style="left: 0px; width: 760px;">
-                    <a class="txt txt-refrash-new" >您有新的推荐内容，点击查看</a>
+                    <a class="txt txt-refrash-new">您有新的推荐内容，点击查看</a>
                     <button class="btn btn-nobg-noborder btn-nobg-noborder btn-close-fixbar">
                         <i class="icon-close"></i>
                     </button>
@@ -191,24 +192,24 @@
                             <div class="title">
                                 <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
                                     data-feed-show="true" data-dsm="post">
-                                    <a strategy="newarticles" href="http://blog.csdn.net/nodeman/article/details/79523301"
-                                    >
+                                    <a strategy="newarticles" href="http://blog.csdn.net/nodeman/article/details/79523301">
                                             ${newsList.ntitle} </a>
                                 </h2>
                             </div>
                             <dl class="list_userbar">
                                 <dt>
-                                    <a href="http://blog.csdn.net/nodeman"  class="user_img">
+                                    <a href="http://blog.csdn.net/nodeman" class="user_img">
                                         <img src="../../statics/newsImages/1_nodeman.jpg" alt="nodeman" title="nodeman">
                                     </a>
                                 </dt>
                                 <dd class="name">
-                                    <a href="http://blog.csdn.net/nodeman" >
+                                    <a href="http://blog.csdn.net/nodeman">
                                             ${newsList.nauthor} </a>
                                 </dd>
                                 <dd class="time csdn-tracking-statistics tracking-click" data-poputype="feed"
                                     data-mod="popu_459">
-                                    <a strategy="newarticles" href="http://blog.csdn.net/nodeman/article/details/79523301"
+                                    <a strategy="newarticles"
+                                       href="http://blog.csdn.net/nodeman/article/details/79523301"
                                     >
                                         <fmt:formatDate value="${newsList.ncreateTime}" type="date" pattern="MM月dd日"/>
                                     </a>
@@ -245,29 +246,32 @@
                     <ul class="company_list">
                         <c:forEach items="${groom}" var="groom" varStatus="s">
                             <li>
-                                <div class="img_box"><a href="http://mp.weixin.qq.com/s/ds82pMExGu9qjwk9Mx5YEQ" target="_blank"><img src="${groom.npicture}" alt=""></a></div>
+                                <div class="img_box"><a href="http://mp.weixin.qq.com/s/ds82pMExGu9qjwk9Mx5YEQ"
+                                                        target="_blank"><img src="${groom.npicture}" alt=""></a></div>
                                 <div class="content">
-                                    <h3 class="company_name"><a href="http://mp.weixin.qq.com/s/ds82pMExGu9qjwk9Mx5YEQ"  target="_blank">${groom.ntitle}</a></h3>
+                                    <h3 class="company_name"><a href="http://mp.weixin.qq.com/s/ds82pMExGu9qjwk9Mx5YEQ"
+                                                                target="_blank">${groom.ntitle}</a></h3>
                                     <p class="txt oneline">${groom.nauthor}</p>
                                 </div>
                             </li>
                         </c:forEach>
                     </ul>
                     <div class="other_company clearfix">
-                        <a href="http://baidudeveloper.csdn.net/" >百度技术专区</a>
-                        <a href="http://intel.csdn.net/" >英特尔开发者专区</a>
-                        <a href="http://aws.csdn.net/" >AWS中文技术专区</a>
-                        <a href="http://powerlinux.csdn.net/" >PowerLinux技术社区</a>
-                        <a href="http://vuforia.csdn.net/" >Vuforia中文社区</a>
-                        <a href="http://primeton.csdn.net/" >普元云计算</a>
-                        <a href="http://huawei.csdn.net/" >华为云计算</a>
-                        <a href="http://g.csdn.net/5271587" >腾讯云技术社区</a>
+                        <a href="http://baidudeveloper.csdn.net/">百度技术专区</a>
+                        <a href="http://intel.csdn.net/">英特尔开发者专区</a>
+                        <a href="http://aws.csdn.net/">AWS中文技术专区</a>
+                        <a href="http://powerlinux.csdn.net/">PowerLinux技术社区</a>
+                        <a href="http://vuforia.csdn.net/">Vuforia中文社区</a>
+                        <a href="http://primeton.csdn.net/">普元云计算</a>
+                        <a href="http://huawei.csdn.net/">华为云计算</a>
+                        <a href="http://g.csdn.net/5271587">腾讯云技术社区</a>
                     </div>
                 </div>
             </div>
             <div class="right_box csdn-tracking-statistics" data-mod="popu_470" data-dsm="post">
-                <div class="feed_viewpoint" style="background-image: url(/newstitle/newsImages/viewpoint_bg.png)">
-                    <a href="http://blog.csdn.net/pk.html?id=10570" >
+                <div class="feed_viewpoint"
+                     style="background-image: url(../../statics/newsImages/633575ce3e5cdf77ff89a22e747b5bb3.jpg)">
+                    <a href="http://blog.csdn.net/pk.html?id=10570">
                         <img src="../../statics/newsImages/mod_viewpoint.png" class="viewpoint_img" alt="csdn_viewpoint"
                              title="csdn_viewpoint">
                         <h3>激光雷达与摄像头，未来哪种会成为自动驾驶的核心传感器呢？</h3>
@@ -288,11 +292,11 @@
                 <ul class="feed_new_arrlist">
                     <li class="clearfix">
                         <span class="arr"><i class="icon CSDN_iconfont Feed-arrowup"></i></span>
-                        <span class="txt"><a href="http://blog.csdn.net/pk.html?id=10568" >又到一年跳槽季，你更看重什么样的公司？</a></span>
+                        <span class="txt"><a href="http://blog.csdn.net/pk.html?id=10568">又到一年跳槽季，你更看重什么样的公司？</a></span>
                     </li>
                     <li class="clearfix">
                         <span class="arr"><i class="icon CSDN_iconfont Feed-arrowup"></i></span>
-                        <span class="txt"><a href="http://blog.csdn.net/pk.html?id=10558" >基于手机SIM卡的一键登录身份验证将颠覆传统短信验证，你认同吗？</a></span>
+                        <span class="txt"><a href="http://blog.csdn.net/pk.html?id=10558">基于手机SIM卡的一键登录身份验证将颠覆传统短信验证，你认同吗？</a></span>
                     </li>
                 </ul>
             </div>
@@ -315,7 +319,7 @@
                             </svg>
                         </a>
                     </div>
-                    <a href="http://www.programmer.com.cn/" class="how_to" >我要订阅</a>
+                    <a href="http://www.programmer.com.cn/" class="how_to">我要订阅</a>
                 </h3>
                 <div class="carousel_magazine_box slide" id="magzCarousel" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
@@ -323,7 +327,8 @@
                             <div class="img_box">
                                 <a href="http://gitbook.cn/gitchat/geekbook/5a3c7879902f0f2223e2526d?utm_source=sy18030802"
                                 >
-                                    <img src="../../statics/newsImages/09a514f3769fffdc701c64cf58b74e6a.png" alt="AI 工程师职业指南【限时特惠中】">
+                                    <img src="../../statics/newsImages/09a514f3769fffdc701c64cf58b74e6a.png"
+                                         alt="AI 工程师职业指南【限时特惠中】">
                                 </a>
                             </div>
                             <div class="content">
@@ -337,7 +342,8 @@
                             <div class="img_box">
                                 <a href="http://gitbook.cn/gitchat/geekbook/5a5c5e6a2be8c361148234e6?utm_source=sy18030102"
                                 >
-                                    <img src="../../statics/newsImages/e1dfe3f73feaf3884fa39c99d412c587.png" alt="人工智能学术前沿">
+                                    <img src="../../statics/newsImages/e1dfe3f73feaf3884fa39c99d412c587.png"
+                                         alt="人工智能学术前沿">
                                 </a>
                             </div>
                             <div class="content">
@@ -351,7 +357,8 @@
                             <div class="img_box">
                                 <a href="http://gitbook.cn/gitchat/geekbook/5a5eb07bdff55721bc1dcaee?utm_source=sy18030101"
                                 >
-                                    <img src="../../statics/newsImages/bd25fdc660dd7173d7619b5141c852fc.png" alt="深入浅出区块链">
+                                    <img src="../../statics/newsImages/bd25fdc660dd7173d7619b5141c852fc.png"
+                                         alt="深入浅出区块链">
                                 </a>
                             </div>
                             <div class="content">
@@ -455,7 +462,7 @@
                                         <path d="M2.167 2h11.666C14.478 2 15 2.576 15 3.286v9.428c0 .71-.522 1.286-1.167 1.286H2.167C1.522 14 1 13.424 1 12.714V3.286C1 2.576 1.522 2 2.167 2zm-.164 3v1L8 10l6-4V5L8 9 2.003 5z"
                                               fill="#B3B3B3" fill-rule="evenodd"></path>
                                     </svg>
-                                    <a href="mailto:webmaster@csdn.net" ><span class="txt">webmaster@csdn.net</span></a>
+                                    <a href="mailto:webmaster@csdn.net"><span class="txt">webmaster@csdn.net</span></a>
                                 </p>
                                 <p>
                                     <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
@@ -474,7 +481,7 @@
                                         <path d="M7.325 13.965a6.5 6.5 0 1 1 7.175-6.4C14.467 11.677 11.346 15 7.5 15c-.514 0-1.015-.06-1.498-.172.488-.178.922-.48 1.323-.863zM4 7.5a4 4 0 1 0 8 0 .5.5 0 1 0-1 0 3 3 0 1 1-6 0 .5.5 0 0 0-1 0z"
                                               fill="#B3B3B3" fill-rule="evenodd"></path>
                                     </svg>
-                                    <a href="http://bbs.csdn.net/forums/Service" ><span
+                                    <a href="http://bbs.csdn.net/forums/Service"><span
                                             class="txt">客服论坛</span></a></p>
                             </div>
                         </div>
@@ -489,14 +496,14 @@
                                     <svg width="13" height="14" xmlns="http://www.w3.org/2000/svg"></svg>
                                     <em> 百度</em></a></p>
                                 <p class="fz12">©1999-2018 CSDN版权所有</p>
-                                <p class="fz12"><a href="http://www.miibeian.gov.cn/"  class="ml14">京ICP证09002463号</a>
+                                <p class="fz12"><a href="http://www.miibeian.gov.cn/" class="ml14">京ICP证09002463号</a>
                                 </p></div>
                             <div class="allow-info-box"><p><a
                                     href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202001032100010"
                             ><span>经营性网站备案信息</span></a></p>
-                                <p><a href="http://www.cyberpolice.cn/" ><span>网络110报警服务</span></a></p>
-                                <p><a href="http://www.12377.cn/" ><span>中国互联网举报中心</span></a></p>
-                                <p><a href="http://www.bjjubao.org/" ><span>北京互联网违法和不良信息举报中心</span></a>
+                                <p><a href="http://www.cyberpolice.cn/"><span>网络110报警服务</span></a></p>
+                                <p><a href="http://www.12377.cn/"><span>中国互联网举报中心</span></a></p>
+                                <p><a href="http://www.bjjubao.org/"><span>北京互联网违法和不良信息举报中心</span></a>
                                 </p></div>
                         </div>
                     </div>

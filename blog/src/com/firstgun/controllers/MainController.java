@@ -118,12 +118,12 @@ public class MainController {
 
     //去新文章
     @RequestMapping("/newstitle")
-    public String newstitle(Model model) {
-        List<NewsTitle> newsList = newsTitleService.getSelectNews();
-        model.addAttribute("newsList", newsList);
-        List<NewsTitle> groom = newsTitleService.getGroom();
-        model.addAttribute("groom", groom);
-        return "newstitle";
+        public String newstitle(Model model) {
+            List<NewsTitle> newsList = newsTitleService.getSelectNews();
+            model.addAttribute("newsList", newsList);
+            List<NewsTitle> groom = newsTitleService.getGroom();
+            model.addAttribute("groom", groom);
+            return "newstitle";
     }
     //去其他
     @RequestMapping("other")
@@ -157,8 +157,15 @@ public class MainController {
 
     //去vip
     @RequestMapping("vip")
-    public String vip() {
-        return "vip";
+    public String vip(HttpServletRequest req) {
+        if ( null !=req.getSession().getAttribute("users")){
+            return "vip";
+
+        }else{
+            return "redirect:login";
+        }
+
+        /*return "vip";*/
     }
 
     //去数据库
