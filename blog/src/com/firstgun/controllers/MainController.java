@@ -162,8 +162,15 @@ public class MainController {
 
     //去vip
     @RequestMapping("vip")
-    public String vip() {
-        return "vip";
+    public String vip(HttpServletRequest req) {
+        if ( null !=req.getSession().getAttribute("users")){
+            return "vip";
+
+        }else{
+            return "redirect:login";
+        }
+
+        /*return "vip";*/
     }
 
     //去数据库
@@ -189,7 +196,7 @@ public class MainController {
     public String specialist() {
         return "otherPage/specialist";
     }
-    //去其他的专家页面/specialist
+    //跳转前端页面
     @RequestMapping("front")
     public String front() {
         return "front-end";
@@ -198,4 +205,8 @@ public class MainController {
     //去个人中心
     @RequestMapping("mycenter")
     public String myCenter(){return "mycenter";}
+
+    //跳转学院页面
+    @RequestMapping("study")
+    public String study(){return "study" ;}
 }

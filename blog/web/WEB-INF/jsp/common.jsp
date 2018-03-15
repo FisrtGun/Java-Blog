@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li><a href="//blog.csdn.net/" class="toolbar_to_feed" title="博客" target="_blank">博客</a></li>
-            <li><a href="//edu.csdn.net" title="学院" target="_blank">学院</a></li>
+            <li><a href="study" title="学院" target="_blank">学院</a></li>
             <li><a href="http://download.csdn.net" title="下载" target="_blank">下载</a></li>
             <li><a href="GitChat" title="GitChat" target="_blank">GitChat</a></li>
             <li class="tb_is1090hide"><a href="http://bbs.csdn.net" title="论坛" target="_blank">论坛</a></li>

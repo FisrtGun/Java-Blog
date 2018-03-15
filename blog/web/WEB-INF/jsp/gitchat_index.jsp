@@ -152,23 +152,23 @@
 <body>
 <div style="height:70px;position:fixed;top:0px;left:0px;right:0px;padding-top: 20px;        padding-bottom:10px;background-color: #ffffff;border-bottom: solid 1px #f0f0f0;z-index:1"
      class="hidden-xs">
-    <div style="display: inline-block;float:left;margin-top: -6px;margin-left: 30px;"><a href=""><img
+    <div style="display: inline-block;float:left;margin-top: -6px;margin-left: 30px;"><a href="javascript:void(0)"><img
             style="width: 50px;vertical-align: top" src="../../statics/picture/gitchat/logo.png"></a></div>
     <div style="display: inline-block;float: left;margin-top: 37px;max-width: 800px;">
         <div style="display: inline-block;float: left;margin-left: 20px;width: 80px;height: 42px;margin-top: -29px;                border-bottom: 4px solid #646464;text-align: center;font-size: 16px;">
-            <a href="" style="color:#444444">首页</a></div>
+            <a href="javascript:void(0)" style="color:#444444">首页</a></div>
         <div style="display: inline-block;float: left;margin-left: 20px;width: 80px;height: 42px;margin-top: -29px;                        text-align: center;font-size: 16px;color: #646464">
-            <a href="">热门 Chat</a></div>
+            <a href="javascript:void(0)">热门 Chat</a></div>
         <div style="display: inline-block;float: left;margin-left: 20px;width: 80px;height: 42px;margin-top: -29px;                        text-align: center;font-size: 16px;color: #646464">
-            <a href="">达人课</a></div>
+            <a href="javascript:void(0)">达人课</a></div>
         <div style="display: inline-block;float: left;margin-left: 20px;width: 80px;height: 42px;margin-top: -29px;                        text-align: center;font-size: 16px;color: #646464">
-            <a href="">专 题</a></div>
+            <a href="javascript:void(0)">专 题</a></div>
         <div style="display: inline-block;float: left;margin-left: 20px;width: 80px;height: 42px;margin-top: -29px;                text-align: center;font-size: 16px;">
-            <a href="">极客书</a></div>
+            <a href="javascript:void(0)">极客书</a></div>
         <div style="display: inline-block;float: left;margin-left: 20px;width: 80px;height: 42px;margin-top: -29px;                text-align: center;font-size: 16px;">
-            <a href="">人才</a></div>
+            <a href="javascript:void(0)">人才</a></div>
         <div style="display: inline-block;float: left;margin-left: 20px;width: 80px;height: 42px;margin-top: -29px;                        text-align: center;font-size: 16px;">
-            <a href="">会 员</a></div>
+            <a href="javascript:void(0)">会 员</a></div>
         <!--div#aboutusNav(style='display: inline-block;float: left;margin-left: 20px;width: 90px;height: 42px;margin-top: -29px;\-->
         <!--        text-align: center;font-size: 16px;color: #646464')-->
         <!--        a#aboutusLink(href='/aboutus') 关于我们-->
@@ -197,7 +197,7 @@
         <!--                                        border: 1px solid #d1d1d1;-webkit-border-radius: 25px;margin-right: 10px;', href='javascript:void(0) return false;', role='button')-->
         <!--        | 发布Chat--><!--else--><a
             style="display:inline-block;height:35px;color: #5f6f81;float:right;font-size:14px;                                                border: 1px solid #d1d1d1;-webkit-border-radius: 25px;margin-right: 10px;"
-            href="" role="button" class="hidden-xs btn btn-default">发布Chat</a></div>
+            href="javascript:void(0)" role="button" class="hidden-xs btn btn-default">发布Chat</a></div>
 </div>
 <div id="thumbClickMenuDIV"
      style="position: fixed;top: 70px;right: 10px;font-size: 14pt;width: 160px;display: none;z-index: 1;">
@@ -357,31 +357,31 @@ headroom.init();</script>
                 window.location.href = $(this).attr('aid') + '';
             });</script>
             <div data-step="3" data-intro="加入GitChat作者群，认识更多朋友。" style="margin-top:25px;"><a
-                    href="" class="recommedAuthor"><img
+                    href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/6f1d56e5109544d0a8af38bff1ec7797.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">孙亖</div>
-            </a><a href="" class="recommedAuthor"><img
+            </a><a href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/4c618bba8b4a4091bec5a181fa9723e0.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">肃肃其羽</div>
-            </a><a href="" class="recommedAuthor"><img
+            </a><a href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/111a9e862b56469d98f9e1838b3ebd46.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">王俊生</div>
-            </a><a href="" class="recommedAuthor"><img
+            </a><a href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/efcce6af3390443abfffaa09dbc24b53.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">刘盼</div>
-            </a><a href="" class="recommedAuthor"><img
+            </a><a href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/4b10098221c94ac99277fdebc127deb7.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">100offer</div>
-            </a><a href="" class="recommedAuthor"><img
+            </a><a href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/060a824d699c4cb1812ccdf42b32e8f6.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">阿福</div>
-            </a><a href="" class="recommedAuthor"><img
+            </a><a href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/02252f0c4cff463a933c0a50e0864556.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">宋璐</div>
-            </a><a href="" class="recommedAuthor"><img
+            </a><a href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/e22c25519df441a2b28f9b4d87ae0e32.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">加兴</div>
-            </a><a href="" class="moreHotAuthor"><span>更多推荐作者</span><span
+            </a><a href="javascript:void(0)" class="moreHotAuthor"><span>更多推荐作者</span><span
                     style="font-size:12px;margin-left: -5px;" class="icon2 lnr-chevron-right"></span></a></div>
         </div>
         <div style="border:0;margin-top:10px;padding:0 25px 0 25px;" class="mazi-activity-container item-container">
@@ -392,20 +392,20 @@ headroom.init();</script>
                     style="margin-right:10px;display: inline-block;">换一换</span></a></div>
             <div style="border-bottom: 1px solid #f5f5f5;"></div>
             <div id="homeColumns" style="display: flex;margin-top: 1px;"><a
-                    href="" class="book">
+                    href="javascript:void(0)" class="book">
                 <div class="cover"><img src="../../statics/picture/gitchat/10c86a4b518845a48d184edd55655e9f.gif"></div>
                 <div class="name">Angular 小专题：玩转注射器</div>
                 <div class="author">大漠穷秋</div>
                 <div class="price">¥ 9.99</div>
                 <div class="intros">共 9 课时</div>
-            </a><a style="margin-left:8px;margin-right:8px;" href=""
+            </a><a style="margin-left:8px;margin-right:8px;" href="javascript:void(0)"
                    class="book">
                 <div class="cover"><img src="../../statics/picture/gitchat/8fd704a866994f34ab12175085ee3428.gif"></div>
                 <div class="name">Django Web 开发极简实战</div>
                 <div class="author">杨健</div>
                 <div class="price">¥ 9.99</div>
                 <div class="intros">共 9 课时</div>
-            </a><a href="" class="book">
+            </a><a href="javascript:void(0)" class="book">
                 <div class="cover"><img src="../../statics/picture/gitchat/e7859936361747e29561149b6fcbf27a.gif"></div>
                 <div class="name">编程语言底层之系统和并发</div>
                 <div class="author">李永京</div>
@@ -415,18 +415,18 @@ headroom.init();</script>
                 <div class="intros">共 13 课时</div>
             </a></div>
         </div>
-        <a href="">
+        <a href="javascript:void(0)">
             <div style="background-color:#fff;font-weight:500;line-height:40px;text-align:center;margin-top:-10px;">
                 <span>查看全部课程</span></div>
         </a>
         <div id="chatItemContainer" style="border:0;margin-top:10px;padding:0 25px 0 25px;"
              class="mazi-activity-container item-container">
             <div style="font-size: 16px;color:#555;line-height: 50px;font-weight:500;"><span
-                    style="color: #c93;margin-right:10px;">最热</span><a href=""><span
-                    style="margin-right:10px;">最新</span></a><a href=""><span>免费</span></a></div>
+                    style="color: #c93;margin-right:10px;">最热</span><a href="javascript:void(0)"><span
+                    style="margin-right:10px;">最新</span></a><a href="javascript:void(0)"><span>免费</span></a></div>
             <div style="border-bottom: 1px solid #f5f5f5;"></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/dee501563d504ba4ba84b2a384ab551f.gif" class="item-author-thumbV2">
@@ -439,13 +439,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">60</span></div>
-                        <a href="" class="textTag category">人工智能</a>
+                        <a href="javascript:void(0)" class="textTag category">人工智能</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/b47163deedfa4114952f5ac1a601aa61.gif" class="item-author-thumbV2"><img
@@ -459,13 +459,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">187</span></div>
-                        <a href="" class="textTag category">架构</a>
+                        <a href="javascript:void(0)" class="textTag category">架构</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/37a638a28efc4dc1a4f71e52337e5b07.gif" class="item-author-thumbV2"><img
@@ -479,13 +479,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">272</span></div>
-                        <a href="" class="textTag category">职场</a>
+                        <a href="javascript:void(0)" class="textTag category">职场</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                         <span style="color:#c9a063;" class="icon2 lnr-clock">本周四 20:30</span></div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/080ba433547e4fc7a5fa9503e7ec9e5c.gif" class="item-author-thumbV2">
@@ -498,14 +498,14 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">122</span></div>
-                        <a href="" class="textTag category">移动开发</a>
+                        <a href="javascript:void(0)" class="textTag category">移动开发</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                         <div style="background-color: #c9a063;color:#ffffff;" class="textTag">免费</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/b47163deedfa4114952f5ac1a601aa61.gif" class="item-author-thumbV2"><img
@@ -519,13 +519,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">176</span></div>
-                        <a href="" class="textTag category">架构</a>
+                        <a href="javascript:void(0)" class="textTag category">架构</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/742df82884ea48febfa46c388114b8b2.gif" class="item-author-thumbV2">
@@ -538,13 +538,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">74</span></div>
-                        <a href="" class="textTag category">编程语言</a>
+                        <a href="javascript:void(0)" class="textTag category">编程语言</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/c9b8f7c6e9cd4b8bbcf4a9d8b74ca72a.gif" class="item-author-thumbV2"><img
@@ -558,13 +558,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">124</span></div>
-                        <a href="" class="textTag category">架构</a>
+                        <a href="javascript:void(0)" class="textTag category">架构</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/111a9e862b56469d98f9e1838b3ebd46.gif" class="item-author-thumbV2"><img
@@ -578,13 +578,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">63</span></div>
-                        <a href="" class="textTag category">开源软件</a>
+                        <a href="javascript:void(0)" class="textTag category">开源软件</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/54d65efa59d14319b2c4c200cdedd93e.gif" class="item-author-thumbV2"><img
@@ -598,13 +598,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">168</span></div>
-                        <a href="" class="textTag category">人工智能</a>
+                        <a href="javascript:void(0)" class="textTag category">人工智能</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/df1c0c244aee41669b78cc0aaaa99e9b.gif" class="item-author-thumbV2">
@@ -617,14 +617,14 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">106</span></div>
-                        <a href="" class="textTag category">职场</a>
+                        <a href="javascript:void(0)" class="textTag category">职场</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                         <div style="background-color: #c9a063;color:#ffffff;" class="textTag">免费</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/bd1998b2d8af4143a2ca58d1f5e60d9f.gif" class="item-author-thumbV2"><img
@@ -638,13 +638,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">166</span></div>
-                        <a href="" class="textTag category">敏捷</a>
+                        <a href="javascript:void(0)" class="textTag category">敏捷</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                         <span style="color:#c9a063;" class="icon2 lnr-clock">下周一 20:30</span></div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/26bd7100e6f94d0896929ea6c140d1ed.gif" class="item-author-thumbV2"><img
@@ -658,13 +658,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">96</span></div>
-                        <a href="" class="textTag category">架构</a>
+                        <a href="javascript:void(0)" class="textTag category">架构</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/dcd817a4b7be41d69043165433c49708.gif" class="item-author-thumbV2">
@@ -677,13 +677,13 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">170</span></div>
-                        <a href="" class="textTag category">移动开发</a>
+                        <a href="javascript:void(0)" class="textTag category">移动开发</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                         <span style="color:#c9a063;" class="icon2 lnr-clock">下周二 20:30</span></div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/52095bef9dc047e0821b3e8df2567669.gif" class="item-author-thumbV2">
@@ -696,14 +696,14 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">164</span></div>
-                        <a href="" class="textTag category">敏捷</a>
+                        <a href="javascript:void(0)" class="textTag category">敏捷</a>
                         <div style=";background-color: #c9a063;color:#ffffff;" class="textTag">买一赠一</div>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/f993bfc4f82848ba81ae55aac612f546.gif" class="item-author-thumbV2">
@@ -716,14 +716,14 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">143</span></div>
-                        <a href="" class="textTag category">架构</a>
+                        <a href="javascript:void(0)" class="textTag category">架构</a>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                         <div style="background-color: #c9a063;color:#ffffff;" class="textTag">免费</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/2d62648bf2d04bdeb7493112f2a8c5ad.gif" class="item-author-thumbV2">
@@ -736,7 +736,7 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">137</span></div>
-                        <a href="" class="textTag category">大数据</a>
+                        <a href="javascript:void(0)" class="textTag category">大数据</a>
                         <div style=";background-color: #c9a063;color:#ffffff;" class="textTag">买一赠一</div>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                         <div style="background-color: #c9a063;color:#ffffff;" class="textTag">免费</div>
@@ -744,7 +744,7 @@ headroom.init();</script>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/c070e5d782cf43e38556633c0906d515.gif" class="item-author-thumbV2">
@@ -757,14 +757,14 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">119</span></div>
-                        <a href="" class="textTag category">区块链</a>
+                        <a href="javascript:void(0)" class="textTag category">区块链</a>
                         <div style=";background-color: #c9a063;color:#ffffff;" class="textTag">买一赠一</div>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
             </a></div>
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
-                    href="">
+                    href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
                             src="../../statics/picture/gitchat/19852a3768e94fc9b5c2fec5210aec5a.gif" class="item-author-thumbV2">
@@ -777,7 +777,7 @@ headroom.init();</script>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
                                 class="text">99</span></div>
-                        <a href="" class="textTag category">编程语言</a>
+                        <a href="javascript:void(0)" class="textTag category">编程语言</a>
                         <div style=";background-color: #c9a063;color:#ffffff;" class="textTag">买一赠一</div>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
