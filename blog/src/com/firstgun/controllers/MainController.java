@@ -162,7 +162,7 @@ public class MainController {
             return "vip";
 
         }else{
-            return "login";
+            return "redirect:login";
         }
 
         /*return "vip";*/
