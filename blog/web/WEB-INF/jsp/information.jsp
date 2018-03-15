@@ -27,7 +27,8 @@
     <link rel="stylesheet" type="text/css" href="../../statics/css/goTop.min.css">
 </head>
 <body data-category="news" data-host_type="www">
-<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
+<jsp:include page="common.jsp" flush="true"></jsp:include>
+<!--<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
     <div class="container row center-block ">
         <ul class="pull-left left-menu clearfix">
             <li><a href="javascript:void(0);" title="首页" target="_blank">
@@ -70,7 +71,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div>-->
 <div class="container clearfix">
     <nav id="nav" class="clearfix">
         <div class="clearfix">
