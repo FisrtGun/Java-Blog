@@ -189,4 +189,8 @@ public class MainController {
     public String front() {
         return "front-end";
     }
+
+    //去个人中心
+    @RequestMapping("mycenter")
+    public String myCenter(){return "mycenter";}
 }

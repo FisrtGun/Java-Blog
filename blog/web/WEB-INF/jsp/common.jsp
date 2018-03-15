@@ -82,7 +82,7 @@
                 <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1" target="_blank"><i class="iconfont-toolbar "></i><span>发Chat</span></a></li>
                 <li class="userinfo"><a href="login">登录</a><span></span><a href="register">注册</a></li>
                 <li class="userLogin">
-                    <div class="loginCenter"><a href=""><img class="login_img" src="../../statics/${users.upicture}"><div class="toolbar-circle"></div></a></div>
+                    <div class="loginCenter"><a href="mycenter"><img class="login_img" src="../../statics/${users.upicture}"><div class="toolbar-circle"></div></a></div>
                 <div><a href="/mainController/exist" >退出</a></div>
                 </li>
             </ul>
