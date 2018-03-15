@@ -45,7 +45,9 @@ public class MainController {
 
     //去注册
     @RequestMapping("register")
-    public String register() {
+
+    public String register(HttpServletRequest req) {
+        req.getSession().setAttribute("error", false);
         return "register";
     }
 

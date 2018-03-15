@@ -105,6 +105,7 @@ To change this template use File | Settings | File Templates.
                             $(document).ready(function () {
                                 $("#uname").focus(function () {
                                     $("#errorName").css("display", "none");
+                                    $("#errormess").css("display", "none");
                                 })
                                 $("#uname").blur(function () {
                                     var uname = $("#uname").val();
@@ -121,6 +122,7 @@ To change this template use File | Settings | File Templates.
                                 })
                                 $("#upwd").focus(function () {
                                     $("#errorPwd").css("display", "none");
+                                    $("#errormess").css("display", "none");
                                 })
                             })
                         </script>
