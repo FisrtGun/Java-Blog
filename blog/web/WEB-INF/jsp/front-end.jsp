@@ -1,3 +1,11 @@
+<%--
+Created by IntelliJ IDEA.
+User: Administrator
+Date: 2018年3月9日,0009
+Time: 21:58
+To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <!-- saved from url=(0028)https://www.csdn.net/nav/web -->
 <html lang="en" style=""
@@ -236,8 +244,7 @@
     </div>
 </div>-->
 <script class="toolbar-s" type="text/javascript" src="../../statics/js/iconfont.js"></script>
-<script id="toolbar-tpl-scriptId" prod="download" skin="black" src="../../statics/js/content_toolbar.js"
-        type="text/javascript" domain="http://blog.csdn.net"></script>
+<jsp:include page="common.jsp" flush="true"></jsp:include>
 <div class="container clearfix">
     <nav id="nav" class="clearfix">
         <div class="clearfix">

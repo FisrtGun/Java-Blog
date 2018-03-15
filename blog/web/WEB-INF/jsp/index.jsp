@@ -48,7 +48,7 @@ To change this template use File | Settings | File Templates.
                     <li class=""><a href="/nav/career">程序人生</a></li>
                     <li class=""><a href="/nav/game">游戏开发</a></li>
                     <li class=""><a href="/nav/engineering">研发管理</a></li>
-                    <li class=""><a href="front-end">前端</a></li>
+                    <li class=""><a href="front">前端</a></li>
                     <li class=""><a href="/nav/mobile">移动开发</a></li>
                     <li class=""><a href="/nav/iot">物联网</a></li>
                     <li class=""><a href="/nav/ops">运维</a></li>

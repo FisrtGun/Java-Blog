@@ -44,8 +44,8 @@
     <!--<script src="./dbcss/get_ads.php" type="text/javascript"></script>-->
 </head>
 <body data-category="db" data-host_type="www">
-
-<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
+<jsp:include page="common.jsp" flush="true"></jsp:include>
+<%--<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
     <div class="container row center-block ">
         <ul class="pull-left left-menu clearfix">
             <li><a href="https://www.csdn.net/" title="CSDN首页" target="_blank">
@@ -122,7 +122,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div>--%>
 <!--<script class="toolbar-s" type="text/javascript" src="./dbjs/iconfont.js"></script>
 <script id="toolbar-tpl-scriptId" prod="download" skin="black" src="./dbjs/content_toolbar.js"
         type="text/javascript" domain="http://blog.csdn.net"></script>-->

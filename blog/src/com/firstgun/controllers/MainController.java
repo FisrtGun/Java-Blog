@@ -1,8 +1,10 @@
 package com.firstgun.controllers;
 
 import com.firstgun.entity.NewsTitle;
+import com.firstgun.entity.OtherTitle;
 import com.firstgun.entity.User;
 import com.firstgun.service.NewsTitleService;
+import com.firstgun.service.OtherTitleService;
 import com.firstgun.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +26,8 @@ public class MainController {
     private UserService userService;
     @Resource
     private NewsTitleService newsTitleService;
+    @Resource
+    private OtherTitleService otherTitleService;
 
     //去首页
     @RequestMapping("index")
@@ -121,6 +125,17 @@ public class MainController {
         model.addAttribute("groom", groom);
         return "newstitle";
     }
+    //去其他
+    @RequestMapping("other")
+    public String other(Model model) {
+        List<OtherTitle> otherList = otherTitleService.getSelectOther();
+        System.out.println(otherList);
+        model.addAttribute("otherList", otherList);
+        List<OtherTitle> groom = otherTitleService.getGroom();
+        System.out.println(groom);
+        model.addAttribute("groom", groom);
+        return "other";
+    }
 
     //去资讯
     @RequestMapping("/information")
@@ -158,12 +173,6 @@ public class MainController {
         return "dbsub";
     }
 
-    //去其他
-    @RequestMapping("other")
-    public String other() {
-        return "other";
-    }
-
     //去其他的Amazon/亚马逊
     @RequestMapping("Amazon")
     public String Amazon() {
@@ -174,5 +183,10 @@ public class MainController {
     @RequestMapping("specialist")
     public String specialist() {
         return "otherPage/specialist";
+    }
+    //去其他的专家页面/specialist
+    @RequestMapping("front")
+    public String front() {
+        return "front-end";
     }
 }
