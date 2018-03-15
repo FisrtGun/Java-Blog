@@ -113,7 +113,7 @@ To change this template use File | Settings | File Templates.
 
                                     <div id="top_pictures">
                                         <div class="dis" id="top_picture_image_0" style="">
-                                            <a href="http://download.csdn.net/album" target="_blank" title="下载精品专辑"><img alt="下载专辑" src="../../statics/ITeyeImages/下载专辑.jpg" /></a>
+                                            <a href="http://download.csdn.net/album" target="_blank" title="下载精品专辑"><img alt="下载专辑" src="../../statics/images/fg.png" /></a>
                                         </div>
                                     </div>
                                     <table id="font_hd" cellspacing="0" cellpadding="0">

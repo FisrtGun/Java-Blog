@@ -130,8 +130,8 @@
              data-requiremodule="apps/checkErrMess" src="../../statics/myCenterJs/checkErrMess.js"></script>-->
 </head>
 <body style="zoom: 1;">
-
-<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
+<jsp:include page="common.jsp" flush="true"></jsp:include>
+<%--<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
     <div class="container row center-block ">
         <ul class="pull-left left-menu clearfix">
             <li><a href="https://www.csdn.net/" title="3月14日 π Day" target="_blank"><img
@@ -209,7 +209,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div>--%>
 <script class="toolbar-s" type="text/javascript" src="../../statics/myCenterJs/iconfont.js."></script>
 <script id="toolbar-tpl-scriptId" skin="black" fixed="true" prod="my" src="../../statics/myCenterJs/content_toolbar.js"
         type="text/javascript"></script>
