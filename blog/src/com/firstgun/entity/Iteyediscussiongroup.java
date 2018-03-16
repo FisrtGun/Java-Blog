@@ -16,6 +16,8 @@ public class Iteyediscussiongroup implements Serializable {
     private int gid;
     //组名
     private String gname;
+    //组员人数
+    private int gnum;
     //讨论的话题
     private String gtopic;
     //创建时间
@@ -39,6 +41,14 @@ public class Iteyediscussiongroup implements Serializable {
 
     public void setGname(String gname) {
         this.gname = gname;
+    }
+
+    public int getGnum() {
+        return gnum;
+    }
+
+    public void setGnum(int gnum) {
+        this.gnum = gnum;
     }
 
     public String getGtopic() {
@@ -78,6 +88,7 @@ public class Iteyediscussiongroup implements Serializable {
         return "Iteyediscussiongroup{" +
                 "gid=" + gid +
                 ", gname='" + gname + '\'' +
+                ", gnum=" + gnum +
                 ", gtopic='" + gtopic + '\'' +
                 ", gcreateTime='" + gcreateTime + '\'' +
                 ", nview=" + nview +

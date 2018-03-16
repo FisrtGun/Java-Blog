@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.firstgun.dao.IteyeDiscussionGroupMapper">
+    <!-- 根据回复的事件排序获取群主讨论的全部数据 -->
+    <select id="getIteyediscussiongroup" resultType="Iteyediscussiongroup">
+        SELECT * FROM `iteyeDiscussionGroup` ORDER BY gRecoveryTime limit 0,7;
+    </select>
+</mapper>
+
