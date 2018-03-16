@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -116,6 +117,23 @@ public class MainController {
             req.getSession().setAttribute("error", true);
             return "register";
         }
+    }
+    //判断注册的账户是否能用
+    @RequestMapping("checkRegister")
+    @ResponseBody//必须加入的注解
+    public int checkRegister(HttpServletRequest req){
+        System.out.println(11111);
+        String uname=req.getParameter("uname");
+        System.out.println(uname);
+        List<User> list=userService.findAll();
+        System.out.println(list);
+        int flag=2;
+        for (int i = 0; i < list.size(); i++) {
+            if (uname.equalsIgnoreCase(list.get(i).getUname())){;
+            flag=1;
+            }
+        }
+        return flag;
     }
 
     //去登录
