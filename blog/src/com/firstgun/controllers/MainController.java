@@ -45,6 +45,10 @@ public class MainController {
     //iteye的资讯模块服务层
     private IteyeInformationService iteyeInformationService;
 
+    @Resource
+    //数据库页面的服务层
+    private DbService dbService;
+
 
     //去首页
     @RequestMapping("index")
@@ -275,7 +279,22 @@ public class MainController {
 
     //去数据库
     @RequestMapping("db")
-    public String db() {
+    public String db(Model model, @RequestParam(value = "index",required = false)String index) {
+        //分页查询功能
+        PageUtils pageUtils = new PageUtils();
+        if (index == null || index =="") {
+            index = "1";
+        }
+        int indexs=Integer.parseInt(index);
+        pageUtils.setIndex(indexs);
+        pageUtils.setPageSize(2);
+        pageUtils.setPageCount(dbService.getTotalCount());
+        pageUtils.getPageCount();
+        List<NewsTitle> newsList = dbService.getSelectNews(pageUtils.getIndex(),pageUtils.getPageSize());
+        model.addAttribute("pageUtils",pageUtils);
+        model.addAttribute("newsList",newsList);
+        List<NewsTitle> groom = dbService.getGroom();
+        model.addAttribute("groom",groom);
         return "db";
     }
 
