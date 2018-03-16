@@ -1,14 +1,12 @@
 package com.firstgun.controllers;
 
-import com.firstgun.entity.NewsTitle;
-import com.firstgun.entity.OtherTitle;
-import com.firstgun.entity.User;
-import com.firstgun.service.NewsTitleService;
-import com.firstgun.service.OtherTitleService;
-import com.firstgun.service.UserService;
+import com.firstgun.entity.*;
+import com.firstgun.service.*;
+import com.firstgun.utils.PageUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -28,16 +26,30 @@ public class MainController {
     private NewsTitleService newsTitleService;
     @Resource
     private OtherTitleService otherTitleService;
+    @Resource
+    private CstoGeniusService cstoGeniusService;
+    @Resource
+    private LatestProjectService latestProjectService;
 
     //去首页
     @RequestMapping("index")
-    public String index(Model model) {
+    public String index(Model model, @RequestParam(value = "index",required = false)String index) {
+        //分页查询功能
+        PageUtils pageUtils = new PageUtils();
+        if (index == null || index =="") {
+            index = "1";
+        }
+        int indexs=Integer.parseInt(index);
+        pageUtils.setIndex(indexs);
+        pageUtils.setPageSize(2);
+        pageUtils.setPageCount(newsTitleService.newsCount());
+        pageUtils.getPageCount();
         //新闻标题
-        List<NewsTitle> newsList = newsTitleService.getSelectNews();
-        model.addAttribute("newsList", newsList);
+        List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(),pageUtils.getPageSize());
+        model.addAttribute("newsList",newsList);
         //今日推荐
         List<NewsTitle> groom = newsTitleService.getGroom();
-        model.addAttribute("groom", groom);
+        model.addAttribute("groom",groom);
         return "index";
     }
 
@@ -135,12 +147,23 @@ public class MainController {
 
     //去新文章
     @RequestMapping("/newstitle")
-        public String newstitle(Model model) {
-            List<NewsTitle> newsList = newsTitleService.getSelectNews();
-            model.addAttribute("newsList", newsList);
-            List<NewsTitle> groom = newsTitleService.getGroom();
-            model.addAttribute("groom", groom);
-            return "newstitle";
+    public String newstitle(Model model, @RequestParam(value = "index",required = false)String index){
+        //分页查询功能
+        PageUtils pageUtils = new PageUtils();
+        if (index == null || index =="") {
+            index = "1";
+        }
+        int indexs=Integer.parseInt(index);
+        pageUtils.setIndex(indexs);
+        pageUtils.setPageSize(2);
+        pageUtils.setPageCount(newsTitleService.newsCount());
+        pageUtils.getPageCount();
+        List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(),pageUtils.getPageSize());
+        model.addAttribute("pageUtils",pageUtils);
+        model.addAttribute("newsList",newsList);
+        List<NewsTitle> groom = newsTitleService.getGroom();
+        model.addAttribute("groom",groom);
+        return "newstitle";
     }
     //去其他
     @RequestMapping("other")
@@ -168,7 +191,51 @@ public class MainController {
 
     //去CSTO
     @RequestMapping("csto")
-    public String csto() {
+    public String csto(@RequestParam(value = "atype",required = false)String atype,Model model) {
+        int atypes=Integer.parseInt(atype);
+        List<CstoGenius> genius = null;
+        switch (atypes){
+            case 1 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 2 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 3 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 4 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 5 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 6 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 7 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 8 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 9 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 10 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 11 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+            case 12 :
+                genius = cstoGeniusService.genius(atypes);
+                break;
+        }
+
+        List<LatestProject> latest = latestProjectService.latest();
+        model.addAttribute("latest",latest);
+        model.addAttribute("genius",genius);
         return "csto";
     }
 

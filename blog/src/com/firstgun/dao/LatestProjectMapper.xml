@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.firstgun.dao.LatestProjectMapper">
+    <!--获取项目标题、作者头像、已竞标人数、预算、剩余天数、标签-->
+    <select id="latest" resultType="LatestProject">
+        SELECT ltitle,llogo,lcompetitive,lprogramBudget,lterm,ltab FROM latestProject ORDER BY lreleaseTime DESC limit 0,5;
+    </select>
+</mapper>
+ 

@@ -12,6 +12,7 @@ import java.util.List;
  */
 public interface NewsTitleService {
     public int insertNews(@Param("ntitle") String ntitle, @Param("nconten") String nconten, @Param("ntab") String ntab, @Param("narticle") String narticle);
-    public List<NewsTitle> getSelectNews();
+    public List<NewsTitle> getSelectNews(int index, int pageSize);
     public List<NewsTitle> getGroom();
+    public int newsCount();
 }

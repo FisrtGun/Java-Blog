@@ -24,12 +24,17 @@ public class NewsTitleServiceImpl implements NewsTitleService {
     }
 
     @Override
-    public List<NewsTitle> getSelectNews() {
-        return newsTitleMapper.getSelectNews();
+    public List<NewsTitle> getSelectNews(int index,int pageSize) {
+        return newsTitleMapper.getSelectNews((index-1)*pageSize,pageSize);
     }
 
     @Override
     public List<NewsTitle> getGroom() {
         return newsTitleMapper.getGroom();
+    }
+
+    @Override
+    public int newsCount() {
+        return newsTitleMapper.newsCount();
     }
 }
