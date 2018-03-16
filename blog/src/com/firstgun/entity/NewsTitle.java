@@ -18,7 +18,7 @@ public class NewsTitle implements Serializable {
     private String ntab;//标签
     private Date ncreateTime;//创建时间
     private int nreads;//阅读量
-    private int nimg;//图片地址
+    private String nimg;//图片地址
     private String narticle;//文章来源
     private int nfollower;//粉丝
     private int nlike;//喜欢
@@ -71,7 +71,6 @@ public class NewsTitle implements Serializable {
     }
 
     public Date getNcreateTime() {
-
         return ncreateTime;
     }
 
@@ -87,11 +86,11 @@ public class NewsTitle implements Serializable {
         this.nreads = nreads;
     }
 
-    public int getNimg() {
+    public String getNimg() {
         return nimg;
     }
 
-    public void setNimg(int nimg) {
+    public void setNimg(String nimg) {
         this.nimg = nimg;
     }
 
@@ -185,7 +184,7 @@ public class NewsTitle implements Serializable {
                 ", ntab='" + ntab + '\'' +
                 ", ncreateTime=" + ncreateTime +
                 ", nreads=" + nreads +
-                ", nimg=" + nimg +
+                ", nimg='" + nimg + '\'' +
                 ", narticle='" + narticle + '\'' +
                 ", nfollower=" + nfollower +
                 ", nlike=" + nlike +
