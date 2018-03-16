@@ -1,5 +1,7 @@
 package com.firstgun.entity;
 
+import org.springframework.stereotype.Repository;
+
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,6 +12,7 @@ import java.util.List;
  * @Date: 2018/3/13 17:22
  * @Description:个人博客主页数据表
  */
+@Repository
 public class NewsTitle implements Serializable {
     private int nid;
     private String ntitle;//新闻标题

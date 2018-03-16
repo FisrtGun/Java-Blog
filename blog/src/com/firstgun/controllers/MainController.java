@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,6 +31,8 @@ import java.util.List;
 @Controller
 @RequestMapping("mainController")
 public class MainController {
+    @Resource
+    private NewsTitle newsTitle;
     @Resource
     //用户服务层
     private UserService userService;
@@ -53,6 +58,7 @@ public class MainController {
     @RequestMapping("index")
     public String index(Model model, @RequestParam(value = "index", required = false) String index) {
         //分页查询功能
+        System.out.println(11111111);
         PageUtils pageUtils = new PageUtils();
         if (index == null || index == "") {
             index = "1";
@@ -325,9 +331,50 @@ public class MainController {
         return "study";
     }
 
-    //写博客
+    //去写博客
     @RequestMapping("writeblog")
-    public String writeblog() {
-        return "writeblog";
+    public String writeblog(HttpServletRequest req) {
+        if (null != req.getSession().getAttribute("users")) {
+            return "writeblog";
+        } else {
+            return "redirect:login";
+        }
+    }
+    //写博客
+    @RequestMapping("dowriteblog")
+    public String dowriteblog(HttpServletRequest req){
+        //后台获取时间
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH-mm-ss ");
+        Date date=new Date();
+        String strDate=simpleDateFormat.format(date);
+        User user= (User) req.getSession().getAttribute("users");
+
+        String nauthor=user.getUname();
+        String ntab= req.getParameter("selType");
+        String ntitle=req.getParameter("txtTitle");
+        String nconten=req.getParameter("textarea");
+        Date ncreateTime= null;
+        try {
+            ncreateTime = simpleDateFormat.parse(strDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String nimg="../../statics/"+user.getUpicture();
+
+        newsTitle.setNtitle(ntitle);
+        newsTitle.setNauthor(nauthor);
+        newsTitle.setNtab(ntab);
+        newsTitle.setNconten(nconten);
+        newsTitle.setNcreateTime(ncreateTime);
+        newsTitle.setNimg(nimg);
+
+        int num=newsTitleService.inserNews(newsTitle);
+        if (num>0){
+            return "mycenter";
+        }else {
+            return "writeblog";
+        }
+
+
     }
 }

@@ -78,7 +78,7 @@
                         <a href="//so.csdn.net/so/" target="_blank" class="btn-nobg-noborder btn-search"><i class="iconfont-toolbar toolbar-sousuo"></i></a>
                     </div>
                 </li>
-                <li class="write-bolg-btn csdn-tracking-statistics tracking-click" data-mod="popu_370"><a class="" href="http://mp.blog.csdn.net/postedit" target="_blank"><i class="iconfont-toolbar"></i><span>写博客</span></a></li>
+                <li class="write-bolg-btn csdn-tracking-statistics tracking-click" data-mod="popu_370"><a class="" href="writeblog" target="_blank"><i class="iconfont-toolbar"></i><span>写博客</span></a></li>
                 <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1" target="_blank"><i class="iconfont-toolbar "></i><span>发Chat</span></a></li>
                 <li class="userinfo"><a href="login">登录</a><span></span><a href="register">注册</a></li>
                 <li class="userLogin">
