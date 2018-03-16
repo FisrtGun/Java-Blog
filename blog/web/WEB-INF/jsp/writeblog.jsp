@@ -14,7 +14,7 @@
     <title>写文章-CSDN博客</title>
     <link rel="icon" href="http://csdnimg.cn/public/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="192x192" href="http://csdnimg.cn/public/favicon.ico">
-    <link href="http://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <link rel="shortcut icon" sizes="192x192" href="http://csdnimg.cn/public/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://csdnimg.cn/public/favicon.ico">
     <meta name="author" content="Benoit Schweblin">

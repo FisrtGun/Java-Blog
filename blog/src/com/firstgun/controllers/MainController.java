@@ -174,7 +174,7 @@ public class MainController {
 
     //iteye页面的退出功能
     @RequestMapping("iteyeExist")
-    public String iteyeExist(HttpServletRequest req) {
+    public String iteyeExist(HttpServletRequest req,Model model) {
         req.getSession().setAttribute("error", true);
         req.getSession().invalidate();
         if (null != req.getSession().getAttribute("users")) {
@@ -182,6 +182,16 @@ public class MainController {
         } else {
             req.getSession().setAttribute("error", true);
         }
+        //新闻标题
+        List<NewsTitle> newsList = newsTitleService.getSelectNews(1, 7);
+        model.addAttribute("newsList", newsList);
+        System.out.println(newsList);
+        //每日资讯
+        List<IteyeInformation> list = iteyeInformationService.getIteyeInformation();
+        model.addAttribute("list", list);
+        //群组讨论帖
+        List<Iteyediscussiongroup> grouplist = iteyediscussiongroupService.getIteyediscussiongroup();
+        model.addAttribute("grouplist", grouplist);
         return "iteye";
     }
 
