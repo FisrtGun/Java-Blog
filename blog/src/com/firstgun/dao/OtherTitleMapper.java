@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @Author:
  * @Date: 2018/3/13 17:34
- * @Description:个人博客主页dao层
+ * @Description:其他 主页dao层
  */
 public interface OtherTitleMapper {
     //插入数据

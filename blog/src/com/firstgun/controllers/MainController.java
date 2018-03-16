@@ -3,6 +3,14 @@ package com.firstgun.controllers;
 import com.firstgun.entity.*;
 import com.firstgun.service.*;
 import com.firstgun.utils.PageUtils;
+import com.firstgun.entity.IteyeInformation;
+import com.firstgun.entity.NewsTitle;
+import com.firstgun.entity.OtherTitle;
+import com.firstgun.entity.User;
+import com.firstgun.service.IteyeInformationService;
+import com.firstgun.service.NewsTitleService;
+import com.firstgun.service.OtherTitleService;
+import com.firstgun.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,15 +29,22 @@ import java.util.List;
 @RequestMapping("mainController")
 public class MainController {
     @Resource
+    //用户服务层
     private UserService userService;
     @Resource
+    //个人博客服务层
     private NewsTitleService newsTitleService;
     @Resource
+    //其他 主页服务层
     private OtherTitleService otherTitleService;
     @Resource
     private CstoGeniusService cstoGeniusService;
     @Resource
     private LatestProjectService latestProjectService;
+    @Resource
+    //iteye的资讯模块服务层
+    private IteyeInformationService iteyeInformationService;
+
 
     //去首页
     @RequestMapping("index")
@@ -124,12 +139,18 @@ public class MainController {
 
     //去iteye
     @RequestMapping("iteye")
-    public String iteye(HttpServletRequest req) {
+    public String iteye(HttpServletRequest req,Model model) {
         if (null!=req.getSession().getAttribute("users")){
             req.getSession().setAttribute("error", false);
         }else {
             req.getSession().setAttribute("error", true);
         }
+        //新闻标题
+        List<NewsTitle> newsList = newsTitleService.getSelectNews(0,7);
+        model.addAttribute("newsList", newsList);
+        //每日资讯
+        List<IteyeInformation> list= iteyeInformationService.getIteyeInformation();
+        model.addAttribute("list",list);
         return "iteye";
     }
     //iteye页面的退出功能
