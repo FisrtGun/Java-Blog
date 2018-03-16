@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,6 +31,8 @@ import java.util.List;
 @Controller
 @RequestMapping("mainController")
 public class MainController {
+    @Resource
+    private NewsTitle newsTitle;
     @Resource
     //用户服务层
     private UserService userService;
@@ -46,26 +51,36 @@ public class MainController {
     private IteyeInformationService iteyeInformationService;
     @Resource
     private GitChatService gitChatService;
+    @Resource
+    //群主讨论模块服务层
+    private IteyediscussiongroupService iteyediscussiongroupService;
+
+    @Resource
+    //数据库页面的服务层
+    private DbService dbService;
+
 
     //去首页
     @RequestMapping("index")
-    public String index(Model model, @RequestParam(value = "index",required = false)String index) {
+    public String index(Model model, @RequestParam(value = "index", required = false) String index) {
         //分页查询功能
+        System.out.println(11111111);
         PageUtils pageUtils = new PageUtils();
-        if (index == null || index =="") {
+        if (index == null || index == "") {
             index = "1";
         }
-        int indexs=Integer.parseInt(index);
+        int indexs = Integer.parseInt(index);
         pageUtils.setIndex(indexs);
-        pageUtils.setPageSize(2);
+        pageUtils.setPageSize(5);
         pageUtils.setPageCount(newsTitleService.newsCount());
         pageUtils.getPageCount();
         //新闻标题
-        List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(),pageUtils.getPageSize());
-        model.addAttribute("newsList",newsList);
+        List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(), pageUtils.getPageSize());
+        model.addAttribute("newsList", newsList);
+        System.out.println(newsList);
         //今日推荐
         List<NewsTitle> groom = newsTitleService.getGroom();
-        model.addAttribute("groom",groom);
+        model.addAttribute("groom", groom);
         return "index";
     }
 
@@ -77,7 +92,6 @@ public class MainController {
 
     //去注册
     @RequestMapping("register")
-
     public String register(HttpServletRequest req) {
         req.getSession().setAttribute("error", false);
         return "register";
@@ -86,7 +100,7 @@ public class MainController {
     //注册
     @RequestMapping("doRegister")
     public String doRegister(User user, Model model, HttpServletRequest req) {
-        if (null != user.getUname() && null != user.getUpwd()&&user.getUname().length()>0&&user.getUpwd().length()>0) {
+        if (null != user.getUname() && null != user.getUpwd() && user.getUname().length() > 0 && user.getUpwd().length() > 0) {
             int num = userService.addUser(user.getUname(), user.getUpwd(), "images/fg.png");
             User OneUser = userService.getUser(user.getUname(), user.getUpwd());
             if (num > 0) {
@@ -98,7 +112,7 @@ public class MainController {
                 model.addAttribute("num", num);
                 return "register";
             }
-        }else {
+        } else {
             req.getSession().setAttribute("error", true);
             return "register";
         }
@@ -114,7 +128,7 @@ public class MainController {
     //实现登录功能
     @RequestMapping("dologin")
     public String dologin(User user, Model model, HttpServletRequest req) {
-        if (null != user.getUname() && null != user.getUpwd()&&user.getUname().length()>0&&user.getUpwd().length()>0) {
+        if (null != user.getUname() && null != user.getUpwd() && user.getUname().length() > 0 && user.getUpwd().length() > 0) {
             User OneUser = userService.getUser(user.getUname(), user.getUpwd());
             if (OneUser == null) {
                 req.getSession().setAttribute("error", true);
@@ -140,53 +154,70 @@ public class MainController {
 
     //去iteye
     @RequestMapping("iteye")
-    public String iteye(HttpServletRequest req,Model model) {
-        if (null!=req.getSession().getAttribute("users")){
+    public String iteye(HttpServletRequest req, Model model) {
+        if (null != req.getSession().getAttribute("users")) {
             req.getSession().setAttribute("error", false);
-        }else {
+        } else {
             req.getSession().setAttribute("error", true);
         }
         //新闻标题
-        List<NewsTitle> newsList = newsTitleService.getSelectNews(0,7);
+        List<NewsTitle> newsList = newsTitleService.getSelectNews(1, 7);
         model.addAttribute("newsList", newsList);
+        System.out.println(newsList);
         //每日资讯
-        List<IteyeInformation> list= iteyeInformationService.getIteyeInformation();
-        model.addAttribute("list",list);
+        List<IteyeInformation> list = iteyeInformationService.getIteyeInformation();
+        model.addAttribute("list", list);
+        //群组讨论帖
+        List<Iteyediscussiongroup> grouplist = iteyediscussiongroupService.getIteyediscussiongroup();
+        model.addAttribute("grouplist", grouplist);
+
         return "iteye";
     }
+
     //iteye页面的退出功能
     @RequestMapping("iteyeExist")
-    public String iteyeExist(HttpServletRequest req){
+    public String iteyeExist(HttpServletRequest req,Model model) {
         req.getSession().setAttribute("error", true);
         req.getSession().invalidate();
-        if (null!=req.getSession().getAttribute("users")){
+        if (null != req.getSession().getAttribute("users")) {
             req.getSession().setAttribute("error", false);
-        }else {
+        } else {
             req.getSession().setAttribute("error", true);
         }
+        //新闻标题
+        List<NewsTitle> newsList = newsTitleService.getSelectNews(1, 7);
+        model.addAttribute("newsList", newsList);
+        System.out.println(newsList);
+        //每日资讯
+        List<IteyeInformation> list = iteyeInformationService.getIteyeInformation();
+        model.addAttribute("list", list);
+        //群组讨论帖
+        List<Iteyediscussiongroup> grouplist = iteyediscussiongroupService.getIteyediscussiongroup();
+        model.addAttribute("grouplist", grouplist);
         return "iteye";
     }
 
     //去新文章
     @RequestMapping("/newstitle")
-    public String newstitle(Model model, @RequestParam(value = "index",required = false)String index){
+    public String newstitle(Model model, @RequestParam(value = "index", required = false) String index) {
         //分页查询功能
         PageUtils pageUtils = new PageUtils();
-        if (index == null || index =="") {
+        if (index == null || index == "") {
             index = "1";
         }
-        int indexs=Integer.parseInt(index);
+        int indexs = Integer.parseInt(index);
         pageUtils.setIndex(indexs);
         pageUtils.setPageSize(2);
         pageUtils.setPageCount(newsTitleService.newsCount());
         pageUtils.getPageCount();
-        List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(),pageUtils.getPageSize());
-        model.addAttribute("pageUtils",pageUtils);
-        model.addAttribute("newsList",newsList);
+        List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(), pageUtils.getPageSize());
+        model.addAttribute("pageUtils", pageUtils);
+        model.addAttribute("newsList", newsList);
         List<NewsTitle> groom = newsTitleService.getGroom();
-        model.addAttribute("groom",groom);
+        model.addAttribute("groom", groom);
         return "newstitle";
     }
+
     //去其他
     @RequestMapping("other")
     public String other(Model model) {
@@ -223,61 +254,61 @@ public class MainController {
 
     //去CSTO
     @RequestMapping("csto")
-    public String csto(@RequestParam(value = "atype",required = false)String atype,Model model) {
-        int atypes=Integer.parseInt(atype);
+    public String csto(@RequestParam(value = "atype", required = false) String atype, Model model) {
+        int atypes = Integer.parseInt(atype);
         List<CstoGenius> genius = null;
-        switch (atypes){
-            case 1 :
+        switch (atypes) {
+            case 1:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 2 :
+            case 2:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 3 :
+            case 3:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 4 :
+            case 4:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 5 :
+            case 5:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 6 :
+            case 6:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 7 :
+            case 7:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 8 :
+            case 8:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 9 :
+            case 9:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 10 :
+            case 10:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 11 :
+            case 11:
                 genius = cstoGeniusService.genius(atypes);
                 break;
-            case 12 :
+            case 12:
                 genius = cstoGeniusService.genius(atypes);
                 break;
         }
 
         List<LatestProject> latest = latestProjectService.latest();
-        model.addAttribute("latest",latest);
-        model.addAttribute("genius",genius);
+        model.addAttribute("latest", latest);
+        model.addAttribute("genius", genius);
         return "csto";
     }
 
     //去vip
     @RequestMapping("vip")
     public String vip(HttpServletRequest req) {
-        if ( null !=req.getSession().getAttribute("users")){
+        if (null != req.getSession().getAttribute("users")) {
             return "vip";
 
-        }else{
+        } else {
             return "redirect:login";
         }
 
@@ -286,7 +317,22 @@ public class MainController {
 
     //去数据库
     @RequestMapping("db")
-    public String db() {
+    public String db(Model model, @RequestParam(value = "index",required = false)String index) {
+        //分页查询功能
+        PageUtils pageUtils = new PageUtils();
+        if (index == null || index =="") {
+            index = "1";
+        }
+        int indexs=Integer.parseInt(index);
+        pageUtils.setIndex(indexs);
+        pageUtils.setPageSize(2);
+        pageUtils.setPageCount(dbService.getTotalCount());
+        pageUtils.getPageCount();
+        List<NewsTitle> newsList = dbService.getSelectNews(pageUtils.getIndex(),pageUtils.getPageSize());
+        model.addAttribute("pageUtils",pageUtils);
+        model.addAttribute("newsList",newsList);
+        List<NewsTitle> groom = dbService.getGroom();
+        model.addAttribute("groom",groom);
         return "db";
     }
 
@@ -307,6 +353,7 @@ public class MainController {
     public String specialist() {
         return "otherPage/specialist";
     }
+
     //跳转前端页面
     @RequestMapping("front")
     public String front() {
@@ -315,9 +362,60 @@ public class MainController {
 
     //去个人中心
     @RequestMapping("mycenter")
-    public String myCenter(){return "mycenter";}
+    public String myCenter() {
+        return "mycenter";
+    }
 
     //跳转学院页面
     @RequestMapping("study")
-    public String study(){return "study" ;}
+    public String study() {
+        return "study";
+    }
+
+    //去写博客
+    @RequestMapping("writeblog")
+    public String writeblog(HttpServletRequest req) {
+        if (null != req.getSession().getAttribute("users")) {
+            return "writeblog";
+        } else {
+            return "redirect:login";
+        }
+    }
+    //写博客
+    @RequestMapping("dowriteblog")
+    public String dowriteblog(HttpServletRequest req){
+        //后台获取时间
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH-mm-ss ");
+        Date date=new Date();
+        String strDate=simpleDateFormat.format(date);
+        User user= (User) req.getSession().getAttribute("users");
+
+        String nauthor=user.getUname();
+        String ntab= req.getParameter("selType");
+        String ntitle=req.getParameter("txtTitle");
+        String nconten=req.getParameter("textarea");
+        Date ncreateTime= null;
+        try {
+            ncreateTime = simpleDateFormat.parse(strDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String nimg="../../statics/"+user.getUpicture();
+
+        newsTitle.setNtitle(ntitle);
+        newsTitle.setNauthor(nauthor);
+        newsTitle.setNtab(ntab);
+        newsTitle.setNconten(nconten);
+        newsTitle.setNcreateTime(ncreateTime);
+        newsTitle.setNimg(nimg);
+
+        int num=newsTitleService.inserNews(newsTitle);
+        if (num>0){
+            return "mycenter";
+        }else {
+            return "writeblog";
+        }
+
+
+    }
 }

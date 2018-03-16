@@ -20,5 +20,9 @@
         SELECT ntitle,npicture,nauthor FROM newstitle ORDER BY ncreateTime limit 0,15;
     </select>
 
+    <insert id="inserNews">
+        INSERT INTO newstitle(`ntitle`,`nconten`,`nauthor`,`ntab`,`ncreateTime`,`nimg`) VALUES (#{ntitle},#{nconten},#{nauthor},#{ntab},#{ncreateTime},#{nimg});
+    </insert>
+
 </mapper>
  
