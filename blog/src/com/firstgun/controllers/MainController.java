@@ -44,7 +44,8 @@ public class MainController {
     @Resource
     //iteye的资讯模块服务层
     private IteyeInformationService iteyeInformationService;
-
+    @Resource
+    private GitChatService gitChatService;
 
     //去首页
     @RequestMapping("index")
@@ -206,7 +207,17 @@ public class MainController {
 
     //去GitChat
     @RequestMapping("/GitChat")
-    public String GitChat() {
+    public String GitChat(Model model){
+        List<GitChat> writerList = gitChatService.selectWriter();
+        List<GitChat> classList = gitChatService.selectClass();
+        List<GitChat> chatList = gitChatService.selectChat();
+        List<GitChat> hotClassList = gitChatService.selectHotClass();
+        List<GitChat> newChatList = gitChatService.selectNewChat();
+        model.addAttribute("writerList",writerList);
+        model.addAttribute("classList",classList);
+        model.addAttribute("chatList",chatList);
+        model.addAttribute("hotClassList",hotClassList);
+        model.addAttribute("newChatList",newChatList);
         return "gitchat_index";
     }
 
