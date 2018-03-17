@@ -1,6 +1,6 @@
 /*
-SQLyog Ultimate v12.09 (64 bit)
-MySQL - 5.7.17-log : Database - firstgun
+SQLyog Professional v12.09 (64 bit)
+MySQL - 5.7.16 : Database - firstgun
 *********************************************************************
 */
 
@@ -12,8 +12,6 @@ MySQL - 5.7.17-log : Database - firstgun
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`firstgun` /*!40100 DEFAULT CHARACTER SET utf8 */;
-
 USE `firstgun`;
 
 /*Table structure for table `chat` */
@@ -114,6 +112,24 @@ CREATE TABLE `chatwriter` (
 /*Data for the table `chatwriter` */
 
 insert  into `chatwriter`(`wid`,`writername`,`writerhead`,`writerimage`,`writertag`,`writerdesc`) values (1,'孙亖','../../statics/picture/gitchat/6f1d56e5109544d0a8af38bff1ec7797.gif',NULL,'开发工程师','软件工程师，长期从事企业信息化系统的研发工作，主要擅长后台业务功能的设计开发。'),(2,'肃肃其羽','../../statics/picture/gitchat/4c618bba8b4a4091bec5a181fa9723e0.gif',NULL,'UI设计/平面设计/Python','目前已研究5年平面设计 + UI设计，积累一定设计经验，一只认真的00后小白。同时做过python开发，有若干开发经验。目前也涉猎机器学习等领域。微信suyu031117。'),(3,'王俊生','../../statics/picture/gitchat/111a9e862b56469d98f9e1838b3ebd46.gif',NULL,'新时代程序员','曾上线运营平台；报表自定义；养老护理中心信息化平台等项目。此外负责公司项目从svn到gitlab的迁移和公司十亿级数据迁移工作。日常喜欢运动、旅游、读书，励志做一个热衷技术、享受生活的新时代程序员。'),(4,'刘盼','../../statics/picture/gitchat/efcce6af3390443abfffaa09dbc24b53.gif',NULL,'高级研发工程师','Linux内核贡献者，CSDN博客专家，活跃于各大创客社区，精通ARM＋Linux＋Android的嵌入式开发，个人公众号《人人都是极客》。智道科技联合创始人，目前专注于嵌入式领域的人工智能研究。'),(5,'100offer','../../statics/picture/gitchat/4b10098221c94ac99277fdebc127deb7.gif',NULL,'100offer','100offer 严格筛选来自世界各地的优质公司，打造了一个优秀人才和公司的平台，致力于帮最好的人才发现更好的工作机会。使用 100offer ，互联网人可在一周内收到来自中国、美国、新加坡等数千家优质企业的工作机会。'),(6,'阿福','../../statics/picture/gitchat/060a824d699c4cb1812ccdf42b32e8f6.gif',NULL,'资深研发工程师','于电商行业的一家独角兽公司任职，专注于代码，热衷于分享'),(7,'宋璐','../../statics/picture/gitchat/02252f0c4cff463a933c0a50e0864556.gif',NULL,'今日头条架构组研发工程师','在传统IT做过基于网络IP层和链路层的协议优化; 目前在互联网公司做基于应用层和传输层的网络优化; 也写一些业务代码,主要开发语言还是C/C++以及Golang; 熟悉chromium内核,喜欢阅读各类开源代码;'),(8,'加兴','../../statics/picture/gitchat/e22c25519df441a2b28f9b4d87ae0e32.gif',NULL,'Agilean事业合伙人','中国敏捷精益领先咨询服务商Agilean事业合伙人，专注在金融数字化转型领域咨询和创新，目前是数家金融组织整体转型的首席顾问。曾主导过多家顶级企业的IT部门敏捷转型、产品一体化运作以及重大创新产品开发。'),(9,'大漠穷秋',NULL,'../../statics/picture/gitchat/10c86a4b518845a48d184edd55655e9f.gif','前端恶棍','大漠穷秋，10 年开发经验，其中 5 年后端、5 年前端。熟悉 Java 相关的技术体系：SpringMVC、MyBatis、Ehcache、ELK、MySQL 等。在前端技术方面尤其有深入的研究，先后使用并研究过 Flex、jQuery、Extjs、Backbone、Bootstrap、Angular 等常见的前端技术体系。'),(10,'杨健',NULL,'../../statics/picture/gitchat/8fd704a866994f34ab12175085ee3428.gif','Python 独立博客“州的先生”作者','杨健，新三板某电商企业技术部 Python 开发工程师，负责公司数据挖掘项目的构建，Python 独立教程博客主：州的先生，对 Python 多领域的运用（Web 开发、数据采集、数据分析和挖掘等）均有所研究和涉及。'),(11,'李永京',NULL,'../../statics/picture/gitchat/e7859936361747e29561149b6fcbf27a.gif','博客园知名博主','李永京，从事互联网后端系统开发，擅长高并发分布式系统，熟悉 Go、C、C#、Python 等语言。架构龙珠直播平台基础框架，开发过道具、任务、红包、直播、聊天、调度系统等。曾任职阿里妈妈，开发过移动广告 DMP、DSP、广告数据人群分析等。个人博客 积分排名前 30，300万 PV。');
+
+/*Table structure for table `front` */
+
+DROP TABLE IF EXISTS `front`;
+
+CREATE TABLE `front` (
+  `fid` int(6) NOT NULL,
+  `ftitle` varchar(30) DEFAULT NULL,
+  `fnum` varchar(30) DEFAULT NULL,
+  `fauthor` varchar(30) DEFAULT NULL,
+  `ftime` varchar(20) DEFAULT NULL,
+  `fcomment` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`fid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `front` */
+
+insert  into `front`(`fid`,`ftitle`,`fnum`,`fauthor`,`ftime`,`fcomment`) values (1,'欢迎使用CSDN-markdown编辑器真是实用','988','liizhao','2月17','14'),(2,'页面居中、响应式布局的总结','1178','fujiawei','2月18','26'),(3,'python总结25 django 富文本编辑器加入项目中','581','wangxiyuan','2月19','65'),(4,'阿里巴巴矢量图的使用方法','898','nainiu','2月20','5'),(5,'js绘制抛物线','727','jiaming','2月21','4'),(6,'Java面板基础中的JPanel和JScrollpane','546','laotie','2月22','89'),(7,'JQuery选择器','908','yuze','2月23','10');
 
 /*Table structure for table `informationtitle` */
 
