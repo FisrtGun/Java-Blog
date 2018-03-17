@@ -395,7 +395,7 @@ public class MainController {
 
     //去写博客
     @RequestMapping("writeblog")
-    public String bbbbbbb(HttpServletRequest req) {
+    public String writeblog(HttpServletRequest req) {
         if (null != req.getSession().getAttribute("users")) {
             return "writeblog";
         } else {
