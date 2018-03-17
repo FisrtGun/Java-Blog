@@ -105,7 +105,7 @@ To change this template use File | Settings | File Templates.
                             $(document).ready(function () {
                                 $("#uname").focus(function () {
                                     $("#errorName").css("display", "none");
-                                    $("#errormess").css("display", "none");
+                                    $("#errorPwd").css("display", "none");
                                 })
                                 $("#uname").blur(function () {
                                     var uname = $("#uname").val();
@@ -143,12 +143,12 @@ To change this template use File | Settings | File Templates.
                                     var upwd = $("#upwd").val();
                                     if ("" == upwd) {
                                         $("#errorPwd").css("display", "inline-block");
-                                        $("#errorName").html("<span class=\"error-icon\"></span><span id=\"error-message\">密码不能为空</span>");
+                                        $("#errorPwd").html("<span class=\"error-icon\"></span><span id=\"error-message\">密码不能为空</span>");
                                     }
                                 })
                                 $("#upwd").focus(function () {
                                     $("#errorPwd").css("display", "none");
-                                    $("#errormess").css("display", "none");
+                                    $("#errorName").css("display", "none");
                                 })
                             })
                         </script>
