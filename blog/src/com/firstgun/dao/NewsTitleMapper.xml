@@ -19,10 +19,48 @@
     <select id="getGroom" resultType="NewsTitle">
         SELECT ntitle,npicture,nauthor FROM newstitle ORDER BY ncreateTime limit 0,15;
     </select>
-
+    <!--添加博主发布文章-->
     <insert id="inserNews">
         INSERT INTO newstitle(`ntitle`,`nconten`,`nauthor`,`ntab`,`ncreateTime`,`nimg`) VALUES (#{ntitle},#{nconten},#{nauthor},#{ntab},#{ncreateTime},#{nimg});
     </insert>
 
+    <!--根据标题，博主模糊查询-->
+    <select id="likeCheck" resultType="NewsTitle">
+        SELECT * FROM newstitle
+        <trim prefix="WHERE">
+            <if test="nauthor != null">
+                 nauthor like  concat( '%' , #{nauthor}, '%')
+            </if>
+            <if test="ntitle != null">
+                or ntitle like  concat( '%' , #{ntitle}, '%')
+            </if>
+        </trim>
+    </select>
+
+
+
+
+
+
+    <resultMap id="News" type="NewsTitle">
+        <id property="nid" column="nid" />
+        <result property="ntitle" column="ntitle" />
+        <result property="nconten" column="nconten" />
+        <result property="nauthor" column="nauthor" />
+        <result property="ntab" column="ntab" />
+        <result property="ncreateTime" column="ncreateTime" />
+        <result property="nreads" column="nreads" />
+        <result property="nimg" column="nimg" />
+        <result property="narticle" column="narticle" />
+        <result property="nfollower" column="nfollower" />
+        <result property="nlike" column="nlike" />
+        <result property="ndiscuss" column="ndiscuss" />
+        <result property="nthumb" column="nthumb" />
+        <result property="ngrade" column="ngrade" />
+        <result property="nview" column="nview" />
+        <result property="nintegration" column="nintegration" />
+        <result property="nranking" column="nranking" />
+        <result property="npicture" column="npicture" />
+    </resultMap>
 </mapper>
  

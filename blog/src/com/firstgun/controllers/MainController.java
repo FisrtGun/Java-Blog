@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -68,7 +69,6 @@ public class MainController {
     @RequestMapping("index")
     public String index(Model model, @RequestParam(value = "index", required = false) String index) {
         //分页查询功能
-        System.out.println(11111111);
         PageUtils pageUtils = new PageUtils();
         if (index == null || index == "") {
             index = "1";
@@ -81,7 +81,6 @@ public class MainController {
         //新闻标题
         List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(), pageUtils.getPageSize());
         model.addAttribute("newsList", newsList);
-        System.out.println(newsList);
         //今日推荐
         List<NewsTitle> groom = newsTitleService.getGroom();
         model.addAttribute("groom", groom);
@@ -125,11 +124,8 @@ public class MainController {
     @RequestMapping("checkRegister")
     @ResponseBody//必须加入的注解
     public int checkRegister(HttpServletRequest req){
-        System.out.println(11111);
         String uname=req.getParameter("uname");
-        System.out.println(uname);
         List<User> list=userService.findAll();
-        System.out.println(list);
         int flag=2;
         for (int i = 0; i < list.size(); i++) {
             if (uname.equalsIgnoreCase(list.get(i).getUname())){;
@@ -410,11 +406,11 @@ public class MainController {
     @RequestMapping("dowriteblog")
     public String dowriteblog(HttpServletRequest req){
         //后台获取时间
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH-mm-ss ");
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date=new Date();
         String strDate=simpleDateFormat.format(date);
         User user= (User) req.getSession().getAttribute("users");
-
+        System.out.println("==========="+strDate);
         String nauthor=user.getUname();
         String ntab= req.getParameter("selType");
         String ntitle=req.getParameter("txtTitle");
@@ -440,7 +436,22 @@ public class MainController {
         }else {
             return "writeblog";
         }
-
-
+    }
+    //搜索---模糊查询
+    @RequestMapping("check")
+    public String check(HttpServletRequest req,Model model){
+        String things=req.getParameter("thing");
+        String thing = null;
+        try {
+            thing = new String(things.getBytes("iso8859-1"),"utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        List<NewsTitle> newList= newsTitleService.likeCheck(thing,thing);
+        model.addAttribute("thing",thing);
+        model.addAttribute("newList",newList);
+        model.addAttribute("newListCount",newList.size());
+        System.out.println(newList);
+        return "check";
     }
 }

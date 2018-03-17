@@ -130,7 +130,6 @@ To change this template use File | Settings | File Templates.
                                                     $("#errorName").css("display", "inline-block");
                                                     $("#errorName").html("<span class=\"error-icon\"></span><span id=\"error-message\">用户名已存在</span>");
                                                 }
-
                                             },//响应成功后要执行代码
                                             "error": function () { //请求失败后要执行代码
                                                 alert("错误！");
@@ -138,7 +137,6 @@ To change this template use File | Settings | File Templates.
                                         });
                                     }
                                 })
-
                                 $("#upwd").blur(function () {
                                     var upwd = $("#upwd").val();
                                     if ("" == upwd) {
