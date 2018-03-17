@@ -67,6 +67,10 @@ public class MainController {
     @Resource
     private  FrontService frontService;
 
+    @Resource
+    //个人中心的服务层
+    private MyCenterService myCenterService;
+
 
     //去首页
     @RequestMapping("index")
@@ -390,6 +394,22 @@ public class MainController {
     //去个人中心
     @RequestMapping("mycenter")
     public String myCenter() {
+        return "mycenter";
+    }
+
+    //实现个人中心
+    @RequestMapping("domycenter")
+    public String domycenter(Model model,HttpServletRequest req){
+        User user=(User)req.getSession().getAttribute("users");
+        /*  userName=user.getUname();*/
+        List<Mycenter> mycenter=myCenterService.getMyInfo(user.getUname());
+
+        model.addAttribute("mycenter",mycenter.get(0));
+        List<Mycenter> myblog=myCenterService.getMyBlog(user.getUname());
+        model.addAttribute("myblog",myblog.get(0));
+
+
+
         return "mycenter";
     }
 

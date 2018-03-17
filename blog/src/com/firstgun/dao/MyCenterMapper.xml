@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.firstgun.dao.MyCenterMapper">
+
+    <!--获取当前用户的个人信息：用户名，行业，职位，性别等-->
+    <select id="getMyInfo" resultType="Mycenter">
+        SELECT * FROM mycenter
+        <trim prefix="where" prefixOverrides="and | or">
+        <if test="userName != null">
+            and userName= #{userName}
+        </if>
+        </trim>
+
+    </select>
+
+
+<!--获取当前用户发表过的所有博客-->
+
+    <resultMap id="getBlogMap" type="Mycenter">
+        <id property="userId" column="userId"></id>
+        <result property="userName" column="userName" />
+        <collection property="newsTitle" ofType="NewsTitle">
+            <id property="nid" column="nid"/>
+            <result property="ntitle" column="ntitle" />
+        </collection>
+
+    </resultMap>
+    <select id="getMyBlog" resultMap="getBlogMap">
+        select m.userName,n.ntitle,n.ncreateTime   from mycenter m, newstitle n where m.userName=n.nauthor and userName=#{userName}
+
+    </select>
+</mapper>
+ 
