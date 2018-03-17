@@ -394,14 +394,15 @@ public class MainController {
     }
 
     //去写博客
-    @RequestMapping("writeblog")
-    public String writeblog(HttpServletRequest req) {
-        if (null != req.getSession().getAttribute("users")) {
-            return "writeblog";
-        } else {
-            return "redirect:login";
-        }
-    }
+//    @RequestMapping("writeblog")
+//    public String writeblog(HttpServletRequest req) {
+//        if (null != req.getSession().getAttribute("users")) {
+//            return "writeblog";
+//        } else {
+//            return "redirect:login";
+//        }
+//    }
+    public static  void main(){}
     //写博客
     @RequestMapping("dowriteblog")
     public String dowriteblog(HttpServletRequest req){
