@@ -42,4 +42,9 @@ public class NewsTitleServiceImpl implements NewsTitleService {
     public int inserNews(NewsTitle newsTitle) {
         return newsTitleMapper.inserNews(newsTitle);
     }
+
+    @Override
+    public List<NewsTitle> likeCheck(String nauthor, String ntitle) {
+        return newsTitleMapper.likeCheck(nauthor,ntitle);
+    }
 }

@@ -15,5 +15,30 @@
     <select id="getGroom" resultType="OtherTitle">
         SELECT ntitle,npicture,nauthor FROM other ORDER BY ncreateTime limit 0,15;
     </select>
+
+
+
+    <resultMap id="Other" type="OtherTitle">
+        <id property="nid" column="nid" />
+        <result property="ntitle" column="ntitle" />
+        <result property="nconten" column="nconten" />
+        <result property="nauthor" column="nauthor" />
+        <result property="ntab" column="ntab" />
+        <result property="ncreateTime" column="ncreateTime" />
+        <result property="nreads" column="nreads" />
+        <result property="nimg" column="nimg" />
+        <result property="narticle" column="narticle" />
+        <result property="nfollower" column="nfollower" />
+        <result property="nlike" column="nlike" />
+        <result property="ndiscuss" column="ndiscuss" />
+        <result property="nthumb" column="nthumb" />
+        <result property="ngrade" column="ngrade" />
+        <result property="nview" column="nview" />
+        <result property="nintegration" column="nintegration" />
+        <result property="nranking" column="nranking" />
+        <result property="npicture" column="npicture" />
+    </resultMap>
+
+
 </mapper>
  

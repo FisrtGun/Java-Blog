@@ -20,7 +20,8 @@ public interface NewsTitleMapper {
     public List<NewsTitle> getGroom();
     //获取新闻总条数
     public int newsCount();
-
     //添加新闻数据
     int inserNews(NewsTitle newsTitle);
+    //根据标题，博主模糊查询
+    List<NewsTitle> likeCheck(@Param("nauthor") String nauthor,@Param("ntitle") String ntitle);
 }

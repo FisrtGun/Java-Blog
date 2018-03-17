@@ -73,10 +73,18 @@
             <ul class="btns">
                 <li class="toolbar-tracking csdn-tracking-statistics tracking-click" data-mod="popu_369"><a href="#" style="padding:0"></a></li>
                 <li>
+                    <form action="check" method="get" id="formS" name="actionForm">
                     <div class="search_bar csdn-tracking-statistics tracking-click" data-mod="popu_366">
-                        <input type="text" class="input_search" name="">
-                        <a href="//so.csdn.net/so/" target="_blank" class="btn-nobg-noborder btn-search"><i class="iconfont-toolbar toolbar-sousuo"></i></a>
+                        <input type="text" class="input_search" name="thing">
+                        <a href="javascript:formSubmit()" onclick="formSubmit()" target="_blank" class="btn-nobg-noborder btn-search"><i class="iconfont-toolbar toolbar-sousuo"></i></a>
                     </div>
+                    </form>
+                    <script type="text/javascript">
+                        function formSubmit(){
+                            var formS=document.getElementById("formS");
+                            formS.submit();
+                        }
+                    </script>
                 </li>
                 <li class="write-bolg-btn csdn-tracking-statistics tracking-click" data-mod="popu_370"><a class="" href="writeblog" target="_blank"><i class="iconfont-toolbar"></i><span>写博客</span></a></li>
                 <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1" target="_blank"><i class="iconfont-toolbar "></i><span>发Chat</span></a></li>

@@ -1,0 +1,119 @@
+﻿dt.serch-list{
+  text-transform: capitalize;
+}
+.intro-wrap{
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #ccc;
+}
+.intro{
+  float: left;
+  margin-top:5px;
+  width: 87px;
+}
+.intro img {
+    width: 72px;
+    height: 72px;
+    border: 1px solid #eee;
+}
+
+.intro-con{
+  font-family: "microsoft yahei";
+  font-size: 14px;
+  margin-bottom: 3px;
+  text-decoration: none;
+}
+.intro-con .intro-detail{
+  color: #999;
+  margin:0 0 10px 0;
+  overflow: hidden;
+}
+.intro-detail span{
+  color:#333;
+}
+.intro-detail p{
+  float: left;
+}
+span.floatleft{
+  width: 410px;
+  display: inline-block;
+}
+
+/**/
+
+#rootSudo{
+  width: 300px;
+  height: 180px;
+  background: #fff;
+  margin-top: 20px;
+  font-family: "microsoft yahei";
+}
+.word{
+  font-size: 14px;
+  color: #B0B0B0;
+  display: inline-block;
+}
+.konwStyle{
+  font-family: "microsoft yahei";
+  font-size: 14px;
+  color: #2981a9!important;
+  display: inline-block;
+  margin-left: 5px;
+}
+.wordStyle{
+  font-size: 14px;
+  color: #242424;
+  display: inline-block;
+  margin-left: 5px;
+}
+.wordStyle1{
+  font-size: 16px;
+  color: #242424;
+  display: inline-block;
+  margin-left: 6px;
+}
+#imgAndWord{
+  overflow: hidden;
+}
+.imges {
+    float: left;
+    width: 72px;
+    height: 72px;
+    border: 1px solid #eee;
+}
+#imgBlock{
+  float: left;
+}
+.bigfont{
+  font-size: 16px;
+}
+.gitStyle{
+  font-family: "microsoft yahei";
+  font-size: 17px;
+  color: #2981a9!important;
+}
+.marg1,.marg4{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.marg3{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.marg5,.marg6{
+  margin-top: 10px
+}
+.gitStyle,.marg5,.marg6{
+  margin-left: 20px;
+}
+/* add by zw */
+.shoulu-tips{
+	font-family : "Microsoft YaHei";
+	color : #666;
+	font-size : 12px;
+}
+.shoulu-tips a{
+	color : #666;
+}
+.shoulu-tips a.tips-point{
+	color : #2981a9;
+}
