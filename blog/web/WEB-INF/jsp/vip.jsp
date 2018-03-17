@@ -99,7 +99,7 @@
 </head>
 <body>
 
-<div class="csdn-toolbar csdn-toolbar tb_disnone ">
+<%--<div class="csdn-toolbar csdn-toolbar tb_disnone ">
     <div class="container row center-block ">
         <ul class="pull-left left-menu clearfix">
             <li><a href="http://www.csdn.net/" title="CSDN首页" target="_blank">
@@ -179,8 +179,8 @@
             </ul>
         </div>
     </div>
-</div>
-
+</div>--%>
+<jsp:include page="common.jsp" flush="true"></jsp:include>
 <script src="static/vipjs/goTop-v1.0.min.js"></script>
 <%--<script type="text/javascript" src="static/vipjs/content_toolbar.js"></script>--%>
 <!--&lt;!&ndash; 百度自动推送工具代码 &ndash;&gt;

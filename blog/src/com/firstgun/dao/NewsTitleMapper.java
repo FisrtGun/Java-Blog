@@ -18,7 +18,9 @@ public interface NewsTitleMapper {
     public List<NewsTitle> getSelectNews(@Param("index") Integer index, @Param("pageSize") Integer pageSize);
     //获取今日推荐内容
     public List<NewsTitle> getGroom();
-
     //获取新闻总条数
     public int newsCount();
+
+    //添加新闻数据
+    int inserNews(NewsTitle newsTitle);
 }

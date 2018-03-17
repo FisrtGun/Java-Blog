@@ -24,7 +24,7 @@ To change this template use File | Settings | File Templates.
     <!--[if lt IE 9]>
     <script type="text/javascript" src="../../statics/js/html5shiv.js"></script>
     <![endif]-->
-    <script>
+    <%--<script>
         var _hmt = _hmt || [];
         (function () {
             var hm = document.createElement("script");
@@ -40,7 +40,7 @@ To change this template use File | Settings | File Templates.
             STATIC_GLOBAL_URL: "https://csdnimg.cn/",               //全局静态资源
             TRACK_KUICK_ID: "0e1a1f29-37da-4c44-8a33-b4735dc85f10"
         }
-    </script>
+    </script>--%>
     <title>注册账号</title>
     <script>
         var errclass = "";
@@ -105,12 +105,37 @@ To change this template use File | Settings | File Templates.
                             $(document).ready(function () {
                                 $("#uname").focus(function () {
                                     $("#errorName").css("display", "none");
-                                    $("#errormess").css("display", "none");
+                                    $("#errorPwd").css("display", "none");
                                 })
                                 $("#uname").blur(function () {
                                     var uname = $("#uname").val();
                                     if ("" == uname) {
                                         $("#errorName").css("display", "inline-block");
+                                        $("#errorName").html("<span class=\"error-icon\"></span><span id=\"error-message\">用户名不能为空</span>");
+                                    } else {
+                                        $.ajax({
+                                            "url": "checkRegister",//要提交的路径
+                                            "Type": "post",//提交方式
+                                            "data": "uname=" + uname,//发送到服务器的数据
+                                            "dataType": "text",//指定返回的数据格式
+                                            "success": function (data) {
+                                                console.log(data);
+                                                if (data == "2") {
+                                                    $("#errorName").css({
+                                                        "display": "inline-block",
+                                                        "background": "white"
+                                                    });
+                                                    $("#errorName").html("<span id=\"error-message\">用户名可用</span>");
+                                                } else {
+                                                    $("#errorName").css("display", "inline-block");
+                                                    $("#errorName").html("<span class=\"error-icon\"></span><span id=\"error-message\">用户名已存在</span>");
+                                                }
+
+                                            },//响应成功后要执行代码
+                                            "error": function () { //请求失败后要执行代码
+                                                alert("错误！");
+                                            }
+                                        });
                                     }
                                 })
 
@@ -118,11 +143,12 @@ To change this template use File | Settings | File Templates.
                                     var upwd = $("#upwd").val();
                                     if ("" == upwd) {
                                         $("#errorPwd").css("display", "inline-block");
+                                        $("#errorPwd").html("<span class=\"error-icon\"></span><span id=\"error-message\">密码不能为空</span>");
                                     }
                                 })
                                 $("#upwd").focus(function () {
                                     $("#errorPwd").css("display", "none");
-                                    $("#errormess").css("display", "none");
+                                    $("#errorName").css("display", "none");
                                 })
                             })
                         </script>
@@ -176,7 +202,7 @@ To change this template use File | Settings | File Templates.
     window._kuickDeal = _kuickDeal;
     var onKDReadyFinish = function () {
     };
-    (function () {
+    /*(function () {
         var _dealProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         var _sdkURL = _dealProtocol + 'deal.kuick.cn/sdk/v1/';
 
@@ -200,7 +226,7 @@ To change this template use File | Settings | File Templates.
                 s.parentNode.insertBefore(deal, s);
             }
         })();
-    })();
+    })();*/
     var onKDReady = function () {
         $("[data-kuick]").on("click", function () {
             var data = $(this).data("kuick");

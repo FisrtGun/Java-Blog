@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.firstgun.dao.GitChatMapper">
+    <select id="selectWriter" resultType="GitChat">
+        SELECT * FROM chatwriter limit 8
+    </select>
+    <select id="selectClass" resultType="GitChat">
+        SELECT * FROM chatclass cc,chatwriter cw WHERE cc.`cwid` = cw.`wid`
+    </select>
+    <select id="selectChat" resultType="GitChat">
+        SELECT * FROM chat c,chatwriter cw,chattopic ct WHERE cw.`wid` = c.`cwid` AND c.`ctid` = ct.`tid`
+    </select>
+    <select id="selectHotClass" resultType="GitChat">
+        SELECT * FROM chatclass cc,chatwriter cw WHERE cc.`cwid` = cw.`wid` ORDER BY cc.`chatclassbought` DESC LIMIT 3
+    </select>
+    <select id="selectNewChat" resultType="GitChat">
+        SELECT * FROM chat c,chatwriter cw WHERE cw.`wid` = c.`cwid` ORDER BY c.`chatcreatetime` DESC LIMIT 6
+    </select>
+</mapper>
+ 

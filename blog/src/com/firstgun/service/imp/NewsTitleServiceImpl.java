@@ -37,4 +37,9 @@ public class NewsTitleServiceImpl implements NewsTitleService {
     public int newsCount() {
         return newsTitleMapper.newsCount();
     }
+
+    @Override
+    public int inserNews(NewsTitle newsTitle) {
+        return newsTitleMapper.inserNews(newsTitle);
+    }
 }

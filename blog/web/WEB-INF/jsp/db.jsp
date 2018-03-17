@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
 <!-- saved from url=(0027)https://www.csdn.net/nav/db -->
@@ -199,6 +201,7 @@
                 </div>
             </div>
             <ul class="feedlist_mod" id="feedlist_id" shown-offset="1520822986806657" style="padding-top: 0px;">
+                <c:forEach items="${newsList}" var="newsList" varStatus="s">
                 <li class="clearfix" data-type="blog" data-id="72624888">
                     <div class="list_con">
                         <div class="title">
@@ -206,7 +209,7 @@
                                 data-feed-show="true" data-dsm="post">
                                 <a strategy="hot" href="http://blog.csdn.net/q383965374/article/details/72624888"
                                    target="_blank">
-                                    动态联动select下拉框实现 </a>
+                                    ${newsList.ntitle} </a>
                             </h2>
                             <div class="close_tag">
                                 <div class="unin_reason_dialog_wrapper">
@@ -251,26 +254,26 @@
                             </dt>
                             <dd class="name">
                                 <a href="http://blog.csdn.net/q383965374" target="_blank">
-                                    张小凡vip </a>
+                                    ${newsList.nauthor} </a>
                             </dd>
                             <dd class="time csdn-tracking-statistics tracking-click" data-poputype="feed"
                                 data-mod="popu_459">
                                 <a strategy="hot" href="http://blog.csdn.net/q383965374/article/details/72624888"
                                    target="_blank">
-                                    05月22日 </a>
+                                    <fmt:formatDate value="${newsList.ncreateTime}" type="date" pattern="MM月dd日"/> </a>
                             </dd>
                             <!--新增评论数+阅读 begin-->
                             <!--新增评论数+阅读 end-->
                         </dl>
                         <!--阅读 begin-->
                         <div class="read_num">
-                            <p class="num">3071</p>
+                            <p class="num">${newsList.nreads}</p>
                             <p class="text">阅读量</p>
                         </div>
                         <!--阅读 end-->
                     </div>
                 </li>
-                <li class="clearfix" data-type="blog" data-id="75452656">
+               <%-- <li class="clearfix" data-type="blog" data-id="75452656">
                     <div class="list_con">
                         <div class="title">
                             <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
@@ -2015,8 +2018,8 @@
                         <div class="read_num"><p class="num">3459</p>
                             <p class="text">阅读量</p></div>
                     </div>
-                </li>
-                <li class="clearfix" data-type="blog" data-id="71302283">
+                </li>--%>
+               <%-- <li class="clearfix" data-type="blog" data-id="71302283">
                     <div class="list_con">
                         <div class="title"><h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
                                                data-feed-show="false" data-dsm="post"><a strategy="hot"
@@ -2137,7 +2140,8 @@
                         <div class="read_num"><p class="num">1707</p>
                             <p class="text">阅读量</p></div>
                     </div>
-                </li>
+                </li>--%>
+                </c:forEach>
             </ul>
             <div class="feed_loading" style="display: none;">
                 <img src="../../statics/dbimage/feedLoading.gif" alt="I&#39;m loading" title="I&#39;m loading">
@@ -2156,18 +2160,19 @@
                 </h3>
                 <div class="feed_company csdn-tracking-statistics" data-mod="popu_474" data-dsm="post">
                     <ul class="company_list">
+                        <c:forEach items="${groom}" var="groom" varStatus="s">
                         <li>
                             <div class="img_box"><a
                                     href="http://blog.csdn.net/blockchain_lemon/article/details/79466131"
-                                    target="_blank"><img src="../../statics/dbimage/354e2786e7c7d22860e4dc683ab0db5d.png"
+                                    target="_blank"><img src="${groom.npicture}"
                                                          alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a
                                         href="http://blog.csdn.net/blockchain_lemon/article/details/79466131"
-                                        target="_blank">区块链开发实战：如何从零打造一个去中心化应用</a></h3>
+                                        target="_blank">${groom.ntitle}</a></h3>
                             </div>
                         </li>
-                        <li>
+                        <%--<li>
                             <div class="img_box"><a
                                     href="http://blog.csdn.net/blockchain_lemon/article/details/79492430"
                                     target="_blank"><img src="../../statics/dbimage/af8a709a82143a435c2505c1fe9acc97.png"
@@ -2306,7 +2311,8 @@
                                 <h3 class="company_name"><a href="http://10086id.csdn.net/" target="_blank">与其花大钱做营销
                                     不如用1.5秒的改变留住用户</a></h3>
                             </div>
-                        </li>
+                        </li>--%>
+                        </c:forEach>
                     </ul>
                     <div class="other_company clearfix">
                         <a href="http://baidudeveloper.csdn.net/" target="_blank">百度技术专区</a>
