@@ -244,63 +244,7 @@
 <script class="toolbar-s" type="text/javascript" src="../../statics/js/iconfont.js"></script>
 <script id="toolbar-tpl-scriptId" prod="download" skin="black" src="../../statics/js/content_toolbar.js"
         type="text/javascript" domain="https://edu.csdn.net/"></script>
-<div class="edu_nav_wrap">
-    <div class="nav_box">
-        <div class="nav_mobile">
-            <div class="nav_logo"><a href="https://edu.csdn.net/"><img src="../../statics/png/edu_logo.png"
-                                                                       alt=""></a></div>
-            <h1>CSDN学院</h1><a href="javascript:;" class="icon_back" style="display: none;"><img
-                src="../../statics/png/edu_m_back.png" alt="返回"></a>
-        </div>
-        <div class="nav">
-            <div class="nav_logo"><a href="https://edu.csdn.net/"><img src="../../statics/png/edu_logo.png"
-                                                                       alt=""></a></div>
-            <div class="nav_l">
-                <ul class="navL_listBox">
-                    <li class="navL_list"><a href="https://edu.csdn.net/" class="navCur">首页</a></li>
-                    <li class="navL_list"><a href="https://edu.csdn.net/courses">课程</a></li>
-                    <li class="navL_list"><a href="https://edu.csdn.net/combos">套餐</a></li>
-                    <li class="navL_list have_secondLevel"><a href="https://edu.csdn.net/huiyiCourse"
-                                                              class="new hotIcon ">直播</a>
-                    </li>
-                    <li class="navL_list have_secondLevel"><a href="https://edu.csdn.net/lecturer">讲师<i
-                            class="iconfont arrowTriangle_down"> </i></a>
-                        <div class="nav_secondLevel"><span class="navSL_arrow"><b></b><i class="iconfont"></i></span>
-                            <ul class="navSL_box">
-                                <li class="navSL_list"><a href="https://edu.csdn.net/lecturer">学院讲师</a></li>
-                                <li class="navSL_list"><a href="https://edu.csdn.net/lecturer/apply">讲师申请</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="navL_list new csdn-tracking-statistics" data-mod="popu_439"><a
-                            href="https://edu.csdn.net/member" class="new" target="_blank">会员</a></li>
-                    <li class="navL_list new csdn-tracking-statistics" data-mod="popu_612"><a
-                            href="https://edu.csdn.net/huiyiCourse/series_detail/79?utm_source=bar" target="_blank"
-                            class="navCur">机器学习案例实战</a></li>
-                </ul>
-            </div>
-            <div class="nav_search_box">
-                <div class="nav_search">
-                    <form name="searchform" method="get" action="https://edu.csdn.net/search">
-                        <div name="classid" id="choose" class="nav_search_ul">
-                            <input name="keywords" type="text" placeholder="搜索关键词" class="inp_srh" value="">
-                            <input type="hidden" name="type" value="0">
-                            <input type="submit" value="" class="btn_srh">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="nav_r">
-                <ul class="navR_listBox">
-                    <li class="navR_list01"><a href="https://edu.csdn.net/mycollege"><i
-                            class="myEdu_icon iconfont"></i>我的学院</a></li>
-                    <li class="clearfloat"></li>
-                </ul>
-            </div>
-            <div class="clearfloat"></div>
-        </div>
-    </div>
-</div>
+
 <!-- 微信分享脚本开始 -->
 <script src="../../statics/js/jweixin-1.2.0.js"></script>
 <script>

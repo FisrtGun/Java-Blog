@@ -328,7 +328,7 @@ To change this template use File | Settings | File Templates.
                                     data-feed-show="true" data-dsm="post">
                                     <a strategy="hot" href="http://blog.csdn.net/playfreely/article/details/77446878"
                                        target="_blank">
-                                       ${flist.ftitle} </a>
+                                            ${flist.ftitle} </a>
                                 </h2>
                                 <div class="close_tag">
                                     <div class="unin_reason_dialog_wrapper">
@@ -374,13 +374,13 @@ To change this template use File | Settings | File Templates.
                                 </dt>
                                 <dd class="name">
                                     <a href="http://blog.csdn.net/playfreely" target="_blank">
-                                        ${flist.fauthor} </a>
+                                            ${flist.fauthor} </a>
                                 </dd>
                                 <dd class="time csdn-tracking-statistics tracking-click" data-poputype="feed"
                                     data-mod="popu_459">
                                     <a strategy="hot" href="http://blog.csdn.net/playfreely/article/details/77446878"
                                        target="_blank">
-                                        ${flist.ftime} </a>
+                                            ${flist.ftime} </a>
                                 </dd>
                                 <!--新增评论数+阅读 begin-->
                                 <dd class="common_num csdn-tracking-statistics tracking-click" data-poputype="feed"
@@ -393,7 +393,7 @@ To change this template use File | Settings | File Templates.
                                                   d="M4,15V12H3a2,2,0,0,1-2-2V4A2,2,0,0,1,3,2H13a2,2,0,0,1,2,2v6a2,2,0,0,1-2,2H8ZM3,3A.94.94,0,0,0,2,4v6a.94.94,0,0,0,1,1H5v2l2.7-2H13a1.08,1.08,0,0,0,1-1V4a.94.94,0,0,0-1-1Z"
                                                   transform="translate(-1 -2)"></path>
                                         </svg>
-                                        ${flist.fcomment}</a>
+                                            ${flist.fcomment}</a>
                                 </dd>
                                 <!--新增评论数+阅读 end-->
                             </dl>

@@ -64,6 +64,9 @@ public class MainController {
     @Resource
     private InformationTitleService informationTitleService;
 
+    @Resource
+    private  FrontService frontService;
+
 
     //去首页
     @RequestMapping("index")
@@ -377,7 +380,10 @@ public class MainController {
 
     //跳转前端页面
     @RequestMapping("front")
-    public String front() {
+    public String front(Model model) {
+       List<Front>  list= frontService.selectFront();
+       model.addAttribute("Flists",list);
+
         return "front-end";
     }
 

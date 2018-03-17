@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+
 @Service("frontServiceImpl")
 public class FrontServiceImpl implements FrontService {
     @Resource
