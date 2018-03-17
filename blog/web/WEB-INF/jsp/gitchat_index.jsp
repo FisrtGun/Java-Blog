@@ -185,9 +185,9 @@
                 GO
             </div>
         </a></div>
-        <a id="loginBtn2"
+        <%--<a id="loginBtn2"
            style="display:inline-block;float:right;height:35px;color: #ff9100;font-size:14px;                border: 1px solid #ff9100;-webkit-border-radius: 25px;margin-right: 10px;"
-           href="javascript:void(0)" role="button" class="btn btn-default">登录 / 注册</a><a id="writeBtn2"
+           href="javascript:void(0)" role="button" class="btn btn-default">登录 / 注册</a>--%><a id="writeBtn2"
                                                                                          style="display:inline-block;height:35px;color: #5f6f81;float:right;font-size:14px;                    border: 1px solid #d1d1d1;-webkit-border-radius: 25px;margin-right: 10px;"
                                                                                          href="javascript:void(0) return false;"
                                                                                          role="button"
@@ -199,7 +199,7 @@
             style="display:inline-block;height:35px;color: #5f6f81;float:right;font-size:14px;                                                border: 1px solid #d1d1d1;-webkit-border-radius: 25px;margin-right: 10px;"
             href="javascript:void(0)" role="button" class="hidden-xs btn btn-default">发布Chat</a></div>
 </div>
-<div id="thumbClickMenuDIV"
+<%--<div id="thumbClickMenuDIV"
      style="position: fixed;top: 70px;right: 10px;font-size: 14pt;width: 160px;display: none;z-index: 1;">
     <div style="border:1px solid #f0f0f0">
         <ul style="width: 100%;padding: 5px 15px;line-height: 35px;margin: 2px 0 0;font-size: 14px;text-align: center;list-style: none;background-color: #fff">
@@ -219,7 +219,7 @@
             <li><a style="text-decoration: none;color:#cccccc;" href="javascript:void(0);">退出登录</a></li>
         </ul>
     </div>
-    <s><i></i></s></div>
+    <s><i></i></s></div>--%>
 <script>// grab an element
 var myElement = document.getElementById("header");
 // construct an instance of Headroom, passing the element

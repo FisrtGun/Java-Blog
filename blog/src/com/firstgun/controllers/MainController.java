@@ -60,6 +60,9 @@ public class MainController {
     //数据库页面的服务层
     private DbService dbService;
 
+    @Resource
+    private InformationTitleService informationTitleService;
+
 
     //去首页
     @RequestMapping("index")
@@ -250,7 +253,11 @@ public class MainController {
 
     //去资讯
     @RequestMapping("/information")
-    public String information() {
+    public String information(Model model) {
+        List<InformationTitle> informationList = informationTitleService.selectInformation();
+        List<InformationTitle> groomList = informationTitleService.selectGroom();
+        model.addAttribute("informationList",informationList);
+        model.addAttribute("groomList",groomList);
         return "information";
     }
 
