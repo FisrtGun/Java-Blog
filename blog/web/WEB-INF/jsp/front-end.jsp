@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
 Created by IntelliJ IDEA.
 User: Administrator
@@ -12,12 +13,12 @@ To change this template use File | Settings | File Templates.
       class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script charset="utf-8" src="../../statics/js/b.js"></script>
-    <script charset="utf-8" src="../../statics/js/b.js"></script>
-    <script src="../../statics/js/hm.js"></script>
+    <%--<script charset="utf-8" src="../../statics/js/b.js"></script>--%>
+    <%--<script charset="utf-8" src="../../statics/js/b.js"></script>--%>
+    <%--<script src="../../statics/js/hm.js"></script>--%>
 
-    <script src="../../statics/js/hm.js"></script>
-    <script src="../../statics/js/tingyun-rum.js" type="text/javascript"></script>
+    <%--<script src="../../statics/js/hm.js"></script>--%>
+    <%--<script src="../../statics/js/tingyun-rum.js" type="text/javascript"></script>--%>
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport"
@@ -28,14 +29,14 @@ To change this template use File | Settings | File Templates.
     <title>前端-CSDN</title>
     <link ref="canonical" href="https://www.csdn.net/nav/web">
     <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
-    <script src="../../statics/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="../../statics/js/tracking-1.0.2.js" type="text/javascript" charset="utf-8"></script>
-    <script src="../../statics/js/main_flume.js"></script>
+    <%--<script src="../../statics/js/jquery-1.9.1.min.js" type="text/javascript"></script>--%>
+    <%--<script src="../../statics/js/tracking-1.0.2.js" type="text/javascript" charset="utf-8"></script>--%>
+    <%--<script src="../../statics/js/main_flume.js"></script>--%>
     <link rel="stylesheet" href="../../statics/css/content_toolbar.css">
     <link rel="stylesheet" href="../../statics/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../statics/css/avatar.css">
     <link href="../../statics/css/csdn_feed.css" rel="stylesheet">
-    <script src="../../statics/js/modernizr.js" type="text/javascript"></script>
+    <%--<script src="../../statics/js/modernizr.js" type="text/javascript"></script>--%>
     <style type="text/css"></style>
     <style type="text/css"></style>
     <style type="text/css"></style>
@@ -319,90 +320,92 @@ To change this template use File | Settings | File Templates.
                 </div>
             </div>
             <ul class="feedlist_mod" id="feedlist_id" shown-offset="1520924892865407" style="padding-top: 0px;">
-                <li class="clearfix" data-type="blog" data-id="77446878">
-                    <div class="list_con">
-                        <div class="title">
-                            <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
-                                data-feed-show="true" data-dsm="post">
-                                <a strategy="hot" href="http://blog.csdn.net/playfreely/article/details/77446878"
-                                   target="_blank">
-                                    web前端工程师----JavaScript语言 </a>
-                            </h2>
-                            <div class="close_tag">
-                                <div class="unin_reason_dialog_wrapper">
-                                    <i class="icon-close"></i>
-                                    <div class="unin_reason_dialog">
-                                        <h3>选择理由，精准屏蔽</h3>
-                                        <ul>
-                                            <li class="unin_item csdn-tracking-statistics" data-poputype="feed"
-                                                data-feed-show="false" data-dsm="post" data-mod="popu_462">
-                                                <a target="_blank">所属分类
-                                                    <em>
-                                                    </em> 不感兴趣</a>
-                                            </li>
-                                            <br>
-                                            <li class="unin_item csdn-tracking-statistics" data-poputype="feed"
-                                                data-feed-show="false" data-dsm="post" data-mod="popu_462">
-                                                <a target="_blank">推荐理由
-                                                    <em>
-                                                        热门文章 </em> 不准确</a>
-                                            </li>
-                                            <br>
-                                            <li class="unin_item csdn-tracking-statistics" data-poputype="feed"
-                                                data-feed-show="false" data-dsm="post" data-mod="popu_462">
-                                                <a target="_blank"> 旧闻、重复 </a>
-                                            </li>
-                                            <br>
-                                            <li class="unin_item csdn-tracking-statistics" data-poputype="feed"
-                                                data-feed-show="false" data-dsm="post" data-mod="popu_462">
-                                                <a target="_blank"> 内容质量差 </a>
-                                            </li>
-                                            <br>
-                                        </ul>
+                <c:forEach items="${Flists}" var="flist" varStatus="s">
+                    <li class="clearfix" data-type="blog" data-id="77446878">
+                        <div class="list_con">
+                            <div class="title">
+                                <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
+                                    data-feed-show="true" data-dsm="post">
+                                    <a strategy="hot" href="http://blog.csdn.net/playfreely/article/details/77446878"
+                                       target="_blank">
+                                       ${flist.ftitle} </a>
+                                </h2>
+                                <div class="close_tag">
+                                    <div class="unin_reason_dialog_wrapper">
+                                        <i class="icon-close"></i>
+                                        <div class="unin_reason_dialog">
+                                            <h3>选择理由，精准屏蔽</h3>
+                                            <ul>
+                                                <li class="unin_item csdn-tracking-statistics" data-poputype="feed"
+                                                    data-feed-show="false" data-dsm="post" data-mod="popu_462">
+                                                    <a target="_blank">所属分类
+                                                        <em>
+                                                        </em> 不感兴趣</a>
+                                                </li>
+                                                <br>
+                                                <li class="unin_item csdn-tracking-statistics" data-poputype="feed"
+                                                    data-feed-show="false" data-dsm="post" data-mod="popu_462">
+                                                    <a target="_blank">推荐理由
+                                                        <em>
+                                                            热门文章 </em> 不准确</a>
+                                                </li>
+                                                <br>
+                                                <li class="unin_item csdn-tracking-statistics" data-poputype="feed"
+                                                    data-feed-show="false" data-dsm="post" data-mod="popu_462">
+                                                    <a target="_blank"> 旧闻、重复 </a>
+                                                </li>
+                                                <br>
+                                                <li class="unin_item csdn-tracking-statistics" data-poputype="feed"
+                                                    data-feed-show="false" data-dsm="post" data-mod="popu_462">
+                                                    <a target="_blank"> 内容质量差 </a>
+                                                </li>
+                                                <br>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <dl class="list_userbar">
+                                <dt>
+                                    <a href="http://blog.csdn.net/playfreely" target="_blank" class="user_img">
+                                        <img src="../../statics/jpg/1_playfreely.jpg" alt="playfreely"
+                                             title="playfreely">
+                                    </a>
+                                </dt>
+                                <dd class="name">
+                                    <a href="http://blog.csdn.net/playfreely" target="_blank">
+                                        ${flist.fauthor} </a>
+                                </dd>
+                                <dd class="time csdn-tracking-statistics tracking-click" data-poputype="feed"
+                                    data-mod="popu_459">
+                                    <a strategy="hot" href="http://blog.csdn.net/playfreely/article/details/77446878"
+                                       target="_blank">
+                                        ${flist.ftime} </a>
+                                </dd>
+                                <!--新增评论数+阅读 begin-->
+                                <dd class="common_num csdn-tracking-statistics tracking-click" data-poputype="feed"
+                                    data-mod="popu_459">
+                                    <a strategy="hot"
+                                       href="http://blog.csdn.net/playfreely/article/details/77446878#comment_form"
+                                       target="_blank">
+                                        <svg>
+                                            <path id="v0.2"
+                                                  d="M4,15V12H3a2,2,0,0,1-2-2V4A2,2,0,0,1,3,2H13a2,2,0,0,1,2,2v6a2,2,0,0,1-2,2H8ZM3,3A.94.94,0,0,0,2,4v6a.94.94,0,0,0,1,1H5v2l2.7-2H13a1.08,1.08,0,0,0,1-1V4a.94.94,0,0,0-1-1Z"
+                                                  transform="translate(-1 -2)"></path>
+                                        </svg>
+                                        ${flist.fcomment}</a>
+                                </dd>
+                                <!--新增评论数+阅读 end-->
+                            </dl>
+                            <!--阅读 begin-->
+                            <div class="read_num">
+                                <p class="num">${flist.fnum}</p>
+                                <p class="text">阅读量</p>
+                            </div>
+                            <!--阅读 end-->
                         </div>
-                        <dl class="list_userbar">
-                            <dt>
-                                <a href="http://blog.csdn.net/playfreely" target="_blank" class="user_img">
-                                    <img src="../../statics/jpg/1_playfreely.jpg" alt="playfreely" title="playfreely">
-                                </a>
-                            </dt>
-                            <dd class="name">
-                                <a href="http://blog.csdn.net/playfreely" target="_blank">
-                                    playfreely </a>
-                            </dd>
-                            <dd class="time csdn-tracking-statistics tracking-click" data-poputype="feed"
-                                data-mod="popu_459">
-                                <a strategy="hot" href="http://blog.csdn.net/playfreely/article/details/77446878"
-                                   target="_blank">
-                                    02月08日 </a>
-                            </dd>
-                            <!--新增评论数+阅读 begin-->
-                            <dd class="common_num csdn-tracking-statistics tracking-click" data-poputype="feed"
-                                data-mod="popu_459">
-                                <a strategy="hot"
-                                   href="http://blog.csdn.net/playfreely/article/details/77446878#comment_form"
-                                   target="_blank">
-                                    <svg>
-                                        <path id="v0.2"
-                                              d="M4,15V12H3a2,2,0,0,1-2-2V4A2,2,0,0,1,3,2H13a2,2,0,0,1,2,2v6a2,2,0,0,1-2,2H8ZM3,3A.94.94,0,0,0,2,4v6a.94.94,0,0,0,1,1H5v2l2.7-2H13a1.08,1.08,0,0,0,1-1V4a.94.94,0,0,0-1-1Z"
-                                              transform="translate(-1 -2)"></path>
-                                    </svg>
-                                    1 </a>
-                            </dd>
-                            <!--新增评论数+阅读 end-->
-                        </dl>
-                        <!--阅读 begin-->
-                        <div class="read_num">
-                            <p class="num">986</p>
-                            <p class="text">阅读量</p>
-                        </div>
-                        <!--阅读 end-->
-                    </div>
-                </li>
-
+                    </li>
+                </c:forEach>
             </ul>
             <div class="feed_loading" style="display: none;">
                 <img src="../../statics/gif/feedLoading.gif" alt="I&#39;m loading" title="I&#39;m loading">
@@ -827,7 +830,7 @@ To change this template use File | Settings | File Templates.
 </div>
 <script src="../../statics/js/bootstrap.min.js" type="text/javascript"></script>
 
-<script src="../../statics/js/async-1.0.1.js"></script>
+<%--<script src="../../statics/js/async-1.0.1.js"></script>--%>
 
 <script src="../../statics/js/tracking-1.0.1.js" type="text/javascript"></script>
 <script language="javascript" type="text/javascript">
@@ -844,7 +847,12 @@ To change this template use File | Settings | File Templates.
 
 <script src="../../statics/js/publib_footer-1.0.3.js" data-isfootertrack="false"></script>
 <link rel="stylesheet" type="text/css" href="../../statics/css/pub_footer_1.0.3.css">
-<script src="../../statics/js/csdn_feed.min.js" type="text/javascript"></script>
+
+<%--//异步刷新--%>
+<%--<script src="../../statics/js/csdn_feed.min.js" type="text/javascript"></script>--%>
+
+
+
 <script src="../../statics/js/ab.plus.js"></script>
 <script>
     adhoc('init', {

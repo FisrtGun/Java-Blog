@@ -47,6 +47,9 @@ public class MainController {
     @Resource
     //群主讨论模块服务层
     private IteyediscussiongroupService iteyediscussiongroupService;
+    //去前端服务层
+    @Resource
+    private  FrontService frontService;
 
 
     //去首页
@@ -309,7 +312,10 @@ public class MainController {
 
     //跳转前端页面
     @RequestMapping("front")
-    public String front() {
+    public String front(Model model) {
+        List<Front>  list=frontService.selectFront();
+        model.addAttribute("Flists",list);
+
         return "front-end";
     }
 
