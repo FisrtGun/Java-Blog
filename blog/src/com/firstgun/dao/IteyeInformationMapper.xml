@@ -7,5 +7,9 @@
     <select id="getIteyeInformation" resultType="IteyeInformation">
         SELECT * FROM `iteyeInformation` ORDER BY icreateTime limit 0,15;
     </select>
+    <!--CSTO获取资讯标题-->
+    <select id="informationTitle" resultType="IteyeInformation">
+        SELECT ititle FROM iteyeInformation ORDER BY icreateTime limit 0,5
+    </select>
 </mapper>
 

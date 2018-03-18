@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * @Author:
  * @Date: 2018/3/15 19:10
- * @Description:
+ * @Description:x
  */
 public class CstoGenius implements Serializable {
     private int aid;
@@ -56,12 +56,12 @@ public class CstoGenius implements Serializable {
 
     @Override
     public String toString() {
-        return "CstoGenius{" +
-                "aid=" + aid +
-                ", atype=" + atype +
-                ", alogo='" + alogo + '\'' +
-                ", author='" + author + '\'' +
-                ", atitle='" + atitle + '\'' +
-                '}';
+        return "{" +
+                "\"aid\":" +"\""+  aid +"\""+
+                ",\"atype\":" +"\""+  atype +"\""+
+                ", \"alogo\":" + "\""+ alogo + "\""+
+                ", \"author\":" +"\""+  author + "\""+
+                ", \"atitle\":" +"\""+ atitle + "\""+
+                "}";
     }
 }

@@ -1,5 +1,7 @@
 package com.firstgun.controllers;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.firstgun.entity.*;
 import com.firstgun.service.*;
 import com.firstgun.utils.PageUtils;
@@ -15,9 +17,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -210,53 +216,106 @@ public class MainController {
         return "gitchat_index";
     }
 
-    //去CSTO
+    //去CSTO页面
     @RequestMapping("csto")
-    public String csto(@RequestParam(value = "atype",required = false)String atype,Model model) {
-        int atypes=Integer.parseInt(atype);
-        List<CstoGenius> genius = null;
-        switch (atypes){
-            case 1 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 2 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 3 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 4 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 5 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 6 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 7 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 8 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 9 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 10 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 11 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-            case 12 :
-                genius = cstoGeniusService.genius(atypes);
-                break;
-        }
-
+    public String csto(Model model){
+        List<CstoGenius> genius1 = cstoGeniusService.genius(1);
+        List<CstoGenius> genius7 = cstoGeniusService.genius(7);
+        List<IteyeInformation> iteyeInformations = iteyeInformationService.informationTitle();
+        model.addAttribute("iteyeInformations",iteyeInformations);
         List<LatestProject> latest = latestProjectService.latest();
         model.addAttribute("latest",latest);
-        model.addAttribute("genius",genius);
+        model.addAttribute("genius1",genius1);
+        model.addAttribute("genius7",genius7);
+        return "csto";
+    }
+
+    //处理ajax请求
+    @ResponseBody
+    @RequestMapping("cstoAjax")
+    public String cstoAjax(HttpServletRequest request,HttpServletResponse response) {
+        String atype = request.getParameter("atype");
+        PrintWriter out=null;
+        try {
+            out = response.getWriter();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (atype.equals("系统开发")) {
+            atype="1";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius1 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius1);
+            out.print(str);
+        }else if(atype.equals("Android")){
+            atype="2";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius2 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius2);
+            out.print(str);
+        }else if(atype.equals("网站开发")){
+            atype="3";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius3 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius3);
+            out.print(str);
+        }else if(atype.equals("企业软件")) {
+            atype="4";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius4 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius4);
+            out.print(str);
+        }else if(atype.equals("应用程序")) {
+            atype="5";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius5 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius5);
+            out.print(str);
+        }else if(atype.equals("嵌入式")) {
+            atype="6";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius6 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius6);
+            out.print(str);
+        }else if(atype.equals("c++")) {
+            atype="7";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius7 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius7);
+            out.print(str);
+        }else if(atype.equals("c#")) {
+            atype="8";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius8 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius8);
+            out.print(str);
+        }else if(atype.equals("andro")) {
+            atype="9";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius9 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius9);
+            out.print(str);
+        }else if(atype.equals("jquer")) {
+            atype="10";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius10 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius10);
+            out.print(str);
+        }else if(atype.equals("java")) {
+            atype="11";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius11= cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius11);
+            out.print(str);
+        }else if(atype.equals("javas")) {
+            atype="12";
+            int atypes=Integer.parseInt(atype);
+            List<CstoGenius> genius12 = cstoGeniusService.genius(atypes);
+            String str  = JSON.toJSONString(genius12);
+            out.print(str);
+        }
+        out.flush();
+        out.close();
         return "csto";
     }
 
@@ -309,4 +368,9 @@ public class MainController {
     //跳转学院页面
     @RequestMapping("study")
     public String study(){return "study" ;}
+
+
+
+
+
 }
