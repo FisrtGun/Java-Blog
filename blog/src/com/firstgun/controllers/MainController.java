@@ -468,8 +468,6 @@ public class MainController {
         List<Mycenter> myblog=myCenterService.getMyBlog(user.getUname());
         model.addAttribute("myblog",myblog.get(0));
 
-
-
         return "mycenter";
     }
 
