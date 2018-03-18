@@ -164,7 +164,7 @@ public class MainController {
             }
         } else {
             req.getSession().setAttribute("error", true);
-            return "login";
+            return "redirect:login";
         }
     }
 
@@ -437,7 +437,6 @@ public class MainController {
         Date date=new Date();
         String strDate=simpleDateFormat.format(date);
         User user= (User) req.getSession().getAttribute("users");
-        System.out.println("==========="+strDate);
         String nauthor=user.getUname();
         String ntab= req.getParameter("selType");
         String ntitle=req.getParameter("txtTitle");
@@ -456,7 +455,6 @@ public class MainController {
         newsTitle.setNconten(nconten);
         newsTitle.setNcreateTime(ncreateTime);
         newsTitle.setNimg(nimg);
-
         int num=newsTitleService.inserNews(newsTitle);
         if (num>0){
             return "mycenter";

@@ -257,7 +257,7 @@ To change this template use File | Settings | File Templates.
             </h3>
             <ul class='column_left'>
                 <c:forEach items="${grouplist}" var="grouplist" varStatus="">
-                    <li><a href="http://www.iteye.com/topic/1147193" target="_blank" title="springboot--如何优雅的使用mybatis">springboot--如何优雅的使用mybatis</a>
+                    <li><a href="http://www.iteye.com/topic/1147193" target="_blank" title="springboot--如何优雅的使用mybatis">${grouplist.gtopic}</a>
                     </li>
                 </c:forEach>
             </ul>

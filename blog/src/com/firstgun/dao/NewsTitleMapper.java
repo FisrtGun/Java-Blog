@@ -24,4 +24,8 @@ public interface NewsTitleMapper {
     int inserNews(NewsTitle newsTitle);
     //根据标题，博主模糊查询
     List<NewsTitle> likeCheck(@Param("nauthor") String nauthor,@Param("ntitle") String ntitle);
+    //根据nid查询一条数据
+    NewsTitle getNewsTitle(@Param("nid") Integer nid);
+    //根据nid修改Nview
+    int updateView(@Param("nid")Integer nid,@Param("nview")Integer nview);
 }

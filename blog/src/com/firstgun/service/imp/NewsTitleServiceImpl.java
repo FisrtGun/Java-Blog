@@ -47,4 +47,14 @@ public class NewsTitleServiceImpl implements NewsTitleService {
     public List<NewsTitle> likeCheck(String nauthor, String ntitle) {
         return newsTitleMapper.likeCheck(nauthor,ntitle);
     }
+
+    @Override
+    public NewsTitle getNewsTitle(Integer nid) {
+        return newsTitleMapper.getNewsTitle(nid);
+    }
+
+    @Override
+    public int updateView(Integer nid, Integer nview) {
+        return newsTitleMapper.updateView(nid,nview);
+    }
 }

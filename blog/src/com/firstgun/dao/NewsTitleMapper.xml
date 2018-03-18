@@ -9,7 +9,7 @@
     </insert>
     <!--获取博主发布的标题、博主、发布文章时间、作者头像图片路径-->
     <select id="getSelectNews" resultType="NewsTitle">
-        SELECT ntitle,ntab,nauthor,nreads,ncreateTime,nauthor,nimg FROM newstitle ORDER BY ncreateTime DESC limit #{index},#{pageSize};
+        SELECT ntitle,ntab,nauthor,nreads,ncreateTime,nauthor,nimg,nid FROM newstitle ORDER BY ncreateTime DESC limit #{index},#{pageSize};
     </select>
     <!--获取数据库总条数-->
     <select id="newsCount" resultType="int">
@@ -37,6 +37,15 @@
         </trim>
     </select>
 
+    <!-- 根据nid查询一条数据 -->
+    <select id="getNewsTitle" resultType="NewsTitle">
+        SELECT * FROM newstitle WHERE nid=#{nid}
+    </select>
+
+    <!--根据nid修改Nview-->
+    <update id="updateView">
+        UPDATE `newstitle` SET nview=#{nview} WHERE nid=#{nid};
+    </update>
 
 
 

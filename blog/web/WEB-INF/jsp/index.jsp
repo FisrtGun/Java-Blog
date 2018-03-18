@@ -222,7 +222,7 @@ To change this template use File | Settings | File Templates.
                         <div class="list_con">
                             <div class="title">
                                 <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed" data-feed-show="false" data-dsm="post">
-                                    <a strategy="recommend" href="/personal/personblog" target="_blank">
+                                    <a strategy="recommend" href="/personal/personblog?nid=${newsList.nid}" target="_blank">
                                             ${newsList.ntitle}                        </a>
                                 </h2>
                                 <div class="close_tag">

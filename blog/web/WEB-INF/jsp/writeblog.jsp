@@ -1232,9 +1232,9 @@
             <div class="dro-box">
                 <select id="selType" name="selType">
                     <option value="0">请选择</option>
-                    <option value="original">原创</option>
-                    <option value="repost">转载</option>
-                    <option value="translated">翻译</option>
+                    <option value="原创">原创</option>
+                    <option value="转载">转载</option>
+                    <option value="翻译">翻译</option>
                 </select>
             </div>
             <input type="text" id="txtTitle" class="input-file-title" name="txtTitle" maxlength="100" placeholder="输入文章标题">
