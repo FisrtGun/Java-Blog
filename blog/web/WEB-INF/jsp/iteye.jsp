@@ -199,7 +199,7 @@ To change this template use File | Settings | File Templates.
                             <dt><a href="http://www.iteye.com/news/32925" target="_blank"
                                    title="Java 程序员开发常用的工具">${informationlist.ititle}</a></dt>
                             <dd>
-                                    ${informationlist.iconten}
+                                  <span style="display:inline-block;height: 50px;width:300px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap">  ${informationlist.iconten}</span>
                                 <a href="http://www.iteye.com/news/32925" target="_blank"
                                    title="Java 程序员开发常用的工具">[详情]</a>
                             </dd>
@@ -222,9 +222,11 @@ To change this template use File | Settings | File Templates.
                 </h3>
                 <ul>
                     <c:forEach items="${list}" var="informationlist" varStatus="i">
+                        <c:if test="${i.count<8}">
                         <li class="title">
                             <a href="/news/32925" target="_blank" title="Java 程序员开发常用的工具">${informationlist.ititle}</a>
                         </li>
+                        </c:if>
                     </c:forEach>
                 </ul>
             </div>

@@ -31,18 +31,7 @@ To change this template use File | Settings | File Templates.
     <link href='../../statics/css/csdn_feed.css' rel='stylesheet' />
     <script src='../../statics/js/modernizr.js' type='text/javascript'></script>
 
-    <style data-for="result" type="text/css" id="css_newi_result">body{color:#333;background:#fff;padding:6px 0 0;margin:0;position:relative;min-width:900px}
-    body,th,td{font-family:arial}
-    #page{font:14px arial;white-space:nowrap;padding-left:35px}
-    #page a,#page strong{display:inline-block;vertical-align:text-bottom;height:36px;text-align:center;line-height:34px;text-decoration:none;overflow:hidden;margin-right:9px;background:#fff}
-    #page a{cursor:pointer}
-    #page a:hover{background:0 0}
-    #page .n:hover,#page a:hover .pc{background:#f2f8ff;border:1px solid #38f}
-    #page .n{height:34px;padding:0 18px;border:1px solid #e1e2e3}
-    #page span{display:block}
-    #page .pc{width:34px;height:34px;border:1px solid #e1e2e3;cursor:pointer}
-    #page strong .pc{border:0;width:36px;height:36px;line-height:36px}
-    </style>
+
 </head>
 <body data-category="home" data-host_type="www">
 <jsp:include page="common.jsp" flush="true"></jsp:include>
@@ -301,56 +290,7 @@ To change this template use File | Settings | File Templates.
                         </div>
                     </li>
                 </c:forEach>
-                <li class="tip_box clearfix">
-                    <%--<button type="button" class="txt btn-feed-refresh">刚刚阅读在这里，点击刷新</button>
-                    <div class="read-here csdn-tracking-statistics" data-mod="popu_464" data-dsm="post">
-                        <a>刚刚阅读在这里，点击刷新</a>
-                    </div>--%>
-                        <div id="page" >
-
-                            <a href="index?index=${pageUtils.index-1}" class="n" id="pageUp">上一页</a>
-                            <script type="text/javascript">
-                                var pageInt=${pageUtils.index};
-                                if(pageInt== "1"){
-                                    $("#pageUp").attr('href',"javascript:;").css("background-color","#f5f6f7");
-                                }
-                            </script>
-                            <script type="text/javascript">
-                                for(var i=1;i<${pageUtils.totalPage};i++){
-
-                                }
-                            </script>
-                            <%--<a href="index?index=1">
-                                <span class="pc">1</span></a>
-                            <a href="index?index=2">
-                                <span class="pc">2</span></a>
-                            <a href="index?index=3">
-                            <span class="pc">3</span></a>
-                            <a href="index?index=4">
-                            <span class="pc">4</span></a>
-                            <a href="index?index=5">
-                            <span class="pc">5</span></a>
-                            <a href="index?index=6">
-                            <span class="pc">6</span></a>
-                            <a href="index?index=7">
-                            <span class="pc">7</span></a>
-                            <a href="index?index=8">
-                            <span class="pc">8</span></a>
-                            <a href="index?index=9">
-                            <span class="pc">9</span></a>
-                            <a href="index?index=10">
-                            <span class="pc">10</span></a>--%>
-                            <a href="index?index=${pageUtils.index+1}" class="n">下一页
-                            </a>
-                            <script type="text/javascript">
-                                var pageInt=${pageUtils.index};
-                                var totalPage=${pageUtils.totalPage}
-                                if(pageInt== totalPage){
-                                    $("#pageUp").attr('href',"javascript:;");
-                                }
-                            </script>
-                        </div>
-                </li>
+                <jsp:include page="PageCommon.jsp" flush="true"></jsp:include>
             </ul>
         </main>
         <!DOCTYPE html>
