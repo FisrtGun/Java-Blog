@@ -14,4 +14,6 @@ import java.util.List;
 public interface IteyeInformationMapper {
     //获取资讯全部数据
     List<IteyeInformation> getIteyeInformation();
+    //CSTO获取资讯标题
+    List<IteyeInformation> informationTitle();
 }
