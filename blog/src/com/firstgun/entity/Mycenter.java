@@ -1,6 +1,7 @@
 package com.firstgun.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Mycenter implements Serializable{
     //用户id
@@ -18,11 +19,21 @@ public class Mycenter implements Serializable{
     //职业
     private String job;
     //性别
-    private String sec;
+    private String sex;
     //生日
     private String birthday;
     //地址
     private String address;
+    //对多：有多篇博客
+    private List<NewsTitle> newsTitle;
+
+    public List<NewsTitle> getNewsTitle() {
+        return newsTitle;
+    }
+
+    public void setNewsTitle(List<NewsTitle> newsTitle) {
+        this.newsTitle = newsTitle;
+    }
 
     public int getIserId() {
         return iserId;
@@ -80,12 +91,12 @@ public class Mycenter implements Serializable{
         this.job = job;
     }
 
-    public String getSec() {
-        return sec;
+    public String getSex() {
+        return sex;
     }
 
-    public void setSec(String sec) {
-        this.sec = sec;
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     public String getBirthday() {
@@ -104,19 +115,5 @@ public class Mycenter implements Serializable{
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "Mycenter{" +
-                "iserId=" + iserId +
-                ", userName='" + userName + '\'' +
-                ", upicture='" + upicture + '\'' +
-                ", attention='" + attention + '\'' +
-                ", fans='" + fans + '\'' +
-                ", industry='" + industry + '\'' +
-                ", job='" + job + '\'' +
-                ", sec='" + sec + '\'' +
-                ", birthday='" + birthday + '\'' +
-                ", address='" + address + '\'' +
-                '}';
-    }
+
 }

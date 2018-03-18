@@ -256,24 +256,10 @@ To change this template use File | Settings | File Templates.
                 <a href="/forums/hot_topics" class="more" target="_blank">[更多]</a>
             </h3>
             <ul class='column_left'>
-                <li><a href="http://www.iteye.com/topic/1147193" target="_blank" title="springboot--如何优雅的使用mybatis">springboot--如何优雅的使用mybatis</a>
-                </li>
-                <li><a href="http://www.iteye.com/topic/1147195" target="_blank"
-                       title="Minidao 1.6.2 版本发布，超轻量Java持久化框架（Hibernate完美助手）">Minidao 1.6.2
-                    版本发布，超轻量Java持久化框架（Hibernate完美助手）</a>
-                </li>
-                <li><a href="http://www.iteye.com/topic/1147191" target="_blank" title="捋一捋dubbo配置">捋一捋dubbo配置</a>
-                </li>
-                <li><a href="http://www.iteye.com/topic/1147187" target="_blank" title="C++短信验证码接口调用demo">C++短信验证码接口调用demo</a>
-                </li>
-                <li><a href="http://www.iteye.com/topic/1147189" target="_blank"
-                       title="Python短信验证码接口调用">Python短信验证码接口调用</a>
-                </li>
-                <li><a href="http://www.iteye.com/topic/1147188" target="_blank" title="PHP短信验证码接口调用">PHP短信验证码接口调用</a>
-                </li>
-                <li><a href="http://www.iteye.com/topic/1147200" target="_blank"
-                       title="JEECG 3.7.3 新春版本发布，企业级JAVA快速开发平台">JEECG 3.7.3 新春版本发布，企业级JAVA快速开发平台</a>
-                </li>
+                <c:forEach items="${grouplist}" var="grouplist" varStatus="">
+                    <li><a href="http://www.iteye.com/topic/1147193" target="_blank" title="springboot--如何优雅的使用mybatis">springboot--如何优雅的使用mybatis</a>
+                    </li>
+                </c:forEach>
             </ul>
         </div>
 
@@ -293,18 +279,22 @@ To change this template use File | Settings | File Templates.
                 </tr>
                 </thead>
                 <tbody>
+                <c:forEach items="${grouplist}" var="grouplist" varStatus="g">
                 <tr onmouseover="$(this).addClassName('mouse_over');"
                     onmouseout="$(this).removeClassName('mouse_over');">
                     <td>
                         <a href='http://software.group.iteye.com/group/topic/125524' title='经过验证的项目管理实践分享-跨越敏捷的那些坑'
-                           target='_blank'>经过验证的项目管理实践分享-跨越敏捷的那 ...</a>
+                           target='_blank'>${grouplist.gtopic} ...</a>
                     </td>
-                    <td class="group"><a href="http://software.group.iteye.com" target="_blank">CMMI与敏捷</a></td>
-                    <td class="group">1 / 269</td>
-                    <td class="date">2018-03-02 <a href="http://software.group.iteye.com/group/topic/125524/post/356770"
-                                                   target="_blank"><img alt="浏览最新的文章"
-                                                                        src="../../statics/ITeyeImages/icon_last_post.gif"/></a>
+                    <td class="group"><a href="http://software.group.iteye.com" target="_blank">${grouplist.gname}</a>
                     </td>
+                    <td class="group">1 / ${grouplist.nview}</td>
+                    <td class="date">${grouplist.gRecoveryTime} <a
+                            href="http://software.group.iteye.com/group/topic/125524/post/356770"
+                            target="_blank"><img alt="浏览最新的文章"
+                                                 src="../../statics/ITeyeImages/icon_last_post.gif"/></a>
+                    </td>
+                    </c:forEach>
                 </tr>
                 <tr onmouseover="$(this).addClassName('mouse_over');"
                     onmouseout="$(this).removeClassName('mouse_over');">
@@ -343,7 +333,8 @@ To change this template use File | Settings | File Templates.
             <ul>
                 <c:forEach items="${newsList}" var="newsList" varStatus="i">
                     <c:if test="${i.count<7}">
-                        <li><a href="/magazines/134-IDE-Comparison" target="_blank" title="编程语言 IDE 对比">${newsList.ntitle}</a>
+                        <li><a href="/magazines/134-IDE-Comparison" target="_blank"
+                               title="编程语言 IDE 对比">${newsList.ntitle}</a>
                         </li>
                     </c:if>
                 </c:forEach>
@@ -362,56 +353,20 @@ To change this template use File | Settings | File Templates.
 
         <div id="groups" class="box">
             <h3>活跃群组</h3>
-            <div class="group">
-                <div class='logo'><a href='http://javaeye-water.group.iteye.com' target='_blank'><img
-                        src='../../statics/ITeyeImages/eb3bcb04-f1f0-426b-abe7-209b0e8c4760.jpg' alt='灌水乐园群组'
-                        title='灌水乐园: ITeye的灌水乐园......' height='48' width='48'/></a></div>
-                <span>
-                    <a href="http://javaeye-water.group.iteye.com" target="_blank"><strong>灌水乐园</strong></a>
-                    <br/>成员：423人
+            <c:forEach items="${grouplist}" var="grouplist" varStatus="g">
+                <c:if test="${g.count<6}">
+                    <div class="group">
+                        <div class='logo'><a href='http://javaeye-water.group.iteye.com' target='_blank'><img
+                                src='../../statics/images/fg.png' alt='灌水乐园群组'
+                                title='灌水乐园: ITeye的灌水乐园......' height='48' width='48'/></a></div>
+                        <span>
+                    <a href="http://javaeye-water.group.iteye.com"
+                       target="_blank"><strong>${grouplist.gname}</strong></a>
+                    <br/>成员：${grouplist.gnum}人
                   </span>
-            </div>
-            <div class="group">
-                <div class='logo'><a href='http://jbpm.group.iteye.com' target='_blank'><img
-                        src='../../statics/ITeyeImages/f37a1679-2f71-4374-9c46-a8b385912ba1.gif' alt='JBPM @net群组'
-                        title='JBPM @net: 工作流的运用越来越多，在Java领域最近异军突起的工作流非JBPM莫属了。可是在国内这方面的资料很少，希望可以通过JavaEye这个开源社区把JBPM普及开来！'
-                        height='48' width='48'/></a></div>
-                <span>
-                    <a href="http://jbpm.group.iteye.com" target="_blank"><strong>JBPM @net</strong></a>
-                    <br/>成员：7526人
-                  </span>
-            </div>
-            <div class="group">
-                <div class='logo'><a href='http://Activiti.group.iteye.com' target='_blank'><img
-                        src='../../statics/ITeyeImages/495b5e63-cc24-3edc-b486-f82cad375467-normal.jpg' alt='Activiti群组'
-                        title='Activiti: Alfresco软件在2010年5月17日宣布Activiti业务流程管理（BPM）开源项目的正式启动，其首席架构师由业务流程管理BPM的专家 Tom Baeyens担任。
-Activiti项目是一项新的基于Apache许可的开源BPM平台，从基础开始构建，旨在提供支持新的BPMN 2.0标准，包括支持对象管理组（OMG），面对新技术的机遇，诸如互操作性和云架构，提供技术实现。
-
-工作流的运用越来越多，Activiti发展势头强劲。可是在国内这方面的资料很少，希望可以通过JavaEye这个开源社区把Activiti普及开来！' height='48' width='48'/></a></div>
-                <span>
-                    <a href="http://Activiti.group.iteye.com" target="_blank"><strong>Activiti</strong></a>
-                    <br/>成员：140人
-                  </span>
-            </div>
-            <div class="group">
-                <div class='logo'><a href='http://javaeye-admin.group.iteye.com' target='_blank'><img
-                        src='../../statics/ITeyeImages/32858d7c-ed39-4ce4-bba3-16d380cb4e9e.gif' alt='站务讨论群组'
-                        title='站务讨论: ITeye站务圈子' height='48' width='48'/></a></div>
-                <span>
-                    <a href="http://javaeye-admin.group.iteye.com" target="_blank"><strong>站务讨论</strong></a>
-                    <br/>成员：431人
-                  </span>
-            </div>
-            <div class="group">
-                <div class='logo'><a href='http://pcdiy.group.iteye.com' target='_blank'><img
-                        src='../../statics/ITeyeImages/40406440-9eee-3cbe-a70d-f0e69dfedd0b.jpg' alt='电脑DIY群组'
-                        title='电脑DIY: 圈主（大家可以称呼我为ice，有些网友喜欢叫冰神）自1997年开始研究电脑DIY，经验极其丰富，教训也是吃足啊，但愿后人不走后悔路，诚心向各位提供咨询服务。纯粹个人业余爱好，如有观点不同很正常，千万不要在圈中随意谩骂。同时谢绝任何形式的广告，推荐可以，广告不行。'
-                        height='48' width='48'/></a></div>
-                <span>
-                    <a href="http://pcdiy.group.iteye.com" target="_blank"><strong>电脑DIY</strong></a>
-                    <br/>成员：3725人
-                  </span>
-            </div>
+                    </div>
+                </c:if>
+            </c:forEach>
         </div>
 
 
@@ -428,52 +383,21 @@ Activiti项目是一项新的基于Apache许可的开源BPM平台，从基础开
                     创建者：zh_harry
                   </span>
             </div>
-            <div class="group">
-                <div class='logo'>
-                    <a href="/blogs/subjects/springMVC" target="_blank"><img alt="Ad26f909-6440-35a9-b4e9-9aea825bd38e"
-                                                                             height="48"
-                                                                             src="../../statics/ITeyeImages/ad26f909-6440-35a9-b4e9-9aea825bd38e.png"
-                                                                             width="48"/></a>
-                </div>
-                <span>
-                    <a href="/blogs/subjects/springMVC" target="_blank">springMVC介绍</a><br/>
-                    创建者：234390216
-                  </span>
-            </div>
-            <div class="group">
-                <div class='logo'>
-                    <a href="/blogs/subjects/Spring-Cloud" target="_blank"><img
-                            alt="12d8ea3d-4199-3941-8a17-acd5024729b8" height="48"
-                            src="../../statics/ITeyeImages/12d8ea3d-4199-3941-8a17-acd5024729b8.jpg" width="48"/></a>
-                </div>
-                <span>
-                    <a href="/blogs/subjects/Spring-Cloud" target="_blank">Spring_Cloud构建云架构</a><br/>
-                    创建者：springcloud关注者
-                  </span>
-            </div>
-            <div class="group">
-                <div class='logo'>
-                    <a href="/blogs/subjects/spring4" target="_blank"><img alt="23e1c30e-ef8c-3702-aa3c-e83277ffca91"
-                                                                           height="48"
-                                                                           src="../../statics/ITeyeImages/23e1c30e-ef8c-3702-aa3c-e83277ffca91.png"
-                                                                           width="48"/></a>
-                </div>
-                <span>
-                    <a href="/blogs/subjects/spring4" target="_blank">Spring基础知识</a><br/>
-                    创建者：234390216
-                  </span>
-            </div>
+            <c:forEach items="${newsList}" var="newsList" varStatus="n">
+                <c:if test="${n.count<6}">
             <div class="group">
                 <div class='logo'>
                     <a href="/blogs/subjects/AngularJS-LIUXU" target="_blank"><img
                             alt="Eace7a35-2604-38a7-aa1e-e77dd4bea5e4" height="48"
-                            src="../../statics/ITeyeImages/eace7a35-2604-38a7-aa1e-e77dd4bea5e4.jpg" width="48"/></a>
+                            src="${newsList.npicture}" width="48"/></a>
                 </div>
                 <span>
-                    <a href="/blogs/subjects/AngularJS-LIUXU" target="_blank">Angularjs实战</a><br/>
-                    创建者：柳絮飞祭奠
+                    <a href="/blogs/subjects/AngularJS-LIUXU" target="_blank">${newsList.ntitle}</a><br/>
+                    创建者：${newsList.nauthor}
                   </span>
             </div>
+                </c:if>
+            </c:forEach>
         </div>
 
 

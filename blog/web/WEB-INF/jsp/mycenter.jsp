@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!-- saved from url=(0020)https://my.csdn.net/ -->
 <html>
@@ -261,17 +262,17 @@
                         class="edit_person_pic"></span></a></dt>
 
 
-                <dd class="focus_num"><b><a href="https://my.csdn.net/my/follow" target="_blank">0</a></b>关注</dd>
-                <dd class="fans_num"><b><a href="https://my.csdn.net/my/fans" target="_blank">1</a></b>粉丝</dd>
+                <dd class="focus_num"><b><a href="https://my.csdn.net/my/follow" target="_blank">${mycenter.attention}</a></b>关注</dd>
+                <dd class="fans_num"><b><a href="https://my.csdn.net/my/fans" target="_blank">${mycenter.fans}</a></b>粉丝</dd>
             </dl>
 
             <dl class="person-info">
                 <dt class="person-nick-name">
-                    <span>caibaozi0521</span></dt>
+                    <span>${mycenter.userName}</span></dt>
                 <dd class="person-detail">
-                    <span class="info_null">未填写行业</span><span>|</span><span class="info_null">未填写职位</span><span>|</span><span
-                        class="info_null">未填写姓名</span><span>|</span>中国<span>|</span><span class="info_null">未填写性别</span><span>|</span><span
-                        class="info_null">未填写生日</span></dd>
+                    <span class="info_null">${mycenter.industry}</span><span>|</span><span class="info_null">${mycenter.job}</span><span>|</span><span
+                        class="info_null">${mycenter.userName}</span><span>|</span>${mycenter.address}<span>|</span><span class="info_null">${mycenter.sex}</span><span>|</span><span
+                        class="info_null">${mycenter.birthday}</span></dd>
                 <dd class="person-sign">个人简介</dd>
                 <dd style="margin: 10px 0px">
                     <div class="person-status clearfix">
@@ -388,116 +389,119 @@
                     </div>
                     <div class="silder-content">
                         <ul>
-                            <li id="79164269" data-bind="ids">
+                            <c:forEach items="${myblog.newsTitle}" var="myblog" varStatus="s">
+                                <li id="79164269" data-bind="ids">
                                 <span class="content">
                                     <a href="http://blog.csdn.net/caibaozi0521/article/details/79164269" target="_blank"
-                                       data-bind="cont">SpringMVC 实现简单的登录功能</a>
+                                       data-bind="cont">${myblog.ntitle}</a>
                                     <em data-bind="tags" class="tags"></em>
                                 </span>
-                                <span class="operate">
+                                    <span class="operate">
                                     <em data-bind="time" class="time">
                                         2018-01-25 17:21:44                                    </em>
                                 </span>
-                            </li>
-                            <li id="79164161" data-bind="ids">
-                                <span class="content">
-                                    <a href="http://blog.csdn.net/caibaozi0521/article/details/79164161" target="_blank"
-                                       data-bind="cont">SpringMVC 控制层类的三种写法</a>
-                                    <em data-bind="tags" class="tags"></em>
-                                </span>
-                                <span class="operate">
-                                    <em data-bind="time" class="time">
-                                        2018-01-25 17:06:40                                    </em>
-                                </span>
-                            </li>
-                            <li id="79163566" data-bind="ids">
-                                <span class="content">
-                                    <a href="http://blog.csdn.net/caibaozi0521/article/details/79163566" target="_blank"
-                                       data-bind="cont">Spring MVC搭建环境与 注解</a>
-                                    <em data-bind="tags" class="tags"></em>
-                                </span>
-                                <span class="operate">
-                                    <em data-bind="time" class="time">
-                                        2018-01-25 16:47:40                                    </em>
-                                </span>
-                            </li>
-                            <li id="79152321" data-bind="ids">
-                                <span class="content">
-                                    <a href="http://blog.csdn.net/caibaozi0521/article/details/79152321" target="_blank"
-                                       data-bind="cont">Spring 结合Mybatis应用</a>
-                                    <em data-bind="tags" class="tags"></em>
-                                </span>
-                                <span class="operate">
-                                    <em data-bind="time" class="time">
-                                        2018-01-24 16:40:34                                    </em>
-                                </span>
-                            </li>
-                            <li id="79141949" data-bind="ids">
-                                <span class="content">
-                                    <a href="http://blog.csdn.net/caibaozi0521/article/details/79141949" target="_blank"
-                                       data-bind="cont">Spring_AOP无注解 与 AOP注解</a>
-                                    <em data-bind="tags" class="tags"></em>
-                                </span>
-                                <span class="operate">
-                                    <em data-bind="time" class="time">
-                                        2018-01-23 17:15:27                                    </em>
-                                </span>
-                            </li>
-                            <li id="79138456" data-bind="ids">
-                                <span class="content">
-                                    <a href="http://blog.csdn.net/caibaozi0521/article/details/79138456" target="_blank"
-                                       data-bind="cont">Spring--注解</a>
-                                    <em data-bind="tags" class="tags"></em>
-                                </span>
-                                <span class="operate">
-                                    <em data-bind="time" class="time">
-                                        2018-01-23 13:19:13                                    </em>
-                                </span>
-                            </li>
-                            <li id="79077119" data-bind="ids">
-                                <span class="content">
-                                    <a href="http://blog.csdn.net/caibaozi0521/article/details/79077119" target="_blank"
-                                       data-bind="cont">mybatis--多对多关联</a>
-                                    <em data-bind="tags" class="tags"></em>
-                                </span>
-                                <span class="operate">
-                                    <em data-bind="time" class="time">
-                                        2018-01-16 17:27:48                                    </em>
-                                </span>
-                            </li>
-                            <li id="79072163" data-bind="ids">
-                                <span class="content">
-                                    <a href="http://blog.csdn.net/caibaozi0521/article/details/79072163" target="_blank"
-                                       data-bind="cont">MyBatis--动态语句，对一关联</a>
-                                    <em data-bind="tags" class="tags"></em>
-                                </span>
-                                <span class="operate">
-                                    <em data-bind="time" class="time">
-                                        2018-01-16 10:48:48                                    </em>
-                                </span>
-                            </li>
-                            <li id="79050752" data-bind="ids">
-                                <span class="content">
-                                    <a href="http://blog.csdn.net/caibaozi0521/article/details/79050752" target="_blank"
-                                       data-bind="cont">框架-MyBatis动态sql语句</a>
-                                    <em data-bind="tags" class="tags"></em>
-                                </span>
-                                <span class="operate">
-                                    <em data-bind="time" class="time">
-                                        2018-01-13 13:13:02                                    </em>
-                                </span>
-                            </li>
-                            <li id="79036615" data-bind="ids">
-                                <span class="content">
-                                    <a href="http://blog.csdn.net/caibaozi0521/article/details/79036615" target="_blank"
-                                       data-bind="cont">MyBatis--搭建环境及增删改</a>
-                                    <em data-bind="tags" class="tags"></em>
-                                </span>
-                                <span class="operate">
-                                    <em data-bind="time" class="time">
-                                        2018-01-11 17:27:14                                    </em>
-                                </span>
-                            </li>
+                                </li>
+
+                                <%--<li id="79164161" data-bind="ids">
+                                    <span class="content">
+                                        <a href="http://blog.csdn.net/caibaozi0521/article/details/79164161" target="_blank"
+                                           data-bind="cont">SpringMVC 控制层类的三种写法</a>
+                                        <em data-bind="tags" class="tags"></em>
+                                    </span>
+                                    <span class="operate">
+                                        <em data-bind="time" class="time">
+                                            2018-01-25 17:06:40                                    </em>
+                                    </span>
+                                </li>
+                                <li id="79163566" data-bind="ids">
+                                    <span class="content">
+                                        <a href="http://blog.csdn.net/caibaozi0521/article/details/79163566" target="_blank"
+                                           data-bind="cont">Spring MVC搭建环境与 注解</a>
+                                        <em data-bind="tags" class="tags"></em>
+                                    </span>
+                                    <span class="operate">
+                                        <em data-bind="time" class="time">
+                                            2018-01-25 16:47:40                                    </em>
+                                    </span>
+                                </li>
+                                <li id="79152321" data-bind="ids">
+                                    <span class="content">
+                                        <a href="http://blog.csdn.net/caibaozi0521/article/details/79152321" target="_blank"
+                                           data-bind="cont">Spring 结合Mybatis应用</a>
+                                        <em data-bind="tags" class="tags"></em>
+                                    </span>
+                                    <span class="operate">
+                                        <em data-bind="time" class="time">
+                                            2018-01-24 16:40:34                                    </em>
+                                    </span>
+                                </li>
+                                <li id="79141949" data-bind="ids">
+                                    <span class="content">
+                                        <a href="http://blog.csdn.net/caibaozi0521/article/details/79141949" target="_blank"
+                                           data-bind="cont">Spring_AOP无注解 与 AOP注解</a>
+                                        <em data-bind="tags" class="tags"></em>
+                                    </span>
+                                    <span class="operate">
+                                        <em data-bind="time" class="time">
+                                            2018-01-23 17:15:27                                    </em>
+                                    </span>
+                                </li>
+                                <li id="79138456" data-bind="ids">
+                                    <span class="content">
+                                        <a href="http://blog.csdn.net/caibaozi0521/article/details/79138456" target="_blank"
+                                           data-bind="cont">Spring--注解</a>
+                                        <em data-bind="tags" class="tags"></em>
+                                    </span>
+                                    <span class="operate">
+                                        <em data-bind="time" class="time">
+                                            2018-01-23 13:19:13                                    </em>
+                                    </span>
+                                </li>
+                                <li id="79077119" data-bind="ids">
+                                    <span class="content">
+                                        <a href="http://blog.csdn.net/caibaozi0521/article/details/79077119" target="_blank"
+                                           data-bind="cont">mybatis--多对多关联</a>
+                                        <em data-bind="tags" class="tags"></em>
+                                    </span>
+                                    <span class="operate">
+                                        <em data-bind="time" class="time">
+                                            2018-01-16 17:27:48                                    </em>
+                                    </span>
+                                </li>
+                                <li id="79072163" data-bind="ids">
+                                    <span class="content">
+                                        <a href="http://blog.csdn.net/caibaozi0521/article/details/79072163" target="_blank"
+                                           data-bind="cont">MyBatis--动态语句，对一关联</a>
+                                        <em data-bind="tags" class="tags"></em>
+                                    </span>
+                                    <span class="operate">
+                                        <em data-bind="time" class="time">
+                                            2018-01-16 10:48:48                                    </em>
+                                    </span>
+                                </li>
+                                <li id="79050752" data-bind="ids">
+                                    <span class="content">
+                                        <a href="http://blog.csdn.net/caibaozi0521/article/details/79050752" target="_blank"
+                                           data-bind="cont">框架-MyBatis动态sql语句</a>
+                                        <em data-bind="tags" class="tags"></em>
+                                    </span>
+                                    <span class="operate">
+                                        <em data-bind="time" class="time">
+                                            2018-01-13 13:13:02                                    </em>
+                                    </span>
+                                </li>
+                                <li id="79036615" data-bind="ids">
+                                    <span class="content">
+                                        <a href="http://blog.csdn.net/caibaozi0521/article/details/79036615" target="_blank"
+                                           data-bind="cont">MyBatis--搭建环境及增删改</a>
+                                        <em data-bind="tags" class="tags"></em>
+                                    </span>
+                                    <span class="operate">
+                                        <em data-bind="time" class="time">
+                                            2018-01-11 17:27:14                                    </em>
+                                    </span>
+                                </li>--%>
+                            </c:forEach>
                         </ul>
                     </div>
                     <input type="hidden" value="1" id="blog_page">

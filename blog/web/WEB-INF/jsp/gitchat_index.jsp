@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -185,9 +185,9 @@
                 GO
             </div>
         </a></div>
-        <a id="loginBtn2"
+        <%--<a id="loginBtn2"
            style="display:inline-block;float:right;height:35px;color: #ff9100;font-size:14px;                border: 1px solid #ff9100;-webkit-border-radius: 25px;margin-right: 10px;"
-           href="javascript:void(0)" role="button" class="btn btn-default">登录 / 注册</a><a id="writeBtn2"
+           href="javascript:void(0)" role="button" class="btn btn-default">登录 / 注册</a>--%><a id="writeBtn2"
                                                                                          style="display:inline-block;height:35px;color: #5f6f81;float:right;font-size:14px;                    border: 1px solid #d1d1d1;-webkit-border-radius: 25px;margin-right: 10px;"
                                                                                          href="javascript:void(0) return false;"
                                                                                          role="button"
@@ -199,7 +199,7 @@
             style="display:inline-block;height:35px;color: #5f6f81;float:right;font-size:14px;                                                border: 1px solid #d1d1d1;-webkit-border-radius: 25px;margin-right: 10px;"
             href="javascript:void(0)" role="button" class="hidden-xs btn btn-default">发布Chat</a></div>
 </div>
-<div id="thumbClickMenuDIV"
+<%--<div id="thumbClickMenuDIV"
      style="position: fixed;top: 70px;right: 10px;font-size: 14pt;width: 160px;display: none;z-index: 1;">
     <div style="border:1px solid #f0f0f0">
         <ul style="width: 100%;padding: 5px 15px;line-height: 35px;margin: 2px 0 0;font-size: 14px;text-align: center;list-style: none;background-color: #fff">
@@ -219,7 +219,7 @@
             <li><a style="text-decoration: none;color:#cccccc;" href="javascript:void(0);">退出登录</a></li>
         </ul>
     </div>
-    <s><i></i></s></div>
+    <s><i></i></s></div>--%>
 <script>// grab an element
 var myElement = document.getElementById("header");
 // construct an instance of Headroom, passing the element
@@ -321,7 +321,7 @@ headroom.init();</script>
                     <li data-target="#carouselBannerIndicators" data-slide-to='4'></li>
                 </ol>
                 <div role="listbox" style="border-radius: 4px;" class="carousel-inner">
-                    <div class="item active"><img style="width:100%" src="../../statics/picture/gitchat/475d2c24a7414ed994255268da9c1ddb.gif"
+                   <div class="item active"><img style="width:100%" src="../../statics/picture/gitchat/475d2c24a7414ed994255268da9c1ddb.gif"
                                                   alt="" sid="5aa1d2b4f622f7137a21f16b" ltype=""
                                                   aid=""
                                                   class="d-block img-fluid"></div>
@@ -356,8 +356,16 @@ headroom.init();</script>
             $('#carouselBannerIndicators img').click(function () {
                 window.location.href = $(this).attr('aid') + '';
             });</script>
-            <div data-step="3" data-intro="加入GitChat作者群，认识更多朋友。" style="margin-top:25px;"><a
-                    href="javascript:void(0)" class="recommedAuthor"><img
+            <div data-step="3" data-intro="加入GitChat作者群，认识更多朋友。" style="margin-top:25px;">
+
+                <c:forEach items="${writerList}" var="writer" varStatus="start">
+                <a href="javascript:void(0)" class="recommedAuthor"><img
+                        style="width: 32px;height: 32px;" src="${writer.writerhead}">
+                    <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">${writer.writername}</div>
+                </a>
+                </c:forEach>
+
+                <%--<a href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/6f1d56e5109544d0a8af38bff1ec7797.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">孙亖</div>
             </a><a href="javascript:void(0)" class="recommedAuthor"><img
@@ -381,7 +389,8 @@ headroom.init();</script>
             </a><a href="javascript:void(0)" class="recommedAuthor"><img
                     style="width: 32px;height: 32px;" src="../../statics/picture/gitchat/e22c25519df441a2b28f9b4d87ae0e32.gif">
                 <div style="display: inline-block;padding: 0 11px 0 6px;font-size: 14px;">加兴</div>
-            </a><a href="javascript:void(0)" class="moreHotAuthor"><span>更多推荐作者</span><span
+            </a>--%>
+                    <a href="javascript:void(0)" class="moreHotAuthor"><span>更多推荐作者</span><span
                     style="font-size:12px;margin-left: -5px;" class="icon2 lnr-chevron-right"></span></a></div>
         </div>
         <div style="border:0;margin-top:10px;padding:0 25px 0 25px;" class="mazi-activity-container item-container">
@@ -391,8 +400,29 @@ headroom.init();</script>
                     id="syncColumn" style="vertical-align: middle;display: inline-block;" class="icon2 lnr-sync"></span><span
                     style="margin-right:10px;display: inline-block;">换一换</span></a></div>
             <div style="border-bottom: 1px solid #f5f5f5;"></div>
-            <div id="homeColumns" style="display: flex;margin-top: 1px;"><a
-                    href="javascript:void(0)" class="book">
+            <div id="homeColumns" style="display: flex;margin-top: 1px;">
+                <c:forEach items="${classList}" var="classList" varStatus="start">
+                <a style="margin-left:8px;margin-right:8px;" href="javascript:void(0)"
+                   class="book">
+                   <div class="cover"><img src="${classList.writerimage}"></div>
+                    <div class="name">${classList.chatclasstitle}</div>
+                    <div class="author">${classList.writername}</div>
+                    <div class="price">${classList.chatclassprice}</div>
+                    <div class="intros">${classList.chatclasshour}</div></a>
+                </c:forEach>
+                <%--<c:forEach items="${classList}" var="class" varStatus="start">
+                    <a href="javascript:void(0)" class="book">
+                        <div class="cover"><img src="${class.writerimage}"></div>
+                        <div class="name">${class.chatclasstitle}</div>
+                        <div class="author">${class.writername}</div>
+                        <div class="price"><span style="color: red"></span><span
+                                style="text-decoration:line-through;font-size: 12px;margin-left:5px;color: #999">${class.chatclassprice}</span>
+                        </div>
+                        <div class="intros">${class.chatclasshour}</div>
+                    </a>
+                </c:forEach>--%>
+
+                <%--<a href="javascript:void(0)" class="book">
                 <div class="cover"><img src="../../statics/picture/gitchat/10c86a4b518845a48d184edd55655e9f.gif"></div>
                 <div class="name">Angular 小专题：玩转注射器</div>
                 <div class="author">大漠穷秋</div>
@@ -413,7 +443,9 @@ headroom.init();</script>
                         style="text-decoration:line-through;font-size: 12px;margin-left:5px;color: #999">¥ 19.99</span>
                 </div>
                 <div class="intros">共 13 课时</div>
-            </a></div>
+            </a>--%>
+
+            </div>
         </div>
         <a href="javascript:void(0)">
             <div style="background-color:#fff;font-weight:500;line-height:40px;text-align:center;margin-top:-10px;">
@@ -425,26 +457,30 @@ headroom.init();</script>
                     style="color: #c93;margin-right:10px;">最热</span><a href="javascript:void(0)"><span
                     style="margin-right:10px;">最新</span></a><a href="javascript:void(0)"><span>免费</span></a></div>
             <div style="border-bottom: 1px solid #f5f5f5;"></div>
+
+            <c:forEach items="${chatList}" var="chat" varStatus="start">
             <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
                     href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
-                            src="../../statics/picture/gitchat/dee501563d504ba4ba84b2a384ab551f.gif" class="item-author-thumbV2">
+                            src="${chat.writerhead}" class="item-author-thumbV2">
                         <div class="item-author-ndV2">
-                            <div class="item-titleV2">如何构造真正理解语言的机器</div>
-                            <div style="padding-top: 3px;" class="item-author-nameV2">庞雨秾</div>
-                            <div class="item-author-descV2">NLP研究员</div>
+                            <div class="item-titleV2">${chat.chattitle}</div>
+                            <div style="padding-top: 3px;" class="item-author-nameV2">${chat.writername}</div>
+                            <div class="item-author-descV2">${chat.writertag}</div>
                         </div>
                     </div>
                     <div style="margin: 0 0 8px -10px;" class="mazi-item-bottom">
                         <div style="margin-left:8px;display: inline;"><span class="icon2 lnr-user"></span><span
-                                class="text">60</span></div>
-                        <a href="javascript:void(0)" class="textTag category">人工智能</a>
-                        <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
+                                class="text">${chat.chathits}</span></div>
+                        <a href="javascript:void(0)" class="textTag category">${chat.chattopic}</a>
+                        <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">${chat.chattag}</div>
                     </div>
                 </div>
             </a></div>
-            <div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
+            </c:forEach>
+
+            <%--<div style="padding:0;border-bottom: 1px solid #f5f5f5;" class="col-md-12"><a
                     href="javascript:void(0)">
                 <div style="border:0;padding:0;" class="mazi-item">
                     <div style="padding: 10px 0 10px 0;" class="item-name-cardV2"><img
@@ -782,7 +818,7 @@ headroom.init();</script>
                         <div style="background-color: #6e8b84;color:#ffffff;" class="textTag">读者圈</div>
                     </div>
                 </div>
-            </a></div>
+            </a></div>--%>
         </div>
         <div>
             <div id="noMoreToLoad" style="display:none;height:60px;text-align:center;line-height: 60px;color:#555;">--
@@ -883,7 +919,8 @@ headroom.init();</script>
                 style="border: 1px solid #f5f5f5;height: 40px;display: inline-block;float: left;                  background-color: #ffffff;padding-left: 10px;padding-right:10px;font-size: 14px;line-height:40px;                  margin-top: 10px;min-width:170px;"
                 href="javascript:void(0);"><img
                 src="../../statics/images/gitchat/85241c80-1c05-11e7-9d4d-1121a99bb498"
-                style="width:25px;margin-right:5px;"><span>其它</span></a></div>
+                style="width:25px;margin-right:5px;"><span>其它</span></a>
+        </div>
         <div style="width:100%;margin:0 auto;border-bottom: 1px solid #f0f0f0;display:inline-block;margin-bottom:8px;"></div>
         <a data-step="1" data-intro="发布Chat活动，开启讲师之旅。" style="width:100%;height:40px;line-height: 26px;order-radius: 0;"
            target="_blank" href="javascript:void(0);" role="button" class="btn btn-primary">创建一场
@@ -895,7 +932,25 @@ headroom.init();</script>
                 style="font-size:12px;margin-left: -5px;" class="icon2 lnr-chevron-right"></span></a>
             <div style="border-top:1px solid #ff9100;margin-top:10px;"></div>
             <div style="margin: 0 auto;display:inline-block;width: 100%;">
+
+                <c:forEach items="${hotClassList}" var="hotClass" varStatus="start">
                 <div style="margin:5px 0 5px 0;padding:0;"><a
+                        href="javascript:void(0);">
+                    <div class="mazi-item">
+                        <div style="text-align: justify;color: #555;font-size: 15px;margin:5px 0 5px 0;font-weight:400"
+                             class="item-title">${hotClass.chatclasstitle}
+                        </div>
+                        <div style="overflow:hidden;" class="default-wrap">
+                            <div style="font-size: 12px;font-weight:400;padding-left:10px;float:left;">${hotClass.writername}</div>
+                            <div style="float:right;"><span
+                                    style="margin:2px 5px 0 -5px;font-size: 12px;line-height: 16px;"
+                                    class="text">共 ${hotClass.chatclasshour} 课时</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                </c:forEach>
+
+                <%--<div style="margin:5px 0 5px 0;padding:0;"><a
                         href="javascript:void(0);">
                     <div class="mazi-item">
                         <div style="text-align: justify;color: #555;font-size: 15px;margin:5px 0 5px 0;font-weight:400"
@@ -964,7 +1019,7 @@ headroom.init();</script>
                                     class="text">共 9 课时</span></div>
                         </div>
                     </div>
-                </a></div>
+                </a></div>--%>
             </div>
         </div>
         <div style="margin: 0 auto;padding-top: 20px;color: #666666;font-size: 14px;font-weight:500">
@@ -972,7 +1027,27 @@ headroom.init();</script>
                 style="font-size:12px;margin-left: -5px;" class="icon2 lnr-chevron-right"></span></a>
             <div style="border-top:1px solid #ff9100;margin-top:10px;"></div>
             <div style="margin: 0 auto;display:inline-block;width: 100%;">
-                <div style="margin:5px 0 5px 0;padding:0;"><a
+
+                <c:forEach items="${newChatList}" var="newChat" varStatus="start">
+                    <div style="margin:5px 0 5px 0;padding:0;"><a
+                            href="javascript:void(0);">
+                        <div class="mazi-item">
+                            <div style="text-align: justify;color: #555;font-size: 15px;margin:5px 0 5px 0;font-weight:400"
+                                 class="item-title">${newChat.chattitle}
+                            </div>
+                            <div style="overflow:hidden;" class="default-wrap">
+                                <div style="font-size: 12px;font-weight:400;padding-left:10px;float:left;">${newChat.writername}</div>
+                                <div style="float:right;"><span
+                                        style="font-size: 12px;margin:2px 0 0 -8px;line-height: 16px;"
+                                        class="icon2 lnr-user"></span><span
+                                        style="margin:2px 5px 0 -5px;font-size: 12px;line-height: 16px;"
+                                        class="text">${newChat.chathits}</span></div>
+                            </div>
+                        </div>
+                    </a></div>
+                </c:forEach>
+
+                <%--<div style="margin:5px 0 5px 0;padding:0;"><a
                         href="javascript:void(0);">
                     <div class="mazi-item">
                         <div style="text-align: justify;color: #555;font-size: 15px;margin:5px 0 5px 0;font-weight:400"
@@ -987,7 +1062,8 @@ headroom.init();</script>
                                     class="text">21</span></div>
                         </div>
                     </div>
-                </a></div>
+                </a></div>--%>
+
             </div>
         </div>
         <div data-step="4" data-intro="关注GitChat服务号，获取活动状态通知。" style="width:100%; text-align: center; margin-top: 20px">

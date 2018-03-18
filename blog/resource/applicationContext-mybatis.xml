@@ -13,6 +13,7 @@
 	<context:component-scan base-package="com.firstgun.service" />
 	<context:component-scan base-package="com.firstgun.dao" />
 	<context:component-scan base-package="com.firstgun.utils" />
+	<context:component-scan base-package="com.firstgun.entity" />
 	
 
 	<!-- 读取数据库配置文件 -->
