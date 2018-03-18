@@ -291,104 +291,40 @@ public class MainController {
     @RequestMapping("csto")
     public String csto(Model model){
         List<CstoGenius> genius1 = cstoGeniusService.genius(1);
+        List<CstoGenius> genius2 = cstoGeniusService.genius(2);
+        List<CstoGenius> genius3 = cstoGeniusService.genius(3);
+        List<CstoGenius> genius4 = cstoGeniusService.genius(4);
+        List<CstoGenius> genius5 = cstoGeniusService.genius(5);
+        List<CstoGenius> genius6 = cstoGeniusService.genius(6);
+
         List<CstoGenius> genius7 = cstoGeniusService.genius(7);
+        List<CstoGenius> genius8 = cstoGeniusService.genius(8);
+        List<CstoGenius> genius9 = cstoGeniusService.genius(9);
+        List<CstoGenius> genius10 = cstoGeniusService.genius(10);
+        List<CstoGenius> genius11 = cstoGeniusService.genius(11);
+        List<CstoGenius> genius12 = cstoGeniusService.genius(12);
+
         List<IteyeInformation> iteyeInformations = iteyeInformationService.informationTitle();
         model.addAttribute("iteyeInformations",iteyeInformations);
         List<LatestProject> latest = latestProjectService.latest();
         model.addAttribute("latest",latest);
+
         model.addAttribute("genius1",genius1);
+        model.addAttribute("genius2",genius2);
+        model.addAttribute("genius3",genius3);
+        model.addAttribute("genius4",genius4);
+        model.addAttribute("genius5",genius5);
+        model.addAttribute("genius6",genius6);
+
         model.addAttribute("genius7",genius7);
+        model.addAttribute("genius8",genius8);
+        model.addAttribute("genius9",genius9);
+        model.addAttribute("genius10",genius10);
+        model.addAttribute("genius11",genius11);
+        model.addAttribute("genius12",genius12);
         return "csto";
     }
 
-    //处理ajax请求
-    @ResponseBody
-    @RequestMapping("cstoAjax")
-    public String cstoAjax(HttpServletRequest request,HttpServletResponse response) {
-        String atype = request.getParameter("atype");
-        PrintWriter out=null;
-        try {
-            out = response.getWriter();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        if (atype.equals("系统开发")) {
-            atype="1";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius1 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius1);
-            out.print(str);
-        }else if(atype.equals("Android")){
-            atype="2";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius2 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius2);
-            out.print(str);
-        }else if(atype.equals("网站开发")){
-            atype="3";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius3 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius3);
-            out.print(str);
-        }else if(atype.equals("企业软件")) {
-            atype="4";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius4 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius4);
-            out.print(str);
-        }else if(atype.equals("应用程序")) {
-            atype="5";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius5 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius5);
-            out.print(str);
-        }else if(atype.equals("嵌入式")) {
-            atype="6";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius6 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius6);
-            out.print(str);
-        }else if(atype.equals("c++")) {
-            atype="7";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius7 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius7);
-            out.print(str);
-        }else if(atype.equals("c#")) {
-            atype="8";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius8 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius8);
-            out.print(str);
-        }else if(atype.equals("andro")) {
-            atype="9";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius9 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius9);
-            out.print(str);
-        }else if(atype.equals("jquer")) {
-            atype="10";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius10 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius10);
-            out.print(str);
-        }else if(atype.equals("java")) {
-            atype="11";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius11= cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius11);
-            out.print(str);
-        }else if(atype.equals("javas")) {
-            atype="12";
-            int atypes=Integer.parseInt(atype);
-            List<CstoGenius> genius12 = cstoGeniusService.genius(atypes);
-            String str  = JSON.toJSONString(genius12);
-            out.print(str);
-        }
-        out.flush();
-        out.close();
-        return "csto";
-    }
 
     //去vip
     @RequestMapping("vip")

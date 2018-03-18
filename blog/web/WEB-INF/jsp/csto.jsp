@@ -17,9 +17,9 @@
     <!--<link rel="icon" href="http://www.csto.com/images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="http://www.csto.com/images/favicon.ico" type="image/x-icon" />
     <link rel="Bookmark" href="http://www.csto.com/images/favicon.ico" type="image/x-icon" />-->
-    <link rel="icon" href="http://csdnimg.cn/public/favicon-g.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="http://csdnimg.cn/public/favicon-g.ico" type="image/x-icon" />
-    <link rel="Bookmark" href="http://csdnimg.cn/public/favicon-g.ico" type="image/x-icon" />
+    <link rel="icon" href="../../statics/images/fg.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../statics/images/fg.png" type="image/x-icon" />
+    <link rel="Bookmark" href="../../statics/images/fg.png" type="image/x-icon" />
     <link href="../../statics/css/HomePage.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
         var site_url = "http://www.csto.com/";
@@ -285,414 +285,115 @@
         <h2>热门领域人才</h2>
         <div id="lingyu">
             <ul>
-                <li><a title="系统开发" id="system">系统开发</a></li>
-                <script type="text/javascript">
-                    $("#lingyu").on("click","#system",function () {
-                        $("#ly_1").html("");
-                        var atype=$("#system").text();
-                        $.post("${pageContext.request.contextPath}/mainController/cstoAjax","atype="+atype,callBack);
-                    });
-                    function callBack(genius1) {
-                        var  str = JSON.parse(genius1)
-                        var tbody =$("#ly_1");
-                        $.each(str,function (index,item) {
-                            outputData(tbody,item);
-                        });
-                        /*"<p>"+item.alogo+"</p>"*/
-                        function outputData(tbody,item) {
-                            tbody.append(
-                                "<li>" +
-                                "<div class='photo'><a href='http://www.csto.com/u/xiuyuanyihe2012' alt='xiuyuanyihe2012' target='_blank'><img src='"+item.alogo+"' alt='' /></a> <a href='http://www.csto.com/u/xiuyuanyihe2012' target='_blank'>"+item.author+"</a></div>" +
-                                "<div class='hover_show'>" +
-                                "<p><span class='level_F' style='background-position:0px -80px' target='_blank'> 4 </span> <span>公司</span> <span>北京 </span> </p>" +
-                                "<p>" +
-                                "<a class='btn_blue' title='收藏' href='javascript:void(0)' onclick='login_csdn()'>收藏</a> <a class='btn_green' title='邀请' href='javascript:void(0)' onclick='login_csdn()'>邀请</a>" +
-                                "</p>" +
-                                "</div>" +
-                                "</li>"
-                            )
-                        }
-                    }
-                </script>
-                <li><a title="Android" id="android">Android</a></li>
-                <script type="text/javascript">
-                    $("#lingyu").on("click","#android",function () {
-                        $("#ly_2").html("");
-                        var atype=$("#android").text();
-                        $.post("${pageContext.request.contextPath}/mainController/cstoAjax","atype="+atype,callBack);
-                    });
-                    function callBack(genius2) {
-                         var  str = JSON.parse(genius2)
-                          var tbody =$("#ly_2");
-                        $.each(str,function (index,item) {
-                            outputData(tbody,item);
-                        });
-                        /*"<p>"+item.alogo+"</p>"*/
-                        function outputData(tbody,item) {
-                            tbody.append(
-                                "<li>" +
-                                "<div class='photo'><a href='http://www.csto.com/u/xiuyuanyihe2012' alt='xiuyuanyihe2012' target='_blank'><img src='"+item.alogo+"' alt='' /></a> <a href='http://www.csto.com/u/xiuyuanyihe2012' target='_blank'>"+item.author+"</a></div>" +
-                                "<div class='hover_show'>" +
-                                "<p><span class='level_F' style='background-position:0px -80px' target='_blank'> 4 </span> <span>公司</span> <span>北京 </span> </p>" +
-                                "<p>" +
-                                "<a class='btn_blue' title='收藏' href='javascript:void(0)' onclick='login_csdn()'>收藏</a> <a class='btn_green' title='邀请' href='javascript:void(0)' onclick='login_csdn()'>邀请</a>" +
-                                "</p>" +
-                                "</div>" +
-                                "</li>"
-                            )
-                        }
-                    }
-                </script>
-                <li><a  title="网站开发" id="wero">网站开发</a></li>
-                <script type="text/javascript">
-                    $("#lingyu").on("click","#wero",function () {
-                        $("#ly_3").html("");
-                        var atype=$("#wero").text();
-                        $.post("${pageContext.request.contextPath}/mainController/cstoAjax","atype="+atype,callBack);
-                    });
-                    function callBack(genius3) {
-                        var  str = JSON.parse(genius3)
-                        var tbody =$("#ly_3");
-                        $.each(str,function (index,item) {
-                            outputData(tbody,item);
-                        });
-                        /*"<p>"+item.alogo+"</p>"*/
-                        function outputData(tbody,item) {
-                            tbody.append(
-                                "<li>" +
-                                "<div class='photo'><a href='http://www.csto.com/u/xiuyuanyihe2012' alt='xiuyuanyihe2012' target='_blank'><img src='"+item.alogo+"' alt='' /></a> <a href='http://www.csto.com/u/xiuyuanyihe2012' target='_blank'>"+item.author+"</a></div>" +
-                                "<div class='hover_show'>" +
-                                "<p><span class='level_F' style='background-position:0px -80px' target='_blank'> 4 </span> <span>公司</span> <span>北京 </span> </p>" +
-                                "<p>" +
-                                "<a class='btn_blue' title='收藏' href='javascript:void(0)' onclick='login_csdn()'>收藏</a> <a class='btn_green' title='邀请' href='javascript:void(0)' onclick='login_csdn()'>邀请</a>" +
-                                "</p>" +
-                                "</div>" +
-                                "</li>"
-                            )
-                        }
-                    }
-                </script>
+                <li><a href="#ly_1" title="系统开发" id="system">系统开发</a></li>
+                <li><a href="#ly_2" title="Android" id="android">Android</a></li>
+                <li><a href="#ly_3" title="网站开发" id="wero">网站开发</a></li>
                 <li><a href="#ly_4" title="企业软件" id="qiye">企业软件</a></li>
                 <li><a href="#ly_5" title="应用程序及脚本" id="project">应用程序及...</a></li>
                 <li><a href="#ly_6" title="嵌入式" id="qianrushi">嵌入式</a></li>
             </ul>
-            <div>
-                <ul id="ly_1">
+            <div id="ly_1">
+                <ul>
                     <c:forEach items="${genius1}" var="genius1" varStatus="s">
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/xiuyuanyihe2012" alt="xiuyuanyihe2012" target="_blank"><img src="${genius1.alogo}" alt="" /></a> <a href="http://www.csto.com/u/xiuyuanyihe2012" target="_blank">${genius1.author}</a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius1.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius1.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
                     </c:forEach>
                 </ul>
             </div>
-            <div >
-                <ul id="ly_2">
+            <div id="ly_2">
+                <ul>
+                    <c:forEach items="${genius2}" var="genius2" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius2.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius2.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
-            <div>
-                <ul id="ly_3">
+            <div id="ly_3">
+                <ul>
+                    <c:forEach items="${genius3}" var="genius3" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius3.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius3.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
             <div id="ly_4">
                 <ul>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/" alt="" target="_blank"><img src="../../statics/cstoImages/1365406802547376.png" alt="" /></a> <a href="http://www.csto.com/u/" target="_blank"> </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/非凡软件" alt="非凡软件" target="_blank"><img src="../../statics/cstoImages/1_sitongqdl.jpg" alt="" /></a> <a href="http://www.csto.com/u/非凡软件" target="_blank">非凡软件 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>山东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/u011013524" alt="u011013524" target="_blank"><img src="../../statics/cstoImages/1370764514799764.png" alt="" /></a> <a href="http://www.csto.com/u/u011013524" target="_blank">u011013524 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/码农帮" alt="码农帮" target="_blank"><img src="../../statics/cstoImages/1359776020565033.png" alt="" /></a> <a href="http://www.csto.com/u/码农帮" target="_blank">码农帮 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>团队</span> <span>河南 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/Legendary灬" alt="Legendary灬" target="_blank"><img src="../../statics/cstoImages/1_qq_16272049.jpg" alt="" /></a> <a href="http://www.csto.com/u/Legendary灬" target="_blank">Legendary灬 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/maredays" alt="maredays" target="_blank"><img src="../../statics/cstoImages/1_maredays.jpg" alt="" /></a> <a href="http://www.csto.com/u/maredays" target="_blank">maredays </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -20px" target="_blank"> 1 </span> <span>个人</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/milankaka22" alt="milankaka22" target="_blank"><img src="../../statics/cstoImages/1_milankaka22.jpg" alt="" /></a> <a href="http://www.csto.com/u/milankaka22" target="_blank">milankaka22 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>山东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/u013607631" alt="u013607631" target="_blank"><img src="../../statics/cstoImages/1_u013607631.jpg" alt="" /></a> <a href="http://www.csto.com/u/u013607631" target="_blank">u013607631 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>辽宁 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/james1207" alt="james1207" target="_blank"><img src="../../statics/cstoImages/1383204244234906.png" alt="" /></a> <a href="http://www.csto.com/u/james1207" target="_blank">james1207 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>陕西 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/中科爱普" alt="中科爱普" target="_blank"><img src="../../statics/cstoImages/1325124919929690.png" alt="" /></a> <a href="http://www.csto.com/u/中科爱普" target="_blank">中科爱普 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>团队</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
+                    <c:forEach items="${genius4}" var="genius4" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius4.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius4.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
             <div id="ly_5">
                 <ul>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/facedge" alt="facedge" target="_blank"><img src="../../statics/cstoImages/1351050110843605.png" alt="" /></a> <a href="http://www.csto.com/u/facedge" target="_blank">facedge </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>陕西 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/luofeng4213" alt="luofeng4213" target="_blank"><img src="../../statics/cstoImages/1430991906597668.png" alt="" /></a> <a href="http://www.csto.com/u/luofeng4213" target="_blank">luofeng4213 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>河北 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/fawen18" alt="fawen18" target="_blank"><img src="../../statics/cstoImages/1382868118506086.png" alt="" /></a> <a href="http://www.csto.com/u/fawen18" target="_blank">fawen18 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>个人</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/alexsunmiu" alt="alexsunmiu" target="_blank"><img src="../../statics/cstoImages/1_alexsunmiu.jpg" alt="" /></a> <a href="http://www.csto.com/u/alexsunmiu" target="_blank">alexsunmiu </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/volye" alt="volye" target="_blank"><img src="../../statics/cstoImages/1_volye.jpg" alt="" /></a> <a href="http://www.csto.com/u/volye" target="_blank">volye </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/CSTO会员_dream1066" alt="CSTO会员_dream1066" target="_blank"><img src="../../statics/cstoImages/1317809568962656.png" alt="" /></a> <a href="http://www.csto.com/u/CSTO会员_dream1066" target="_blank">CSTO会员_dream1066 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>陕西 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/Halostudio" alt="Halostudio" target="_blank"><img src="../../statics/cstoImages/1_xuezhi1001.jpg" alt="" /></a> <a href="http://www.csto.com/u/Halostudio" target="_blank">Halostudio </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/loophop" alt="loophop" target="_blank"><img src="../../statics/cstoImages/1359034401620113.png" alt="" /></a> <a href="http://www.csto.com/u/loophop" target="_blank">loophop </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>个人</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/奋斗并快乐着" alt="奋斗并快乐着" target="_blank"><img src="../../statics/cstoImages/1317809568962656.png" alt="" /></a> <a href="http://www.csto.com/u/奋斗并快乐着" target="_blank">奋斗并快乐着 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>福建 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/SoftwareSE" alt="SoftwareSE" target="_blank"><img src="../../statics/cstoImages/1_softwarese.jpg" alt="" /></a> <a href="http://www.csto.com/u/SoftwareSE" target="_blank">SoftwareSE </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>个人</span> <span>辽宁 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
+                    <c:forEach items="${genius5}" var="genius5" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius5.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius5.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
             <div id="ly_6">
                 <ul>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/quickembed_sh" alt="quickembed_sh" target="_blank"><img src="../../statics/cstoImages/1_quickembed_sh.jpg" alt="" /></a> <a href="http://www.csto.com/u/quickembed_sh" target="_blank">quickembed_sh </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>公司</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/laonanhai2008" alt="laonanhai2008" target="_blank"><img src="../../statics/cstoImages/1356831974230837.png" alt="" /></a> <a href="http://www.csto.com/u/laonanhai2008" target="_blank">laonanhai2008 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>公司</span> <span>山东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/feiyangqingyun" alt="feiyangqingyun" target="_blank"><img src="../../statics/cstoImages/1371436690373932.png" alt="" /></a> <a href="http://www.csto.com/u/feiyangqingyun" target="_blank">feiyangqingyun </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/qq_30599799" alt="qq_30599799" target="_blank"><img src="../../statics/cstoImages/1439558523539890.png" alt="" /></a> <a href="http://www.csto.com/u/qq_30599799" target="_blank">qq_30599799 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>安徽 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/fanck" alt="fanck" target="_blank"><img src="../../statics/cstoImages/1_fanck.jpg" alt="" /></a> <a href="http://www.csto.com/u/fanck" target="_blank">fanck </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>四川 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/hexingshi" alt="hexingshi" target="_blank"><img src="../../statics/cstoImages/1375947875309398.png" alt="" /></a> <a href="http://www.csto.com/u/hexingshi" target="_blank">hexingshi </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>陕西 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/ruiqiandianzi" alt="ruiqiandianzi" target="_blank"><img src="../../statics/cstoImages/1401249141918918.png" alt="" /></a> <a href="http://www.csto.com/u/ruiqiandianzi" target="_blank">ruiqiandianzi </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/AraxLee" alt="AraxLee" target="_blank"><img src="../../statics/cstoImages/1370181085233800.png" alt="" /></a> <a href="http://www.csto.com/u/AraxLee" target="_blank">AraxLee </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/开发快" alt="开发快" target="_blank"><img src="../../statics/cstoImages/1317809568962656.png" alt="" /></a> <a href="http://www.csto.com/u/开发快" target="_blank">开发快 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/中嵌科技" alt="中嵌科技" target="_blank"><img src="../../statics/cstoImages/1440646791784223.png" alt="" /></a> <a href="http://www.csto.com/u/中嵌科技" target="_blank">中嵌科技 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>团队</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
+                    <c:forEach items="${genius6}" var="genius6" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius6.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius6.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
         </div>
         <h2>热门技术人才</h2>
         <div id="jishu">
             <ul>
-                <li><a href="#ly_1" title="C++" id="c++">C++</a></li>
-                <li><a href="#ly_2" title="C#" id="c#">C#</a></li>
-                <li><a href="#ly_3" title="Android" id="andro">Andro...</a></li>
-                <li><a href="#ly_4" title="jQuery" id="jquer">jQuer...</a></li>
-                <li><a href="#ly_5" title="Java" id="java">Java</a></li>
-                <li><a href="#ly_6" title="JavaScript" id="javas">JavaS...</a></li>
+                <li><a href="#ly_7" title="C++" id="c++">C++</a></li>
+                <li><a href="#ly_8" title="C#" id="c#">C#</a></li>
+                <li><a href="#ly_9" title="Android" id="andro">Andro...</a></li>
+                <li><a href="#ly_10" title="jQuery" id="jquer">jQuer...</a></li>
+                <li><a href="#ly_11" title="Java" id="java">Java</a></li>
+                <li><a href="#ly_12" title="JavaScript" id="javas">JavaS...</a></li>
             </ul>
-            <div id="ly_1">
+            <div id="ly_7">
                 <ul>
                     <c:forEach items="${genius7}" var="genius7" varStatus="s">
                     <li>
@@ -705,557 +406,81 @@
                         </div>
                     </li>
                     </c:forEach>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/bmailqy" alt="bmailqy" target="_blank"><img src="../../statics/cstoImages/1491788583365640.png" alt="" /></a> <a href="http://www.csto.com/u/bmailqy" target="_blank">bmailqy </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/jobsccnu" alt="jobsccnu" target="_blank"><img src="../../statics/cstoImages/1363772762909302.png" alt="" /></a> <a href="http://www.csto.com/u/jobsccnu" target="_blank">jobsccnu </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -120px" target="_blank"> 6 </span> <span>公司</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/david3c" alt="david3c" target="_blank"><img src="../../statics/cstoImages/1489996470737296.png" alt="" /></a> <a href="http://www.csto.com/u/david3c" target="_blank">david3c </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>团队</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/高手软件" alt="高手软件" target="_blank"><img src="../../statics/cstoImages/1359348352694647.png" alt="" /></a> <a href="http://www.csto.com/u/高手软件" target="_blank">高手软件 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -120px" target="_blank"> 6 </span> <span>团队</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/chris801224" alt="chris801224" target="_blank"><img src="../../statics/cstoImages/1445243878627280.png" alt="" /></a> <a href="http://www.csto.com/u/chris801224" target="_blank">chris801224 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/澜沃科技" alt="澜沃科技" target="_blank"><img src="../../statics/cstoImages/1_newcad0000.jpg" alt="" /></a> <a href="http://www.csto.com/u/澜沃科技" target="_blank">澜沃科技 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>团队</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/QQ729615546" alt="QQ729615546" target="_blank"><img src="../../statics/cstoImages/1333516824313859.png" alt="" /></a> <a href="http://www.csto.com/u/QQ729615546" target="_blank">QQ729615546 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>团队</span> <span>湖南 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/zhubenfulovepoem" alt="zhubenfulovepoem" target="_blank"><img src="../../statics/cstoImages/1373267332773143.png" alt="" /></a> <a href="http://www.csto.com/u/zhubenfulovepoem" target="_blank">zhubenfulovepoem </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>个人</span> <span>浙江 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/西柚互动" alt="西柚互动" target="_blank"><img src="../../statics/cstoImages/1494914986922541.png" alt="" /></a> <a href="http://www.csto.com/u/西柚互动" target="_blank">西柚互动 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>公司</span> <span>四川 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
                 </ul>
             </div>
-            <div id="ly_2">
+            <div id="ly_8">
                 <ul>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/微点科技" alt="微点科技" target="_blank"><img src="../../statics/cstoImages/1385622877259808.png" alt="" /></a> <a href="http://www.csto.com/u/微点科技" target="_blank">微点科技 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -120px" target="_blank"> 6 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/sigil2011" alt="sigil2011" target="_blank"><img src="../../statics/cstoImages/1354718688698046.png" alt="" /></a> <a href="http://www.csto.com/u/sigil2011" target="_blank">sigil2011 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>公司</span> <span>辽宁 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/踏雪无痕_影" alt="踏雪无痕_影" target="_blank"><img src="../../statics/cstoImages/1_zmk523.jpg" alt="" /></a> <a href="http://www.csto.com/u/踏雪无痕_影" target="_blank">踏雪无痕_影 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>浙江 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/陕西一点通网络技术有限公司" alt="陕西一点通网络技术有限公司" target="_blank"><img src="../../statics/cstoImages/1432285495705905.png" alt="" /></a> <a href="http://www.csto.com/u/陕西一点通网络技术有限公司" target="_blank">陕西一点通网络技术有限公司 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>陕西 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/bb0536" alt="bb0536" target="_blank"><img src="../../statics/cstoImages/1_bb0536.jpg" alt="" /></a> <a href="http://www.csto.com/u/bb0536" target="_blank">bb0536 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>山东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/731673173" alt="731673173" target="_blank"><img src="../../statics/cstoImages/1458604539853458.png" alt="" /></a> <a href="http://www.csto.com/u/731673173" target="_blank">731673173 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>个人</span> <span>黑龙江</span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/米哈哈科技" alt="米哈哈科技" target="_blank"><img src="../../statics/cstoImages/1478579892783913.png" alt="" /></a> <a href="http://www.csto.com/u/米哈哈科技" target="_blank">米哈哈科技 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>个人</span> <span>四川 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/西柚互动" alt="西柚互动" target="_blank"><img src="../../statics/cstoImages/1494914986922541.png" alt="" /></a> <a href="http://www.csto.com/u/西柚互动" target="_blank">西柚互动 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>公司</span> <span>四川 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/tianliang0309" alt="tianliang0309" target="_blank"><img src="../../statics/cstoImages/1382880580266943.png" alt="" /></a> <a href="http://www.csto.com/u/tianliang0309" target="_blank">tianliang0309 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>团队</span> <span>湖北 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/YLeafSoft" alt="YLeafSoft" target="_blank"><img src="../../statics/cstoImages/1435152868530453.png" alt="" /></a> <a href="http://www.csto.com/u/YLeafSoft" target="_blank">YLeafSoft </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>个人</span> <span>江苏 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
+                    <c:forEach items="${genius8}" var="genius8" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius8.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius8.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
-            <div id="ly_3">
+            <div id="ly_9">
                 <ul>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/shijin525" alt="shijin525" target="_blank"><img src="../../statics/cstoImages/1_shijin525.jpg" alt="" /></a> <a href="http://www.csto.com/u/shijin525" target="_blank">shijin525 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>个人</span> <span>辽宁 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/maiyunxiaodan" alt="maiyunxiaodan" target="_blank"><img src="../../statics/cstoImages/1514441330587019.png" alt="" /></a> <a href="http://www.csto.com/u/maiyunxiaodan" target="_blank">maiyunxiaodan </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/高手软件" alt="高手软件" target="_blank"><img src="../../statics/cstoImages/1359348352694647.png" alt="" /></a> <a href="http://www.csto.com/u/高手软件" target="_blank">高手软件 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -120px" target="_blank"> 6 </span> <span>团队</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/wspscucs" alt="wspscucs" target="_blank"><img src="../../statics/cstoImages/1317809568962656.png" alt="" /></a> <a href="http://www.csto.com/u/wspscucs" target="_blank">wspscucs </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/腾众软件" alt="腾众软件" target="_blank"><img src="../../statics/cstoImages/1481181039745959.png" alt="" /></a> <a href="http://www.csto.com/u/腾众软件" target="_blank">腾众软件 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/qq_22470473" alt="qq_22470473" target="_blank"><img src="../../statics/cstoImages/1414133494466632.png" alt="" /></a> <a href="http://www.csto.com/u/qq_22470473" target="_blank">qq_22470473 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/微点科技" alt="微点科技" target="_blank"><img src="../../statics/cstoImages/1385622877259808.png" alt="" /></a> <a href="http://www.csto.com/u/微点科技" target="_blank">微点科技 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -120px" target="_blank"> 6 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/君韵科技" alt="君韵科技" target="_blank"><img src="../../statics/cstoImages/1392890074655566.png" alt="" /></a> <a href="http://www.csto.com/u/君韵科技" target="_blank">君韵科技 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>公司</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/TSofTIME_Ltd" alt="TSofTIME_Ltd" target="_blank"><img src="../../statics/cstoImages/1348630465520174.png" alt="" /></a> <a href="http://www.csto.com/u/TSofTIME_Ltd" target="_blank">TSofTIME_Ltd </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/协德科技" alt="协德科技" target="_blank"><img src="../../statics/cstoImages/1395633728810215.png" alt="" /></a> <a href="http://www.csto.com/u/协德科技" target="_blank">协德科技 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
+                    <c:forEach items="${genius9}" var="genius9" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius9.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius9.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
-            <div id="ly_4">
+            <div id="ly_10">
                 <ul>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/微点科技" alt="微点科技" target="_blank"><img src="../../statics/cstoImages/1385622877259808.png" alt="" /></a> <a href="http://www.csto.com/u/微点科技" target="_blank">微点科技 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -120px" target="_blank"> 6 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/红橘子科技-九九" alt="红橘子科技-九九" target="_blank"><img src="../../statics/cstoImages/1352097075343551.png" alt="" /></a> <a href="http://www.csto.com/u/红橘子科技-九九" target="_blank">红橘子科技-九九 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>团队</span> <span>湖南 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/北京江图科技有限公司" alt="北京江图科技有限公司" target="_blank"><img src="../../statics/cstoImages/1489821621436415.png" alt="" /></a> <a href="http://www.csto.com/u/北京江图科技有限公司" target="_blank">北京江图科技有限公司 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/做就一定要做好" alt="做就一定要做好" target="_blank"><img src="../../statics/cstoImages/1397611367444235.png" alt="" /></a> <a href="http://www.csto.com/u/做就一定要做好" target="_blank">做就一定要做好 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -140px" target="_blank"> 7 </span> <span>个人</span> <span>四川 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/raomk" alt="raomk" target="_blank"><img src="../../statics/cstoImages/1444628981786310.png" alt="" /></a> <a href="http://www.csto.com/u/raomk" target="_blank">raomk </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>个人</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/phpstudios" alt="phpstudios" target="_blank"><img src="../../statics/cstoImages/1409816524118745.png" alt="" /></a> <a href="http://www.csto.com/u/phpstudios" target="_blank">phpstudios </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>安徽 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/qq1057789374" alt="qq1057789374" target="_blank"><img src="../../statics/cstoImages/1408514652192175.png" alt="" /></a> <a href="http://www.csto.com/u/qq1057789374" target="_blank">qq1057789374 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/金华与时网络" alt="金华与时网络" target="_blank"><img src="../../statics/cstoImages/1334153479205301.png" alt="" /></a> <a href="http://www.csto.com/u/金华与时网络" target="_blank">金华与时网络 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>团队</span> <span>浙江 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/larkim82" alt="larkim82" target="_blank"><img src="../../statics/cstoImages/1392823460212154.png" alt="" /></a> <a href="http://www.csto.com/u/larkim82" target="_blank">larkim82 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>湖北 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/kongyun360" alt="kongyun360" target="_blank"><img src="../../statics/cstoImages/1481805881393291.png" alt="" /></a> <a href="http://www.csto.com/u/kongyun360" target="_blank">kongyun360 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>江苏 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
+                    <c:forEach items="${genius10}" var="genius10" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius10.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius10.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
-            <div id="ly_5">
+            <div id="ly_11">
                 <ul>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="../../statics/cstoImages/1511844463925700.png" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">donaldo_123 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/maiyunxiaodan" alt="maiyunxiaodan" target="_blank"><img src="../../statics/cstoImages/1514441330587019.png" alt="" /></a> <a href="http://www.csto.com/u/maiyunxiaodan" target="_blank">maiyunxiaodan </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/zhihee122" alt="zhihee122" target="_blank"><img src="../../statics/cstoImages/1516608555774957.png" alt="" /></a> <a href="http://www.csto.com/u/zhihee122" target="_blank">zhihee122 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -20px" target="_blank"> 1 </span> <span>团队</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/axcsoft" alt="axcsoft" target="_blank"><img src="../../statics/cstoImages/1510277205527651.png" alt="" /></a> <a href="http://www.csto.com/u/axcsoft" target="_blank">axcsoft </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/人丰" alt="人丰" target="_blank"><img src="../../statics/cstoImages/1_prosperity1006.jpg" alt="" /></a> <a href="http://www.csto.com/u/人丰" target="_blank">人丰 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/纵道软件" alt="纵道软件" target="_blank"><img src="../../statics/cstoImages/1468225125181208.png" alt="" /></a> <a href="http://www.csto.com/u/纵道软件" target="_blank">纵道软件 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>团队</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/bigbird_llh" alt="bigbird_llh" target="_blank"><img src="../../statics/cstoImages/1467521034633672.png" alt="" /></a> <a href="http://www.csto.com/u/bigbird_llh" target="_blank">bigbird_llh </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>个人</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/uibekt0821" alt="uibekt0821" target="_blank"><img src="../../statics/cstoImages/1459996669768492.png" alt="" /></a> <a href="http://www.csto.com/u/uibekt0821" target="_blank">uibekt0821 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/微点科技" alt="微点科技" target="_blank"><img src="../../statics/cstoImages/1385622877259808.png" alt="" /></a> <a href="http://www.csto.com/u/微点科技" target="_blank">微点科技 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -120px" target="_blank"> 6 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/guotion" alt="guotion" target="_blank"><img src="../../statics/cstoImages/1461305694837147.png" alt="" /></a> <a href="http://www.csto.com/u/guotion" target="_blank">guotion </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -60px" target="_blank"> 3 </span> <span>个人</span> <span>四川 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
+                    <c:forEach items="${genius11}" var="genius11" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius11.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius11.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
-            <div id="ly_6">
+            <div id="ly_12">
                 <ul>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/axcsoft" alt="axcsoft" target="_blank"><img src="../../statics/cstoImages/1510277205527651.png" alt="" /></a> <a href="http://www.csto.com/u/axcsoft" target="_blank">axcsoft </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>上海 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/wspscucs" alt="wspscucs" target="_blank"><img src="../../statics/cstoImages/1317809568962656.png" alt="" /></a> <a href="http://www.csto.com/u/wspscucs" target="_blank">wspscucs </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/megger520" alt="megger520" target="_blank"><img src="../../statics/cstoImages/1445448597101493.png" alt="" /></a> <a href="http://www.csto.com/u/megger520" target="_blank">megger520 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/weimengwangluo" alt="weimengwangluo" target="_blank"><img src="../../statics/cstoImages/1455368980973479.png" alt="" /></a> <a href="http://www.csto.com/u/weimengwangluo" target="_blank">weimengwangluo </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>河南 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/北京江图科技有限公司" alt="北京江图科技有限公司" target="_blank"><img src="../../statics/cstoImages/1489821621436415.png" alt="" /></a> <a href="http://www.csto.com/u/北京江图科技有限公司" target="_blank">北京江图科技有限公司 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>个人</span> <span>北京 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/做就一定要做好" alt="做就一定要做好" target="_blank"><img src="../../statics/cstoImages/1397611367444235.png" alt="" /></a> <a href="http://www.csto.com/u/做就一定要做好" target="_blank">做就一定要做好 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -140px" target="_blank"> 7 </span> <span>个人</span> <span>四川 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/raomk" alt="raomk" target="_blank"><img src="../../statics/cstoImages/1444628981786310.png" alt="" /></a> <a href="http://www.csto.com/u/raomk" target="_blank">raomk </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>个人</span> <span>广东 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/Kyle-soft" alt="Kyle-soft" target="_blank"><img src="../../statics/cstoImages/1404967363446578.png" alt="" /></a> <a href="http://www.csto.com/u/Kyle-soft" target="_blank">Kyle-soft </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -80px" target="_blank"> 4 </span> <span>团队</span> <span>四川 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/陕西一点通网络技术有限公司" alt="陕西一点通网络技术有限公司" target="_blank"><img src="../../statics/cstoImages/1432285495705905.png" alt="" /></a> <a href="http://www.csto.com/u/陕西一点通网络技术有限公司" target="_blank">陕西一点通网络技术有限公司 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>公司</span> <span>陕西 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="photo"><a href="http://www.csto.com/u/金华与时网络" alt="金华与时网络" target="_blank"><img src="../../statics/cstoImages/1334153479205301.png" alt="" /></a> <a href="http://www.csto.com/u/金华与时网络" target="_blank">金华与时网络 </a></div>
-                        <div class="hover_show">
-                            <p><span class="level_F" style="background-position:0px -100px" target="_blank"> 5 </span> <span>团队</span> <span>浙江 </span> </p>
-                            <p>
-                                <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
-                            </p>
-                        </div>
-                    </li>
+                    <c:forEach items="${genius12}" var="genius12" varStatus="s">
+                        <li>
+                            <div class="photo"><a href="http://www.csto.com/u/donaldo_123" alt="donaldo_123" target="_blank"><img src="${genius12.alogo}" alt="" /></a> <a href="http://www.csto.com/u/donaldo_123" target="_blank">${genius12.author} </a></div>
+                            <div class="hover_show">
+                                <p><span class="level_F" style="background-position:0px -40px" target="_blank"> 2 </span> <span>团队</span> <span>北京 </span> </p>
+                                <p>
+                                    <a class="btn_blue" title="收藏" href="javascript:void(0)" onclick="login_csdn()">收藏</a> <a class="btn_green" title="邀请" href="javascript:void(0)" onclick="login_csdn()">邀请</a>
+                                </p>
+                            </div>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
         </div>
@@ -1302,7 +527,8 @@
     </dl>
     <input type="button" id="submit_info" value="保存设置" />
     <input type="button" id="mark_after" value="以后再说" />
-    <input type="hidden" name="mark_name" id="mark_name" value="users" /></div>
+    <input type="hidden" name="mark_name" id="mark_name" value="users" />
+</div>
 <script type="text/javascript">
     //点击收藏的操作
     function add_favorite(mark_id, mark_name, obj)
@@ -1423,7 +649,9 @@
         <input type="button" value="邀请更多接包方" class="class_btn" onclick="invite_more()" />
         <!-- <a href="javascript:void(0);" onclick="box_hide('result_msg')">关闭</a> -->
     </div>
+
 </div>
+
 
 <script type="text/javascript">
     /**
@@ -1511,6 +739,8 @@
         window.location.href = 'http://www.csto.com/member';
     }
 </script>
+        </div>
+    </div>
 <!--邀请结束--><!-- footer -->
 <!-- footer -->
 <div id="tmpboxdiv">
@@ -1533,13 +763,13 @@
     </div>
 </div>
 <!-- //footer -->
-
 <span class="hide">
+
 	<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=543 border=0 width=0 height=0>");</script>
 	<script type="text/javascript"> new Image().src ="http://bss.csdn.net/monitor_interface/add_monitor?id=1" ;</script>
 	<script type="text/javascript" src="../../statics/js/tracking.js"></script>
 </span>
-            <script type="text/javascript" src="../../statics/js/cstoPicture.js"></script>
+</div>
 </body>
 </html>
 
