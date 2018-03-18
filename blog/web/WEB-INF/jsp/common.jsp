@@ -75,7 +75,7 @@
                 <li>
                     <form action="check" method="get" id="formS" name="actionForm">
                     <div class="search_bar csdn-tracking-statistics tracking-click" data-mod="popu_366">
-                        <input type="text" class="input_search" name="thing">
+                        <input type="text" class="input_search" name="q">
                         <a href="javascript:formSubmit()" onclick="formSubmit()" target="_blank" class="btn-nobg-noborder btn-search"><i class="iconfont-toolbar toolbar-sousuo"></i></a>
                     </div>
                     </form>
