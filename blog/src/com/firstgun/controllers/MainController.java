@@ -27,6 +27,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -92,6 +93,7 @@ public class MainController {
         pageUtils.getPageCount();
         //新闻标题
         List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(), pageUtils.getPageSize());
+        model.addAttribute("pageUtils",pageUtils);
         model.addAttribute("newsList", newsList);
         //今日推荐
         List<NewsTitle> groom = newsTitleService.getGroom();
@@ -293,8 +295,6 @@ public class MainController {
         List<IteyeInformation> iteyeInformations = iteyeInformationService.informationTitle();
         model.addAttribute("iteyeInformations",iteyeInformations);
         List<LatestProject> latest = latestProjectService.latest();
-        model.addAttribute("latest", latest);
-        model.addAttribute("genius", genius);
         model.addAttribute("latest",latest);
         model.addAttribute("genius1",genius1);
         model.addAttribute("genius7",genius7);
