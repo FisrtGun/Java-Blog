@@ -17,9 +17,9 @@
     <!--<link rel="icon" href="http://www.csto.com/images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="http://www.csto.com/images/favicon.ico" type="image/x-icon" />
     <link rel="Bookmark" href="http://www.csto.com/images/favicon.ico" type="image/x-icon" />-->
-    <link rel="icon" href="http://csdnimg.cn/public/favicon-g.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="http://csdnimg.cn/public/favicon-g.ico" type="image/x-icon" />
-    <link rel="Bookmark" href="http://csdnimg.cn/public/favicon-g.ico" type="image/x-icon" />
+    <link rel="icon" href="../../statics/images/fg.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../statics/images/fg.png" type="image/x-icon" />
+    <link rel="Bookmark" href="../../statics/images/fg.png" type="image/x-icon" />
     <link href="../../statics/css/HomePage.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
         var site_url = "http://www.csto.com/";
