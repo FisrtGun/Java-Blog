@@ -163,11 +163,11 @@ public class MainController {
             User OneUser = userService.getUser(user.getUname(), user.getUpwd());
             if (OneUser == null) {
                 req.getSession().setAttribute("error", true);
-                return "login";
+                return "redirect:login";
             } else {
                 req.getSession().setAttribute("users", OneUser);
                 req.getSession().setAttribute("error", false);
-                return "index";
+                return "redirect:index";
             }
         } else {
             req.getSession().setAttribute("error", true);
@@ -180,7 +180,7 @@ public class MainController {
     public String exist(HttpServletRequest req) {
         req.getSession().setAttribute("error", true);
         req.getSession().invalidate();
-        return "index";
+        return "redirect:index";
     }
 
     //去iteye
@@ -225,7 +225,7 @@ public class MainController {
         //群组讨论帖
         List<Iteyediscussiongroup> grouplist = iteyediscussiongroupService.getIteyediscussiongroup();
         model.addAttribute("grouplist", grouplist);
-        return "iteye";
+        return "redirect:iteye";
     }
 
     //去新文章
