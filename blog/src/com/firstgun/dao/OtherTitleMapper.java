@@ -17,5 +17,8 @@ public interface OtherTitleMapper {
      List<OtherTitle> getSelectOther();
     //获取今日推荐内容
      List<OtherTitle> getGroom();
-
+    //根据nid获取other表的数据
+    OtherTitle getOtherConnet(@Param("nid")Integer nid);
+    //根据nid修改阅读量
+    int updateNview(@Param("nview")Integer nview,@Param("nid")Integer nid);
 }

@@ -19,8 +19,8 @@
     <meta name="keywords" content="GitChat,机器学习,大数据,程序员,用户体验,软件开发,知识付费,技术分享">
     <link href="../../statics/css/bundle1.css" rel="stylesheet">
     <script src="../../statics/js/gitchat/js1.js"></script>
-    <link rel="icon" type="image/png" href="http://images.gitbook.cn/Logo16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="http://images.gitbook.cn/Logo32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../statics/images/fg.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../../statics/images/fg.png" sizes="32x32">
 </head>
 <link href="../../statics/css/bundle2.css" rel="stylesheet">
 <link rel="stylesheet" href="../../statics/css/mazi.css">

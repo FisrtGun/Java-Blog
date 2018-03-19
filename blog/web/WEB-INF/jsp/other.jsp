@@ -98,7 +98,7 @@ To change this template use File | Settings | File Templates.
                             <div class="title">
                                 <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
                                     data-feed-show="false" data-dsm="post">
-                                    <a strategy="new" href="Amazon">
+                                    <a strategy="new" href="Amazon?nid=${list.nid}">
                                           ${list.ntitle}   </a>
                                 </h2>
                             </div>
@@ -124,7 +124,7 @@ To change this template use File | Settings | File Templates.
                             </dl>
                             <!--阅读 begin-->
                             <div class="read_num">
-                                <p class="num">${list.nreads}</p>
+                                <p class="num">${list.nview}</p>
                                 <p class="text">阅读量</p>
                             </div>
                             <!--阅读 end-->

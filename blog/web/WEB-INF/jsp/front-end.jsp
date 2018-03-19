@@ -28,7 +28,7 @@ To change this template use File | Settings | File Templates.
     <meta name="msvalidate.01" content="3189512127C34C46BC74BED5852D45E4">
     <title>前端-CSDN</title>
     <link ref="canonical" href="https://www.csdn.net/nav/web">
-    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <%--<script src="../../statics/js/jquery-1.9.1.min.js" type="text/javascript"></script>--%>
     <%--<script src="../../statics/js/tracking-1.0.2.js" type="text/javascript" charset="utf-8"></script>--%>
     <%--<script src="../../statics/js/main_flume.js"></script>--%>

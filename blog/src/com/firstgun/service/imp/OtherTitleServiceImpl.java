@@ -36,4 +36,14 @@ public class OtherTitleServiceImpl implements OtherTitleService {
     public List<OtherTitle> getGroom() {
         return otherTitleMapper.getGroom();
     }
+
+    @Override
+    public OtherTitle getOtherConnet(Integer nid) {
+        return otherTitleMapper.getOtherConnet(nid);
+    }
+
+    @Override
+    public int updateNview(Integer nview, Integer nid) {
+        return otherTitleMapper.updateNview(nview,nid);
+    }
 }

@@ -283,7 +283,7 @@ To change this template use File | Settings | File Templates.
                             </dl>
                             <!--阅读 begin-->
                             <div class="read_num">
-                                <p class="num">${newsList.nreads}</p>
+                                <p class="num">${newsList.nview}</p>
                                 <p class="text">阅读量</p>
                             </div>
                             <!--阅读 end-->
@@ -332,7 +332,7 @@ To change this template use File | Settings | File Templates.
                         <li>
                             <div class="img_box"><a href="http://mp.weixin.qq.com/s/ds82pMExGu9qjwk9Mx5YEQ" target="_blank"><img src="${groom.npicture}" alt=""></a></div>
                             <div class="content">
-                                <h3 class="company_name"><a href="http://mp.weixin.qq.com/s/ds82pMExGu9qjwk9Mx5YEQ"  target="_blank">${groom.ntitle}</a></h3>
+                                <h3 class="company_name"><a href=""  target="_blank" style="width:180px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap">${groom.ntitle}</a></h3>
                                 <p class="txt oneline">${groom.nauthor}</p>
                             </div>
                         </li>
