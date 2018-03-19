@@ -240,7 +240,7 @@ To change this template use File | Settings | File Templates.
             </div>
             <ul class="feedlist_mod" id="feedlist_id" shown-offset="1520902233852052">
                 <c:forEach items="${newsList}" var="newsList" varStatus="s">
-                    <li class="clearfix" data-type="blog" data-id="79442462">
+                    <li class="clearfix" data-type="blog" data-id="79442462" id="new">
                         <div class="list_con">
                             <div class="title">
                                 <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
@@ -253,28 +253,6 @@ To change this template use File | Settings | File Templates.
                                     <div class="unin_reason_dialog_wrapper">
                                         <i class="icon-close"></i>
                                         <div class="unin_reason_dialog">
-                                            <ul>
-                                                    <%--<li class="unin_item csdn-tracking-statistics" data-poputype="feed" data-feed-show="false" data-dsm="post" data-mod="popu_462">
-                                                        <a>所属分类
-                                                            <em>
-                                                                    ${newsList.ntab}                                            </em> 不感兴趣</a>
-                                                    </li>--%>
-                                                <br/>
-                                                    <%--<li class="unin_item csdn-tracking-statistics" data-poputype="feed" data-feed-show="false" data-dsm="post" data-mod="popu_462">
-                                                        <a>推荐理由
-                                                            <em>
-                                                                运营精选                                            </em> 不准确</a>
-                                                    </li>--%>
-                                                <br/>
-                                                    <%--<li class="unin_item csdn-tracking-statistics" data-poputype="feed" data-feed-show="false" data-dsm="post" data-mod="popu_462">
-                                                        <a> 旧闻、重复 </a>
-                                                    </li>
-                                                    <br/>
-                                                    <li class="unin_item csdn-tracking-statistics" data-poputype="feed" data-feed-show="false" data-dsm="post" data-mod="popu_462">
-                                                        <a> 内容质量差 </a>
-                                                    </li>--%>
-                                                <br/>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -286,7 +264,7 @@ To change this template use File | Settings | File Templates.
                                 </dd>
                                 <dt>
                                     <a href="http://blog.csdn.net/wireless_com" target="_blank" class="user_img">
-                                        <img src="../../statics/picture/1_wireless_com.jpg" alt="wireless_com"
+                                        <img src="${newsList.npicture}" alt="wireless_com"
                                              title="wireless_com">
                                     </a>
                                 </dt>
@@ -317,8 +295,8 @@ To change this template use File | Settings | File Templates.
                         </div>
                     </li>
                 </c:forEach>
-                <jsp:include page="PageCommon.jsp" flush="true"></jsp:include>
             </ul>
+            <jsp:include page="PageCommon.jsp" flush="true"></jsp:include>
         </main>
         <!DOCTYPE html>
         <aside>

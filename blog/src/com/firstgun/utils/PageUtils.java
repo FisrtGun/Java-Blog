@@ -1,12 +1,15 @@
 package com.firstgun.utils;
 
+import org.springframework.stereotype.Repository;
+
 /**
  * @Author:
  * @Date: 2018/3/15 7:25
  * @Description: 分页查询功能
  */
+@Repository
 public class PageUtils {
-    private int index;//当前页
+    private int index =1;//当前页
     private int pageSize;//页量
     private int pageCount;//总条数
     private int totalPage;//总页数

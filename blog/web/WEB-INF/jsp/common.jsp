@@ -99,7 +99,7 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-        var ll = ${error};
+        var ll ="${error}";
             console.log(ll);
         console.log(!ll);
         unlogin();

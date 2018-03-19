@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -7,9 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
     <title>分页</title>
+    <script type="text/javascript" src="../../statics/js/jquery-1.11.1.min.js"></script>
     <style data-for="result" type="text/css" id="css_newi_result">body {
         color: #333;
         background: #fff;
@@ -38,7 +40,7 @@
         text-decoration: none;
         overflow: hidden;
         margin-right: 9px;
-        background: #fff
+        background: #fff;
     }
 
     #page a {
@@ -77,6 +79,11 @@
         height: 36px;
         line-height: 36px
     }
+
+    .bod {
+        background: #f2f8ff;
+        border: 1px solid #38f
+    }
     </style>
 </head>
 <body>
@@ -86,39 +93,39 @@
         <a>刚刚阅读在这里，点击刷新</a>
     </div>--%>
     <div id="page">
-        <a href="index?index=${pageUtils.index-1}" class="n" id="pageUp">上一页</a>
-        <script type="text/javascript">
+        <a><span class="n" id="pageUp">上一页</span></a>
+        <%--<script type="text/javascript">
             var pageInt =${pageUtils.index};
             if (pageInt == "1") {
                 $("#pageUp").attr('href', "javascript:;").css("background-color", "#f5f6f7");
             } else {
                 $("#pageUp").attr('href', "index?index=${pageUtils.index-1}").css("background-color", "f2f8ff");
             }
-        </script>
+        </script>--%>
 
-        <a href="index?index=1" id="page1">
+        <a>
             <span class="pc">1</span></a>
-        <a href="index?index=2" id="page2">
+        <a>
             <span class="pc">2</span></a>
-        <a href="index?index=3" id="page3">
+        <a>
             <span class="pc">3</span></a>
-        <a href="index?index=4" id="page4">
+        <a>
             <span class="pc">4</span></a>
-        <a href="index?index=5" id="page5">
+        <a>
             <span class="pc">5</span></a>
-        <a href="index?index=6" id="page6">
+        <a>
             <span class="pc">6</span></a>
-        <a href="index?index=7" id="page7">
+        <a>
             <span class="pc">7</span></a>
-        <a href="index?index=8" id="page8">
+        <a>
             <span class="pc">8</span></a>
-        <a href="index?index=9" id="page9">
+        <a>
             <span class="pc">9</span></a>
-        <a href="index?index=10" id="page10">
+        <a>
             <span class="pc">10</span></a>
 
 
-        <script type="text/javascript">
+        <%--<script type="text/javascript">
             var i =${pageUtils.index};
             if(i == "1"){
                 $("#page1").css({"border": "1px solid #398bde"});
@@ -155,19 +162,118 @@
             });*/
 
 
-        </script>
+        </script>--%>
 
 
-        <a href="index?index=${pageUtils.index+1}" class="n" id="pageDown">下一页</a>
-        <script type="text/javascript">
+        <a><span class="n" id="pageDown">下一页</span></a>
+        <%--<script type="text/javascript">
             var pageInt =${pageUtils.index};
-            var totalPage =
-            ${pageUtils.totalPage}
+            var totalPage =${pageUtils.totalPage}
             if (pageInt == totalPage) {
                 $("#pageDown").attr('href', "javascript:;").css("background-color", "#f5f6f7");
             } else {
                 $("#pageDown").attr('href', "index?index=${pageUtils.index+1}").css("background-color", "f2f8ff");
             }
+        </script>--%>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#page').on("click","a",function () {
+                    $(this).addClass("bod")
+                    $(this).siblings().removeClass("bod");
+                    var pageInt =${pageUtils.index};
+                    alert("当前页："+pageInt);
+                    var vals = $(this).children().text();
+
+                    if (vals === "上一页") {
+                        pageInt=pageInt-1;
+                    } else if (vals === "下一页") {
+                        pageInt=pageInt+1;
+                        alert(pageInt);
+                    } else {
+                        pageInt = vals;
+                    }
+                    $.ajax({
+                        "url": "/mainController/indexPage",//要提交的路径
+                        "Type": "post",//提交方式
+                        "data": "index=" + pageInt,//发送到服务器的数据
+                        "dataType": "json",//指定返回的数据格式
+                        beforeSend: function () {
+                            $("#feedlist_id").html('加载中...');
+                        }, //加载执行方法
+                        "success": function (data) {
+                            var newsList = eval(data); //数组
+                            var news = "";
+                            $.each(newsList, function (p) {
+                                var nid = newsList[p].nid;
+                                var ntitle = newsList[p].ntitle;
+                                var ntab = newsList[p].ntab;
+                                var nauthor = newsList[p].nauthor;
+                                var ncreateTime = newsList[p].ncreateTime;
+                                var nreads = newsList[p].nreads;
+                                var npicture = newsList[p].npicture;
+
+
+                               var newdemo = " <li class=\"clearfix\" data-type=\"blog\" data-id=\"79442462\" id=\"new\">\n" +
+                                    "        <div class=\"list_con\">\n" +
+                                    "            <div class=\"title\">\n" +
+                                    "                <h2 class=\"csdn-tracking-statistics\" data-mod=\"popu_459\" data-poputype=\"feed\"\n" +
+                                    "                    data-feed-show=\"false\" data-dsm=\"post\">\n" +
+                                    "                    <a strategy=\"recommend\" href=\"/personal/personblog?" + nid + "\" target=\"_blank\">" + ntitle + "</a>" +
+                                    " </h2> <div class=\"close_tag\">\n" +
+                                    "                    <div class=\"unin_reason_dialog_wrapper\">\n" +
+                                    "                        <i class=\"icon-close\"></i>\n" +
+                                    "                        <div class=\"unin_reason_dialog\">\n" +
+                                    "                        </div>\n" +
+                                    "                    </div>\n" +
+                                    "                </div>\n" +
+                                    "            </div>\n" +
+                                    "            <dl class=\"list_userbar\">\n" +
+                                    "                <dd class=\"tag\">\n" +
+                                    "                    <a href=\"/nav/blockchain\" target=\"_blank\">\n" +
+                                    "                        ntab </a>\n" +
+                                    "                </dd>\n" +
+                                    "                <dt>\n" +
+                                    "                    <a href=\"http://blog.csdn.net/wireless_com\" target=\"_blank\" class=\"user_img\">\n" +
+                                    "                        <img src="+npicture+" alt=\"\"\n" +
+                                    "                             title=\"wireless_com\">\n" +
+                                    "                    </a>\n" +
+                                    "                </dt>\n" +
+                                    "                <dd class=\"name\">\n" +
+                                    "                    <a href=\"http://blog.csdn.net/wireless_com\" target=\"_blank\">" + nauthor + "</a>" +
+                                    "</dd>" +
+                                    " <dd class=\"time csdn-tracking-statistics tracking-click\" data-poputype=\"feed\"\n" +
+                                    "                    data-mod=\"popu_459\">\n" +
+                                    "                    <a strategy=\"recommend\"\n" +
+                                    "                       href=\"http://blog.csdn.net/wireless_com/article/details/79442462\"\n" +
+                                    "                       target=\"_blank\">\n" + ncreateTime +
+                                    "</a> " +
+                                    "</dd>\n" +
+                                    "                <dd class=\"strategy\">\n" +
+                                    "                    运营精选\n" +
+                                    "                </dd>\n" +
+                                    "                <!--新增评论数+阅读 begin-->\n" +
+                                    "                <!--新增评论数+阅读 end-->\n" +
+                                    "            </dl>\n" +
+                                    "            <!--阅读 begin-->\n" +
+                                    "            <div class=\"read_num\">\n" +
+                                    "                <p class=\"num\">" + nreads +
+                                    "</p>" +
+                                    "<p class=\"text\">阅读量</p>\n" +
+                                    "            </div>\n" +
+                                    "            <!--阅读 end-->\n" +
+                                    "        </div>\n" +
+                                    "    </li>";
+                               news+=newdemo;
+                            });
+                            $("#feedlist_id").html(news);
+                        },//响应成功后要执行代码
+                        "error": function () { //请求失败后要执行代码
+                            alert("错误！");
+                        }
+                    });
+                });
+
+            });
         </script>
     </div>
 </li>

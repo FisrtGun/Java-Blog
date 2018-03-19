@@ -1,6 +1,7 @@
 package com.firstgun.controllers;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.firstgun.entity.*;
 import com.firstgun.service.*;
@@ -40,6 +41,10 @@ import java.util.List;
 @RequestMapping("mainController")
 public class MainController {
     @Resource
+    //分页工具类
+    private PageUtils pageUtils;
+    @Resource
+    //新闻实体类
     private NewsTitle newsTitle;
     @Resource
     //用户服务层
@@ -77,18 +82,20 @@ public class MainController {
     //个人中心的服务层
     private MyCenterService myCenterService;
 
-
+    private Model indexModel;
     //去首页
     @RequestMapping("index")
-    public String index(Model model, @RequestParam(value = "index", required = false) String index) {
+    public String index(Model model) {
+        indexModel=model;
         //分页查询功能
-        PageUtils pageUtils = new PageUtils();
-        if (index == null || index == "") {
-            index = "1";
-        }
-        int indexs = Integer.parseInt(index);
-        pageUtils.setIndex(indexs);
-        pageUtils.setPageSize(20);
+//        if (index == null || index == "") {
+//            index = "1";
+//        }
+//
+//            int indexs = Integer.parseInt(index);
+//        System.out.println(index+"index");
+//        pageUtils.setIndex(indexs);
+        pageUtils.setPageSize(5);
         pageUtils.setPageCount(newsTitleService.newsCount());
         pageUtils.getPageCount();
         //新闻标题
@@ -99,6 +106,24 @@ public class MainController {
         List<NewsTitle> groom = newsTitleService.getGroom();
         model.addAttribute("groom", groom);
         return "index";
+    }
+    //实现ajax分页查询
+    @RequestMapping("indexPage")
+    @ResponseBody//必须加入的注解
+    public JSONArray indexPage(HttpServletRequest req,Model model){
+        int index=Integer.parseInt(req.getParameter("index"));
+        System.out.println(index+"indexpage");
+//        int indexs = Integer.parseInt(index);
+        pageUtils.setIndex(index);
+        pageUtils.setPageSize(5);
+        pageUtils.setPageCount(newsTitleService.newsCount());
+        pageUtils.getPageCount();
+        //新闻标题
+        List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(), pageUtils.getPageSize());
+        JSONArray ja = JSONArray.parseArray(JSON.toJSONString(newsList));
+        System.out.println("indexPage里面的index："+pageUtils.getIndex());
+        indexModel.addAttribute("pageUtils",pageUtils);
+        return ja;
     }
 
     //去common
