@@ -390,7 +390,7 @@ To change this template use File | Settings | File Templates.
             <div class="group">
                 <div class='logo'>
                     <a href="/blogs/subjects/AngularJS-LIUXU" target="_blank"><img
-                            alt="Eace7a35-2604-38a7-aa1e-e77dd4bea5e4" height="48"
+                            alt="${newsList.npicture}" height="48"
                             src="${newsList.npicture}" width="48"/></a>
                 </div>
                 <span>

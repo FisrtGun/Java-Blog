@@ -88,7 +88,7 @@ public class MainController {
         }
         int indexs = Integer.parseInt(index);
         pageUtils.setIndex(indexs);
-        pageUtils.setPageSize(5);
+        pageUtils.setPageSize(15);
         pageUtils.setPageCount(newsTitleService.newsCount());
         pageUtils.getPageCount();
         //新闻标题
@@ -194,7 +194,6 @@ public class MainController {
         //新闻标题
         List<NewsTitle> newsList = newsTitleService.getSelectNews(1, 7);
         model.addAttribute("newsList", newsList);
-        System.out.println(newsList);
         //每日资讯
         List<IteyeInformation> list = iteyeInformationService.getIteyeInformation();
         model.addAttribute("list", list);
