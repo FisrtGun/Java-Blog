@@ -13,7 +13,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="referrer" content="always">
-    <title>ajax - fg搜索</title>
+    <title>${thing} - fg搜索</title>
     <link href="../../statics/css/bootstrap.css" rel="stylesheet">
     <link href="../../statics/css/common.css" rel="stylesheet">
     <link href="../../statics/css/content_toolbar.css" rel="stylesheet">
