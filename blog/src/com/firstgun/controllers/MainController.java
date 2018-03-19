@@ -82,11 +82,10 @@ public class MainController {
     //个人中心的服务层
     private MyCenterService myCenterService;
 
-    private Model indexModel;
+
     //去首页
     @RequestMapping("index")
     public String index(Model model) {
-        indexModel=model;
         //分页查询功能
 //        if (index == null || index == "") {
 //            index = "1";
@@ -111,18 +110,17 @@ public class MainController {
     @RequestMapping("indexPage")
     @ResponseBody//必须加入的注解
     public JSONArray indexPage(HttpServletRequest req,Model model){
-        int index=Integer.parseInt(req.getParameter("index"));
-        System.out.println(index+"indexpage");
-//        int indexs = Integer.parseInt(index);
-        pageUtils.setIndex(index);
-        pageUtils.setPageSize(5);
-        pageUtils.setPageCount(newsTitleService.newsCount());
+//        System.out.println(indexs);
+        String index=req.getParameter("index");
+        int indexs = Integer.parseInt(index);
+        pageUtils.setIndex(indexs);
+//        pageUtils.setPageSize(5);
+//        pageUtils.setPageCount(newsTitleService.newsCount());
         pageUtils.getPageCount();
         //新闻标题
         List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(), pageUtils.getPageSize());
         JSONArray ja = JSONArray.parseArray(JSON.toJSONString(newsList));
-        System.out.println("indexPage里面的index："+pageUtils.getIndex());
-        indexModel.addAttribute("pageUtils",pageUtils);
+        model.addAttribute("pageUtils",pageUtils);
         return ja;
     }
 
