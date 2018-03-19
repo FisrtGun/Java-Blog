@@ -468,7 +468,7 @@ public class MainController {
     //搜索---模糊查询
     @RequestMapping("check")
     public String check(HttpServletRequest req,Model model){
-        String things=req.getParameter("thing");
+        String things=req.getParameter("q");
         String thing = null;
         try {
             thing = new String(things.getBytes("iso8859-1"),"utf-8");
@@ -479,7 +479,6 @@ public class MainController {
         model.addAttribute("thing",thing);
         model.addAttribute("newList",newList);
         model.addAttribute("newListCount",newList.size());
-        System.out.println(newList);
         return "check";
     }
 }

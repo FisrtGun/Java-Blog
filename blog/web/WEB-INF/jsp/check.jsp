@@ -532,7 +532,7 @@
             <li>学院</li>
         </ul>
         <div class="search-from2" style="position:relative">
-            <form id="search_form_1" name="search_form_1">
+            <form id="search_form_1" name="search_form_1" action="check">
                 <div class="search-text-con2" style="position:relative">
                     <input type="text" path="q" class="search-text2" id="keyword" name="q" value="${thing}"
                            autocomplete="off"/>
@@ -592,7 +592,7 @@
                     </dd>
                     <dd class="search-detail">${newList.ntitle}
 
-                                ${newList.nconten}</dd>
+                                <span style="width:200px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap">${newList.nconten}...</span></dd>
                     <dd class="search-link"><a href="http://blog.csdn.net/zym_zb/article/details/76660730"
                                                target="_blank">http://blog.csdn.net/zym_zb/article/details/76660730</a>
                     </dd>
@@ -600,12 +600,12 @@
             </c:forEach>
 
         </div>
-        <div class="baidu_img"
+        <%--<div class="baidu_img"
              style="text-align: center; font-size: 14px; color:#999; line-height:14px; background-color:white; padding-bottom:15px;">
             <span>搜索结果部分由</span>
             <img src="../../statics/picture/baidu_logo.png" style="vertical-align: bottom">
             <span>提供</span>
-        </div>
+        </div>--%>
 
         <div class="csdn-pagination hide-set">
 		        <span class="page-nav">
@@ -716,7 +716,7 @@
             <p class="pointout"></p>
         </div>
         <div class="search-from2">
-            <form>
+            <form action="check">
                 <div class="search-text-con2" style="position:relative">
                     <input type="text" path="q" class="search-text2" name="q" id="keyword" value="${thing}"
                            autocomplete="off"/>
@@ -727,7 +727,7 @@
                     <ul class="search-suggest2" id="search-suggest3" style="bottom: 30px;"></ul>
                 </div>
                 <div class="search-btn-con2">
-                    <input type="Submit" value="搜一搜" class="search-btn2">
+                    <input type="submit" value="搜一搜" class="search-btn2">
                 </div>
             </form>
         </div>
@@ -770,8 +770,8 @@
 
     <script src="../../statics/js/publib_footer-1.0.2.js"></script>
 </div>
-<script src="../../statics/js/baidu_search-1.1.2.js" type="text/javascript"></script>
-<script src="../../statics/js/baidu_site_search.js" type="text/javascript"></script>
+<%--<script src="../../statics/js/baidu_search-1.1.2.js" type="text/javascript"></script>--%>
+<%--<script src="../../statics/js/baidu_site_search.js" type="text/javascript"></script>--%>
 <script async="async"
         charset="utf-8"
         data-id="8935aa488dd58452b9e5ee3b44f1212f"
