@@ -9,7 +9,7 @@
     </insert>
     <!--获取博主发布的标题、博主、发布文章时间、作者头像图片路径-->
     <select id="getSelectNews" resultType="NewsTitle">
-        SELECT ntitle,ntab,nauthor,nreads,ncreateTime,nauthor,nimg,nid FROM newstitle ORDER BY ncreateTime DESC limit #{index},#{pageSize};
+        SELECT ntitle,ntab,nauthor,nreads,ncreateTime,nauthor,nimg,nid,nview,npicture FROM newstitle ORDER BY ncreateTime DESC limit #{index},#{pageSize};
     </select>
     <!--获取数据库总条数-->
     <select id="newsCount" resultType="int">
@@ -17,7 +17,7 @@
     </select>
     <!--获取今日推荐的照片和标题-->
     <select id="getGroom" resultType="NewsTitle">
-        SELECT ntitle,npicture,nauthor FROM newstitle ORDER BY ncreateTime limit 0,15;
+        SELECT ntitle,npicture,nauthor FROM newstitle ORDER BY ncreateTime limit 0,10;
     </select>
     <!--添加博主发布文章-->
     <insert id="inserNews">

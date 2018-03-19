@@ -88,7 +88,7 @@ public class MainController {
         }
         int indexs = Integer.parseInt(index);
         pageUtils.setIndex(indexs);
-        pageUtils.setPageSize(15);
+        pageUtils.setPageSize(20);
         pageUtils.setPageCount(newsTitleService.newsCount());
         pageUtils.getPageCount();
         //新闻标题
@@ -237,7 +237,7 @@ public class MainController {
         }
         int indexs = Integer.parseInt(index);
         pageUtils.setIndex(indexs);
-        pageUtils.setPageSize(2);
+        pageUtils.setPageSize(20);
         pageUtils.setPageCount(newsTitleService.newsCount());
         pageUtils.getPageCount();
         List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(), pageUtils.getPageSize());
@@ -367,7 +367,16 @@ public class MainController {
 
     //去其他的Amazon/亚马逊
     @RequestMapping("Amazon")
-    public String Amazon() {
+    public String Amazon(@RequestParam("nid")String nid,Model model) {
+        if (nid == null || nid=="") {
+
+        }else {
+        int nids = Integer.parseInt(nid);
+        OtherTitle otherConnet = otherTitleService.getOtherConnet(nids);
+        otherConnet.setNview(otherConnet.getNview()+1);
+        otherTitleService.updateNview(otherConnet.getNview(),otherConnet.getNid());
+        model.addAttribute("otherConnet",otherConnet);
+        }
         return "otherPage/Amazon";
     }
 

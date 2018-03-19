@@ -26,6 +26,6 @@ public interface NewsTitleMapper {
     List<NewsTitle> likeCheck(@Param("nauthor") String nauthor,@Param("ntitle") String ntitle);
     //根据nid查询一条数据
     NewsTitle getNewsTitle(@Param("nid") Integer nid);
-    //根据nid修改Nview
+    //根据nid修改阅读量Nview
     int updateView(@Param("nid")Integer nid,@Param("nview")Integer nview);
 }

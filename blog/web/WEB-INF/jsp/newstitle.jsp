@@ -37,84 +37,6 @@
 <body data-category="newarticles" data-host_type="www">
 <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;"></svg>
 <jsp:include page="common.jsp" flush="true"></jsp:include>
-<%--<div class="csdn-toolbar csdn-toolbar tb_disnone  csdn-toolbar-skin-black ">
-    <div class="container row center-block ">
-        <ul class="pull-left left-menu clearfix">
-            <li><a href="#" title="CSDN首页" >
-                <img src="../../statics/newsImages/">
-            </a></li>
-            <li><a href="#" class="toolbar_to_feed" title="博客">博客</a></li>
-            <li><a href="#" title="学院">学院</a></li>
-            <li><a href="#" title="下载" >下载</a></li>
-            <li><a href="#" title="GitChat">GitChat</a></li>
-            <li class="tb_is1090hide"><a href="#" title="论坛" >论坛</a></li>
-            <li class="tb_is1150hide"><a href="#" title="问答" >问答</a></li>
-            <li class="tb_is1210hide"><a href="#" title="商城" >商城</a></li>
-            <li class="tb_is1270hide"><a href="#" title="下载VIP" >VIP</a>
-            </li>
-            <li class="tb_is1330hide"><a href="#" title="活动" >活动</a></li>
-            <li class="tb_is1400hide"><a href="#" title="招聘" >招聘</a></li>
-            <li class="tb_is1452hide"><a href="#" title="ITeye" >ITeye</a></li>
-            <li class="tb_is1513hide"><a href="#" title="码云" >码云</a></li>
-            <li class="tb_is1513hide"><a href="#" title="CSTO" >CSTO</a></li>
-            <li class="show-more"><a href="javascript:;" class="show-more-a">
-                <svg width="22" height="4" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm9 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm9 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
-                          fill="#4F4F4F" fill-rule="evenodd"></path>
-                </svg>
-            </a>
-                <div class="more">
-                    <div class="tb_is1090show"><a href="#" >论坛</a></div>
-                    <div class="tb_is1150show"><a href="#" >问答</a></div>
-                    <div class="tb_is1210show"><a href="#" >商城</a></div>
-                    <div class="tb_is1270show"><a href="#" >下载VIP</a>
-                    </div>
-                    <div class="tb_is1330show"><a href="#" >活动</a></div>
-                    <div class="tb_is1400show"><a href="#" >招聘</a></div>
-                    <div class="tb_is1452show"><a href="#" >ITeye</a></div>
-                    <div class="tb_is1513show"><a href="#" >码云</a></div>
-                    <div class="tb_is1513show"><a href="#" >CSTO</a></div>
-                </div>
-            </li>
-        </ul>
-        <div class="pull-right login-wrap unlogin">
-            <ul class="btns">
-                <li class="toolbar-tracking csdn-tracking-statistics tracking-click" data-mod="popu_369"><a
-                        href="https://www.csdn.net/nav/newarticles#" style="padding:0" ></a></li>
-                <li>
-                    <div class="search_bar csdn-tracking-statistics tracking-click" data-mod="popu_366"><input
-                            type="text" class="input_search" name=""> <a href="https://so.csdn.net/so/"
-                                                                         class="btn-nobg-noborder btn-search"><i
-                            class="iconfont-toolbar toolbar-sousuo"></i></a></div>
-                </li>
-                <li class="write-bolg-btn csdn-tracking-statistics tracking-click" data-mod="popu_370"><a class=""
-                                                                                                          href="http://mp.blog.csdn.net/postedit"
-                ><i
-                        class="iconfont-toolbar toolbar-icon_boke"></i><span>写博客</span></a></li>
-                <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1"
-                ><i
-                        class="iconfont-toolbar toolbar-icon_gitchatx"></i><span>发Chat</span></a></li>
-                <li class="userinfo"><a href="https://passport.csdn.net/account/login">登录</a><span></span><a
-                        href="https://passport.csdn.net/account/mobileregister?action=mobileRegister">注册</a></li>
-                <li class="userLogin">
-                    <div class="loginCenter"><a href="http://my.csdn.net/" ><img class="login_img"
-                                                                                 src="../../statics/newsImages//100x100.jpg">
-                        <div class="toolbar-circle"></div>
-                    </a></div>
-                    <div class="userControl">
-                        <div><a href="http://blog.csdn.net/" >我的博客</a></div>
-                        <div><a class="xiaoxi" href="http://msg.csdn.net/" >消息<span
-                                class="toolbar-newsL">(3)</span></a></div>
-                        <div><a href="http://my.csdn.net/my/account/changepwd" >设置</a></div>
-                        <div><a href="http://bbs.csdn.net/forums/Service" >反馈</a></div>
-                        <div><a href="http://oldblog.csdn.net/home/help.html" >帮助</a></div>
-                        <div><a href="https://passport.csdn.net/account/logout">退出</a></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>--%>
 <div class="container clearfix">
     <nav id="nav" class="clearfix">
         <div class="clearfix">
@@ -192,7 +114,7 @@
                             <div class="title">
                                 <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
                                     data-feed-show="true" data-dsm="post">
-                                    <a strategy="newarticles" href="http://blog.csdn.net/nodeman/article/details/79523301">
+                                    <a strategy="newarticles" href="/personal/personblog?nid=${newsList.nid}">
                                             ${newsList.ntitle} </a>
                                 </h2>
                             </div>
@@ -216,7 +138,7 @@
                                 </dd>
                                 <!--新增评论数+阅读 begin-->
                                 <div class="read_num">
-                                    <p class="num">${newsList.nreads}</p>
+                                    <p class="num">${newsList.nview}</p>
                                     <p class="text">阅读量</p>
                                 </div>
                                 <!--新增评论数+阅读 end-->
