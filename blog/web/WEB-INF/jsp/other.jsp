@@ -137,13 +137,10 @@ To change this template use File | Settings | File Templates.
                 </li>
             </ul>
             <script type="text/javascript">
-                alert("进入jquery");
                 var pageInt=1;
                 var totalPage=${pageUtils.totalPage}
-                    alert(totalPage);
                     $(document).ready(function () {
                         $("#last").on("click",function () {
-                            alert("进入点击事件");
                             if(totalPage!=pageInt){
                                 pageInt=pageInt+1;
                                 $.ajax({
@@ -157,7 +154,7 @@ To change this template use File | Settings | File Templates.
                                     //         "            </div>");
                                     // }, //加载执行方法
                                     "success": function (data) {
-                                        var otherPage = eval(data); //数组
+                                        var newsList = eval(data); //数组
                                         var news = "";
                                         $.each(newsList, function (p) {
                                             var nid = newsList[p].nid;
@@ -223,7 +220,6 @@ To change this template use File | Settings | File Templates.
                                             // alert(newdemo);
 
                                         });
-                                        alert(news);
                                         $("#ggg").append(news);
                                     },//响应成功后要执行代码
                                     "error": function () { //请求失败后要执行代码

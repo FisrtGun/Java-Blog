@@ -123,22 +123,19 @@ public class MainController {
         model.addAttribute("pageUtils",pageUtils);
         return ja;
     }
+
     //实现otherajax分页查询
     @RequestMapping("otherPage")
     @ResponseBody//必须加入的注解
     public JSONArray otherPage(HttpServletRequest req,Model model){
         String index=req.getParameter("index");
         int indexs = Integer.parseInt(index);
-
-        System.out.println("控制台的页数"+indexs);
-
         pageUtils.setIndex(indexs);
         pageUtils.getPageCount();
         List<OtherTitle> OtherList=otherTitleService.getSelectOther(pageUtils.getIndex(), pageUtils.getPageSize());
-        JSONArray ja = JSONArray.parseArray(JSON.toJSONString(OtherList));
-        System.out.println("返回的JSON:"+ja);
+        JSONArray js = JSONArray.parseArray(JSON.toJSONString(OtherList));
         model.addAttribute("pageUtils",pageUtils);
-        return ja;
+        return js;
     }
 
     //去common
@@ -294,14 +291,10 @@ public class MainController {
         pageUtils.setPageSize(5);
         pageUtils.setPageCount(otherTitleService.otherCount());
         pageUtils.getPageCount();
-
         List<OtherTitle> otherList = otherTitleService.getSelectOther(pageUtils.getIndex(),pageUtils.getPageSize());
-        System.out.println("other方法里的otherList集合:"+otherList);
         model.addAttribute("otherList", otherList);
         List<OtherTitle> groom = otherTitleService.getGroom();
-        System.out.println("other方法里的otherList集合:"+groom);
         model.addAttribute("groom", groom);
-        System.out.println("other方法里的当前页:"+pageUtils.getIndex());
         model.addAttribute("pageUtils",pageUtils);
         return "other";
     }
