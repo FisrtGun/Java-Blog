@@ -89,7 +89,7 @@
                     <li class=""><a href="javascript:void(0);">程序人生</a></li>
                     <li class=""><a href="javascript:void(0);">游戏开发</a></li>
                     <li class=""><a href="javascript:void(0);">研发管理</a></li>
-                    <li class=""><a href="javascript:void(0);">前端</a></li>
+                    <li class=""><a href="front-end">前端</a></li>
                     <li class=""><a href="javascript:void(0);">移动开发</a></li>
                     <li class=""><a href="javascript:void(0);">物联网</a></li>
                     <li class=""><a href="javascript:void(0);">运维</a></li>
@@ -98,7 +98,7 @@
                     <li class=""><a href="javascript:void(0);">架构</a></li>
                     <li class=""><a href="javascript:void(0);">音视频开发</a></li>
                     <li class=""><a href="javascript:void(0);">安全</a></li>
-                    <li class=""><a href="javascript:void(0);">其他</a></li>
+                    <li class=""><a href="other">其他</a></li>
                 </ul>
             </div>
         </div>
@@ -111,7 +111,7 @@
                     <div class="list_con">
                         <div class="title">
                             <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed" data-feed-show="true" data-dsm="post">
-                                <a strategy="new" href="javascript:void(0);" target="_blank">
+                                <a strategy="new" href="/personal/personblog03?iId=${infoMessage.iId}" target="_blank">
                                     ${infoMessage.iTitle} </a>
                             </h2>
                         </div>

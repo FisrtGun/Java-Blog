@@ -5,11 +5,14 @@
 <mapper namespace="com.firstgun.dao.InformationTitleMapper">
     <!--获取博主发布的标题、博主、发布文章时间、作者头像图片路径-->
     <select id="selectInformation" resultType="InformationTitle">
-        SELECT ititle,itab,iauthor,ireads,icreateTime,iauthor,iimg FROM informationTitle;
+        SELECT iid,ititle,itab,iauthor,ireads,icreateTime,iauthor,iimg FROM informationTitle;
     </select>
     <!--获取今日推荐的照片和标题-->
     <select id="selectGroom" resultType="InformationTitle">
-        SELECT ititle,iimg,iauthor FROM informationTitle ORDER BY ireads DESC LIMIT 12;
+        SELECT iid,ititle,iimg,iauthor FROM informationTitle ORDER BY ireads DESC LIMIT 12;
+    </select>
+    <select id="selectId" resultType="InformationTitle">
+        SELECT * FROM  informationTitle WHERE iId=#{iId};
     </select>
 </mapper>
  
