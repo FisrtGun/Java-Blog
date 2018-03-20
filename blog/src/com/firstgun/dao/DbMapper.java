@@ -16,7 +16,5 @@ public interface DbMapper {
     public List<NewsTitle> getGroom();
 
 
-    //根据nid获取文章内容
-    public NewsTitle getNewsContent(@Param("nid") Integer nid);
 
 }
