@@ -90,21 +90,28 @@
                 <li class="gitChat"><a class="" href="http://gitbook.cn/new/gitchat/activity?utm_source=csdnblog1" target="_blank"><i class="iconfont-toolbar "></i><span>发Chat</span></a></li>
                 <li class="userinfo"><a href="login">登录</a><span></span><a href="register">注册</a></li>
                 <li class="userLogin">
-                    <div class="loginCenter"><a href="/mainController/domycenter"><img class="login_img" src="../../statics/${users.upicture}"><div class="toolbar-circle"></div></a></div>
-                <div><a href="/mainController/exist" >退出</a></div>
+                    <div class="loginCenter"><a href="/mainController/domycenter"><img class="login_img" src="../../statics/${users.upicture}"></a>
+                        <div style="width: 60px;height: 50px;background: #FFFFFF;margin-left: -15px;display: none;"><a href="/mainController/domycenter"style="width: 100%">个人中心</a><a href="/mainController/exist" style="width: 100%">退出</a></div>
+                    </div>
                 </li>
             </ul>
         </div>
     </div>
 </div>
 <script type="text/javascript">
+    $(".loginCenter").hover(function() {
+        $(this).children('div').show();
+    }, function() {
+        $(this).children('div').hide();
+    });
+
     $(document).ready(function () {
         var ll ="${error}";
             console.log(ll);
         console.log(!ll);
         unlogin();
             function unlogin() {
-                if(ll==true||ll==null){
+                if(ll=="true"||ll==""){
                     $("#logins").addClass("unlogin")
                 }else {
                     $("#logins").removeClass("unlogin");

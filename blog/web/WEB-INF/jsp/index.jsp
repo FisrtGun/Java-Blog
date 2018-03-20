@@ -264,8 +264,7 @@ To change this template use File | Settings | File Templates.
                                 </dd>
                                 <dt>
                                     <a href="http://blog.csdn.net/wireless_com" target="_blank" class="user_img">
-                                        <img src="${newsList.npicture}" alt="wireless_com"
-                                             title="wireless_com">
+                                        <img src="${newsList.npicture}">
                                     </a>
                                 </dt>
                                 <dd class="name">
