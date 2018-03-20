@@ -46,4 +46,9 @@ public class OtherTitleServiceImpl implements OtherTitleService {
     public int updateNview(Integer nview, Integer nid) {
         return otherTitleMapper.updateNview(nview,nid);
     }
+
+    @Override
+    public int otherCount() {
+        return otherTitleMapper.otherCount();
+    }
 }

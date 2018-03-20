@@ -9,7 +9,7 @@
     </insert>
     <!--获取博主发布的标题、博主、发布文章时间、作者头像图片路径-->
     <select id="getSelectOther" resultType="OtherTitle">
-        SELECT ntitle,ntab,nauthor,nreads,ncreateTime,nauthor,nimg,nid,nview,npicture FROM newstitle ORDER BY ncreateTime DESC limit #{index},#{pageSize};
+        SELECT ntitle,ntab,nauthor,nreads,ncreateTime,nauthor,nimg,nid,nview,npicture FROM other ORDER BY ncreateTime DESC limit #{index},#{pageSize};
     </select>
     <!--获取今日推荐的照片和标题-->
     <select id="getGroom" resultType="OtherTitle">
@@ -23,6 +23,11 @@
     <update id="updateNview" parameterType="int">
         UPDATE other SET nview=#{nview} WHERE nid=#{nid};
     </update>
+
+    <!--获取数据库总条数-->
+    <select id="otherCount" resultType="int">
+        SELECT COUNT(*) FROM other;
+    </select>
 
     <resultMap id="Other" type="OtherTitle">
         <id property="nid" column="nid" />

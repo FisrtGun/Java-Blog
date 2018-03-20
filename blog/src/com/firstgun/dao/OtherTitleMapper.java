@@ -21,4 +21,6 @@ public interface OtherTitleMapper {
     OtherTitle getOtherConnet(@Param("nid")Integer nid);
     //根据nid修改阅读量
     int updateNview(@Param("nview")Integer nview,@Param("nid")Integer nid);
+    //获取新闻总条数
+    int otherCount();
 }

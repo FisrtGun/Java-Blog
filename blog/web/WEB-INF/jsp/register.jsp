@@ -173,7 +173,7 @@ To change this template use File | Settings | File Templates.
 
 
                     </div>
-                    <input id="pcSec" accesskey="l" value="登录" tabindex="6"
+                    <input id="pcSec" accesskey="l" value="确定注册" tabindex="6"
                            type="submit" class="next_btn next_step">
                 </form>
 
