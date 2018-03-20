@@ -207,7 +207,7 @@
                         <div class="title">
                             <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
                                 data-feed-show="true" data-dsm="post">
-                                <a strategy="hot" href="dbsub"
+                                <a strategy="hot" href="dbsub?nid=${newsList.nid}"
                                    target="_blank">
                                     ${newsList.ntitle} </a>
                             </h2>
