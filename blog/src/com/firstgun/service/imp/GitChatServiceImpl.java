@@ -37,4 +37,9 @@ public class GitChatServiceImpl implements GitChatService{
     public List<GitChat> selectNewChat() {
         return gitChatMapper.selectNewChat();
     }
+
+   /* @Override
+    public List<GitChat> selectLike(String iAuthor, String iTitle) {
+        return gitChatMapper.selectLike(iAuthor,iTitle);
+    }*/
 }
