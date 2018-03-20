@@ -28,8 +28,8 @@ public class OtherTitleServiceImpl implements OtherTitleService {
     }
 
     @Override
-    public List<OtherTitle> getSelectOther() {
-        return otherTitleMapper.getSelectOther();
+    public List<OtherTitle> getSelectOther(Integer index, Integer pageSize) {
+        return otherTitleMapper.getSelectOther(index,pageSize);
     }
 
     @Override
