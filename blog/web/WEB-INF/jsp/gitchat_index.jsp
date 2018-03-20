@@ -185,13 +185,16 @@
                 GO
             </div>
         </a></div>
+
         <%--<a id="loginBtn2"
            style="display:inline-block;float:right;height:35px;color: #ff9100;font-size:14px;                border: 1px solid #ff9100;-webkit-border-radius: 25px;margin-right: 10px;"
-           href="javascript:void(0)" role="button" class="btn btn-default">登录 / 注册</a>--%><a id="writeBtn2"
+           href="login" role="button" class="btn btn-default">登录</a>--%>
+
+        <%--<a id="writeBtn2"
                                                                                          style="display:inline-block;height:35px;color: #5f6f81;float:right;font-size:14px;                    border: 1px solid #d1d1d1;-webkit-border-radius: 25px;margin-right: 10px;"
                                                                                          href="javascript:void(0) return false;"
                                                                                          role="button"
-                                                                                         class="hidden-xs btn btn-default">写作</a>
+                                                                                         class="hidden-xs btn btn-default">写作</a>--%>
         <!--if !isLogin-->
         <!--    a#newChatBtn2.hidden-xs.btn.btn-default(style='display:inline-block;height:35px;color: #5f6f81;float:right;font-size:14px;\-->
         <!--                                        border: 1px solid #d1d1d1;-webkit-border-radius: 25px;margin-right: 10px;', href='javascript:void(0) return false;', role='button')-->
@@ -395,10 +398,15 @@ headroom.init();</script>
         </div>
         <div style="border:0;margin-top:10px;padding:0 25px 0 25px;" class="mazi-activity-container item-container">
             <div style="font-size: 16px;color:#555;line-height: 50px;font-weight:500;">达人课<a id="changeColumns" href="#"
-                                                                                             onclick="changeHomeColumn(1); return false;"
+                                                                                             onclick="changeHomeButton();"
                                                                                              style="font-size:14px;font-weight:500;line-height:50px;float:right;"><span
                     id="syncColumn" style="vertical-align: middle;display: inline-block;" class="icon2 lnr-sync"></span><span
                     style="margin-right:10px;display: inline-block;">换一换</span></a></div>
+            <script>
+                function changeHomeButton() {
+
+                }
+            </script>
             <div style="border-bottom: 1px solid #f5f5f5;"></div>
             <div id="homeColumns" style="display: flex;margin-top: 1px;">
                 <c:forEach items="${classList}" var="classList" varStatus="start">
@@ -410,6 +418,7 @@ headroom.init();</script>
                     <div class="price">${classList.chatclassprice}</div>
                     <div class="intros">${classList.chatclasshour}</div></a>
                 </c:forEach>
+
                 <%--<c:forEach items="${classList}" var="class" varStatus="start">
                     <a href="javascript:void(0)" class="book">
                         <div class="cover"><img src="${class.writerimage}"></div>

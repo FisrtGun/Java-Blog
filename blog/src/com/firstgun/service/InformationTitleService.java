@@ -1,6 +1,7 @@
 package com.firstgun.service;
 
 import com.firstgun.entity.InformationTitle;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 /*
@@ -11,4 +12,6 @@ public interface InformationTitleService {
     public List<InformationTitle> selectInformation();
     //获取今日推荐内容
     public List<InformationTitle> selectGroom();
+    //通过ID查询信息
+    public InformationTitle selectId(@Param("iId") Integer iId);
 }

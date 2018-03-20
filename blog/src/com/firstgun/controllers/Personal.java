@@ -1,7 +1,9 @@
 package com.firstgun.controllers;
 
 import com.firstgun.dao.NewsTitleMapper;
+import com.firstgun.entity.InformationTitle;
 import com.firstgun.entity.NewsTitle;
+import com.firstgun.service.InformationTitleService;
 import com.firstgun.service.NewsTitleService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,8 @@ import java.util.List;
 public class Personal {
     @Resource
     private NewsTitleService newsTitleService;
+    @Resource
+    private InformationTitleService informationTitleService;
     //去最新文章个人页面
     @RequestMapping("personblog")
     public String personblog(@Param("nid")String nid,Model model){
@@ -42,5 +46,17 @@ public class Personal {
         model.addAttribute("news",newsTitle);
         return "personblog";
     }
+    //去资讯个人页面
+    @RequestMapping("personblog03")
+    public String personblog03(@Param("iId")String iId,Model model){
+        int iIds=0;
+        System.out.println(iId);
+        if (iId!=null){
+            iIds=Integer.parseInt(iId);
+        }
+        InformationTitle informationTitle=informationTitleService.selectId(iIds);
 
+        model.addAttribute("information",informationTitle);
+        return "personblog03";
+    }
 }

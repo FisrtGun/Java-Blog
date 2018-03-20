@@ -22,4 +22,9 @@ public class InformationTitleServiceImpl implements InformationTitleService{
     public List<InformationTitle> selectGroom() {
         return informationTitleMapper.selectGroom();
     }
+
+    @Override
+    public InformationTitle selectId(Integer iId) {
+        return informationTitleMapper.selectId(iId);
+    }
 }
