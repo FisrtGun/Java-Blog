@@ -371,7 +371,7 @@ public class MainController {
         }
         int indexs=Integer.parseInt(index);
         pageUtils.setIndex(indexs);
-        pageUtils.setPageSize(2);
+        pageUtils.setPageSize(5);
         pageUtils.setPageCount(dbService.getTotalCount());
         pageUtils.getPageCount();
         List<NewsTitle> newsList = dbService.getSelectNews(pageUtils.getIndex(),pageUtils.getPageSize());
@@ -385,6 +385,7 @@ public class MainController {
     //去数据库的“一个MySQL表”
     @RequestMapping("dbsub")
     public String dbsub() {
+
         return "dbsub";
     }
 
@@ -418,11 +419,11 @@ public class MainController {
         return "front-end";
     }
 
-    //去个人中心
+  /*  //去个人中心
     @RequestMapping("mycenter")
     public String myCenter() {
         return "mycenter";
-    }
+    }*/
 
     //实现个人中心
     @RequestMapping("domycenter")
@@ -482,7 +483,8 @@ public class MainController {
         newsTitle.setNimg(nimg);
         int num=newsTitleService.inserNews(newsTitle);
         if (num>0){
-            return "redirect:mycenter";
+
+            return "redirect:domycenter";
         }else {
             return "writeblog";
         }
