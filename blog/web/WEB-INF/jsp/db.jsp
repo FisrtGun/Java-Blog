@@ -207,7 +207,7 @@
                         <div class="title">
                             <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
                                 data-feed-show="true" data-dsm="post">
-                                <a strategy="hot" href="http://blog.csdn.net/q383965374/article/details/72624888"
+                                <a strategy="hot" href="dbsub"
                                    target="_blank">
                                     ${newsList.ntitle} </a>
                             </h2>

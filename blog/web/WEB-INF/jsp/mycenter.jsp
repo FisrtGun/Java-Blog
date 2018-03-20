@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <!-- saved from url=(0020)https://my.csdn.net/ -->
 <html>
@@ -398,7 +399,10 @@
                                 </span>
                                     <span class="operate">
                                     <em data-bind="time" class="time">
-                                        2018-01-25 17:21:44                                    </em>
+
+                                        <fmt:formatDate value="${myblog.ncreateTime}" type="date" pattern="yyy-MM-dd"/>
+                                    </em>
+
                                 </span>
                                 </li>
 

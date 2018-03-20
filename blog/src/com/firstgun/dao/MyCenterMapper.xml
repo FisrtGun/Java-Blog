@@ -24,11 +24,13 @@
         <collection property="newsTitle" ofType="NewsTitle">
             <id property="nid" column="nid"/>
             <result property="ntitle" column="ntitle" />
+            <result property="ncreateTime" column="ncreateTime" />
         </collection>
 
     </resultMap>
     <select id="getMyBlog" resultMap="getBlogMap">
-        select m.userName,n.ntitle,n.ncreateTime   from mycenter m, newstitle n where m.userName=n.nauthor and userName=#{userName}
+        select m.userName,n.ntitle,n.ncreateTime   from mycenter m, newstitle n where m.userName=n.nauthor and userName=#{userName} order by n.ncreateTime DESC
+
 
     </select>
 </mapper>
