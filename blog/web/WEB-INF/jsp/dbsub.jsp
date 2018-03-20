@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
 <!-- saved from url=(0056)http://blog.csdn.net/u011277123/article/details/70837736 -->
@@ -836,12 +837,12 @@
 
         </div>
         <article>
-            <h1 class="csdn_top">一个MySQL表真的最多只能够有24个字段吗？反正我不信</h1>
+            <h1 class="csdn_top">${newsContent.ntitle}</h1>
             <div class="article_bar clearfix">
                 <div class="artical_tag">
                 <span class="original">
                 转载                </span>
-                    <span class="time">2017年04月27日 09:08:22</span>
+                    <span class="time"><fmt:formatDate value="${newsContent.ncreateTime}" type="date" pattern="yyyyyyyy年MM月dd日 hh:mm:ss"/> </span>
                 </div>
 
                 <ul class="article_tags clearfix csdn-tracking-statistics tracking-click" data-mod="popu_377"
@@ -873,32 +874,10 @@
                 <div class="htmledit_views">
 
                     <div class="articleInfo"><span class="original">原创</span> <span class="src">web情报站
-</span><span class="time">2017-04-26 17:23</span></div>
+</span><span class="time"><fmt:formatDate value="${newsContent.ncreateTime}" type="date" pattern="yyyyyyyy年MM月dd日 hh:mm:ss"/></span></div>
                     <div class="article-content">
                         <div>
-                            <blockquote>
-                                <p>
-                                    随着业务需求的不断变化，我们发现需要往视频数据表里面新增很多字段，如：是否需要购买才能够观看、是否VIP就可以看、是否免费、有几个人购买了等等，我们不断的往数据表里面添加各种各样的字段，最后发现字段越来越多，这个时候我们会担心是否会有性能问题，下面我们就围绕这个问题来聊聊，MySQL里面一张表到底可以有多少个字段？难道正如互联网上说的最多只能够有24个字段？字段多了真的会有性能问题？如果有性能问题，出现性能问题的根本原因是什么呢?</p>
-                            </blockquote>
-                            <p><strong>MySQL官方怎么说？</strong></p>
-                            <p><img src="./一个MySQL表真的最多只能够有24个字段吗？反正我不信 - CSDN博客_files/1c6c0002d7faef78ae66"
-                                    alt="一个MySQL表真的最多只能够有24个字段吗？反正我不信"></p>
-                            <p>打开MySQL的官方文档，我们能够清楚的看到，MySQL对每个表有一个硬限制，就是最多只能够有4096字段数，但是实际情况要比这个少，因为还要取决于下面几个因素：</p>
-                            <p>来自于存储引擎的限制，比如InnoDB存储引擎限制每个表最多有1017个字段。</p>
-                            <p>所有字段的总共尺寸加起来不能够大于行尺寸限制，在MySQL里面，这个尺寸值为65535个字节。</p>
-                            <p>还有一些其他原因，如.frm文件的限制等等，我们就不一一说了。</p>
-                            <p>看到上面想必你已经很清楚关于最多字段数计算的问题了，同样从官方文档我们还能够找到每个表最多能够建多少个索引的答案等。</p>
-                            <p><strong>是否有性能问题？</strong></p>
-                            <p><img src="./一个MySQL表真的最多只能够有24个字段吗？反正我不信 - CSDN博客_files/1c6b0006d5f48729f88e"
-                                    alt="一个MySQL表真的最多只能够有24个字段吗？反正我不信"></p>
-                            <p>以Innodb存储引擎为例进行说明，我们知道目前<span style="font-size:14px;color:#FF0000;"><strong>MySQL的默认存储引擎是Innodb，并且这种存储引擎是将数据表记录按照页的方式存储的，每个页的大小是16KB，</strong></span>这样从磁盘读取数据的时候也是按照页的方式进行读取的，假设我们现在没有增加字段前每条记录是1KB，那么我们现在一次磁盘输入输出可以读取大约16条数据，而现在增加字段了，每条记录变成了4KB，那么现在要读取之前的数据，需要大约4次磁盘输入输出才能够完成，从这个描述来看，在读取数据记录非常多的情况，表字段还是有一定的影响，相反，我们发现表字段的影响比较小，也就是我们要根据具体情况才能够知道表字段是否有性能影响，这里有一个问题？就是我们仅仅读取某几个字段的情况又是怎么样呢？答案是比读取全部字段肯定快，这也是为什么会有人建议不要用select
-                                * from ,而是用具体的字段名来代替。</p>
-                            <p><strong>遇到这样的疑惑怎么办？</strong></p>
-                            <!--<p><img src="../../statics/dbsubimage/1c6e0006bdc923f9191f"
-                                    alt="一个MySQL表真的最多只能够有24个字段吗？反正我不信"></p>
-                            <p>-->
-                            其实，对于程序员的我们来说，很多疑惑都可以通过相关知识的官方文档找到答案，很多互联网上的答案都是相对片面的，都是针对某个特殊情况得到的结论，只有通过官方文档，我们才能够找到一个客观的答案，由这个客观的答案出发，才能够得到某个特殊情况下需要的答案，这才是真正的经验，总之一句话，官方文档才是我们真正的答案源泉。</p>
-                            <p><strong>如果大家觉得本文好，可以点赞或者转发给你的好友，如果有什么问题，可以在评论中提出来，我会尽力解答的。</strong></p>
+                            ${newsContent.nconten}
                         </div>
                     </div>
                 </div>

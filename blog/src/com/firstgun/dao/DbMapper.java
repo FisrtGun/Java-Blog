@@ -15,6 +15,9 @@ public interface DbMapper {
     //获取今日推荐内容
     public List<NewsTitle> getGroom();
 
+    //根据id显示文章内容
+    public NewsTitle getNewsContent(@Param("nid") Integer nid);
+
 
 
 }

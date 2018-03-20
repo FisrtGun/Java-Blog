@@ -397,6 +397,21 @@ public class MainController {
         model.addAttribute("groom",groom);
         return "db";
     }
+    //去数据库的文章内容页面
+    @RequestMapping("dbsub")
+    public String Dbsub(@RequestParam("nid") String nid,Model model) {
+        if (nid == null || nid == "") {
+
+        } else {
+            int nids = Integer.parseInt(nid);
+            NewsTitle newsContent = dbService.getNewsContent(nids);
+
+            model.addAttribute("newsContent", newsContent);
+
+
+        }
+        return "dbsub";
+    }
 
     //去其他的Amazon/亚马逊
     @RequestMapping("Amazon")
