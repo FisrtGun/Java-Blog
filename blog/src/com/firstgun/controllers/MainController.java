@@ -405,9 +405,17 @@ public class MainController {
         return "db";
     }
 
-    //去数据库的“一个MySQL表”
+    //去数据库的第三层页面：点标题进入
     @RequestMapping("dbsub")
-    public String dbsub() {
+    public String dbsub(@RequestParam("nid")String nid,Model model) {
+        if (nid == null || nid=="") {
+
+        }else {
+            int nids = Integer.parseInt(nid);
+            NewsTitle =dbService.getNewsContent(nids);
+
+
+
 
         return "dbsub";
     }
