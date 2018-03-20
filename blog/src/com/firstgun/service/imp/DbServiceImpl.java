@@ -25,4 +25,9 @@ public class DbServiceImpl implements DbService{
     public List<NewsTitle> getGroom() {
         return dbMapper.getGroom();
     }
+
+    @Override
+    public NewsTitle getNewsContent(int nid) {
+        return dbMapper.getNewsContent(nid);
+    }
 }
