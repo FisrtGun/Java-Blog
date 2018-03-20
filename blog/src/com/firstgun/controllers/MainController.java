@@ -129,10 +129,14 @@ public class MainController {
     public JSONArray otherPage(HttpServletRequest req,Model model){
         String index=req.getParameter("index");
         int indexs = Integer.parseInt(index);
+
+        System.out.println("控制台的页数"+indexs);
+
         pageUtils.setIndex(indexs);
         pageUtils.getPageCount();
         List<OtherTitle> OtherList=otherTitleService.getSelectOther(pageUtils.getIndex(), pageUtils.getPageSize());
         JSONArray ja = JSONArray.parseArray(JSON.toJSONString(OtherList));
+        System.out.println("返回的JSON:"+ja);
         model.addAttribute("pageUtils",pageUtils);
         return ja;
     }
@@ -287,12 +291,18 @@ public class MainController {
     //去其他
     @RequestMapping("other")
     public String other(Model model) {
-        List<OtherTitle> otherList = otherTitleService.getSelectOther(1,7);
-        System.out.println(otherList);
+        pageUtils.setPageSize(5);
+        pageUtils.setPageCount(otherTitleService.otherCount());
+        pageUtils.getPageCount();
+
+        List<OtherTitle> otherList = otherTitleService.getSelectOther(pageUtils.getIndex(),pageUtils.getPageSize());
+        System.out.println("other方法里的otherList集合:"+otherList);
         model.addAttribute("otherList", otherList);
         List<OtherTitle> groom = otherTitleService.getGroom();
-        System.out.println(groom);
+        System.out.println("other方法里的otherList集合:"+groom);
         model.addAttribute("groom", groom);
+        System.out.println("other方法里的当前页:"+pageUtils.getIndex());
+        model.addAttribute("pageUtils",pageUtils);
         return "other";
     }
 

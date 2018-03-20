@@ -78,7 +78,7 @@
         class="header_logout">
     <div class="header">
         <div class="dl">
-            <div class="dd" id="logo"><a href="/main/index" title="返回CSTO首页"></a></div>
+            <div class="dd" id="logo"><a href="/mainController/index" title="返回CSTO首页"></a></div>
             <div class="dd">
                 <ul class="menu_logout">
                     <li> <a href="#">找人才</a> </li>

@@ -26,6 +26,7 @@ To change this template use File | Settings | File Templates.
     <script src="../../statics/js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="../../statics/js/tracking-1.0.2.js" type="text/javascript" charset="utf-8"></script>
     <script src="../../statics/js/main_flume.js"></script>
+    <script src="../../statics/js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="../../statics/css/content_toolbar.css">
     <link rel="stylesheet" href="../../statics/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../statics/css/avatar.css">
@@ -136,22 +137,25 @@ To change this template use File | Settings | File Templates.
                 </li>
             </ul>
             <script type="text/javascript">
+                alert("进入jquery");
                 var pageInt=1;
                 var totalPage=${pageUtils.totalPage}
+                    alert(totalPage);
                     $(document).ready(function () {
                         $("#last").on("click",function () {
+                            alert("进入点击事件");
                             if(totalPage!=pageInt){
                                 pageInt=pageInt+1;
                                 $.ajax({
-                                    "url": "/mainController/indexPage",//要提交的路径
+                                    "url": "/mainController/otherPage",//要提交的路径
                                     "Type": "get",//提交方式
                                     "data": "index=" + pageInt,//发送到服务器的数据
                                     "dataType": "json",//指定返回的数据格式
-                                    beforeSend: function () {
-                                        $("#gg").html("<div class=\"feed_loading\">\n" +
-                                            "                <img src=\"../../statics/picture/feedloading.gif\" alt=\"I'm loading\" title=\"I'm loading\">\n" +
-                                            "            </div>");
-                                    }, //加载执行方法
+                                    // beforeSend: function () {
+                                    //     $("#gg").html("<div class=\"feed_loading\">\n" +
+                                    //         "                <img src=\"../../statics/picture/feedloading.gif\" alt=\"I'm loading\" title=\"I'm loading\">\n" +
+                                    //         "            </div>");
+                                    // }, //加载执行方法
                                     "success": function (data) {
                                         var otherPage = eval(data); //数组
                                         var news = "";
@@ -219,6 +223,7 @@ To change this template use File | Settings | File Templates.
                                             // alert(newdemo);
 
                                         });
+                                        alert(news);
                                         $("#ggg").append(news);
                                     },//响应成功后要执行代码
                                     "error": function () { //请求失败后要执行代码
