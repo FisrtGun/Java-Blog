@@ -18,5 +18,17 @@
     <select id="selectNewChat" resultType="GitChat">
         SELECT * FROM chat c,chatwriter cw WHERE cw.`wid` = c.`cwid` ORDER BY c.`chatcreatetime` DESC LIMIT 6
     </select>
+    <!--根据作者，标题 模糊查询-->
+    <!--<select id="selectLike" resultType="GitChat">
+        SELECT * FROM chat c,chatwriter cw,chattopic ct
+        <trim prefix="WHERE">
+            <if test="iAuthor != null">
+                iAuthor like  concat( '%' , #{iAuthor}, '%')
+            </if>
+            <if test="iTitle != null">
+                or iTitle like  concat( '%' , #{iTitle}, '%')
+            </if>
+        </trim>
+    </select>-->
 </mapper>
  
