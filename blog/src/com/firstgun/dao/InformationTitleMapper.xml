@@ -9,10 +9,10 @@
     </select>
     <!--获取今日推荐的照片和标题-->
     <select id="selectGroom" resultType="InformationTitle">
-        SELECT ititle,iimg,iauthor FROM informationTitle ORDER BY ireads DESC LIMIT 8;
+        SELECT ititle,iimg,iauthor,iId FROM informationTitle ORDER BY ireads DESC LIMIT 8;
     </select>
     <select id="selectId" resultType="InformationTitle">
-        SELECT * FROM  informationTitle WHERE iid=#{iid}
+        SELECT * FROM  informationTitle WHERE iid=#{iId}
     </select>
 </mapper>
  

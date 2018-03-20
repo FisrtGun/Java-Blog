@@ -240,7 +240,7 @@ To change this template use File | Settings | File Templates.
                 <ul>
                     <c:forEach items="${newsList}" var="newsList" varStatus="c">
                         <li class="title">
-                            <a href="http://xhload3d.iteye.com/blog/2412917" target="_blank"
+                            <a href="/personal/personblog?nid=${newsList.nid}" target="_blank"
                                title="快速开发 HTML5 WebGL 的 3D 斜面拖拽生成模型">${newsList.ntitle}</a>
                         </li>
                     </c:forEach>

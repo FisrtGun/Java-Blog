@@ -52,7 +52,6 @@ public class Personal {
     @RequestMapping("personblog03")
     public String personblog03(@Param("iId")String iId,Model model){
         int iIds=0;
-        System.out.println(iId);
         if (iId!=null){
             iIds=Integer.parseInt(iId);
         }

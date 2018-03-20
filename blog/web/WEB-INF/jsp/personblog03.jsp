@@ -68,8 +68,8 @@
     <link rel="stylesheet" href="../../statics/otherTxt/css/htmledit_views-b569b0e3ef.css">
 </head>
 <body>
-<script id="toolbar-tpl-scriptId" prod="download" skin="black" src="../../statics/otherTxt/js/content_toolbar.js"
-        type="text/javascript" domain="//blog.csdn.net/"></script>
+<%--<script id="toolbar-tpl-scriptId" prod="download" skin="black" src="../../statics/otherTxt/js/content_toolbar.js"--%>
+        <%--type="text/javascript" domain="//blog.csdn.net/"></script>--%>
 <div class="container clearfix">
     <main>
         <div style="display:none;">

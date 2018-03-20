@@ -214,7 +214,7 @@
                                                 "            <div class=\"title\">\n" +
                                                 "                <h2 class=\"csdn-tracking-statistics\" data-mod=\"popu_459\" data-poputype=\"feed\"\n" +
                                                 "                    data-feed-show=\"false\" data-dsm=\"post\">\n" +
-                                                "                    <a strategy=\"recommend\" href=\"/personal/personblog?" + nid + "\" target=\"_blank\">" + ntitle + "</a>" +
+                                                "                    <a strategy=\"recommend\" href=\"/personal/personblog03?iId=" + nid + "\" target=\"_blank\">" + ntitle + "</a>" +
                                                 " </h2> <div class=\"close_tag\">\n" +
                                                 "                    <div class=\"unin_reason_dialog_wrapper\">\n" +
                                                 "                        <i class=\"icon-close\"></i>\n" +
@@ -303,11 +303,11 @@
 
                         <c:forEach items="${groomList}" var="groom" varStatus="start">
                         <li>
-                            <div class="img_box"><a href="/personal/personblog?nid=${groom.iid}"
+                            <div class="img_box"><a href="/personal/personblog?nid=${groom.iId}"
                                                     target="_blank"><img
                                     src="${groom.iImg}" alt=""></a></div>
                             <div class="content">
-                                <h3 class="company_name"><a href="/personal/personblog?nid=${groom.iid}"
+                                <h3 class="company_name"><a href="/personal/personblog?nid=${groom.iId}"
                                                             target="_blank">${groom.iTitle}</a></h3>
                                 <%--<p class="txt oneline">${groom.iAuthor}</p>--%>
                             </div>
