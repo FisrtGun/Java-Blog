@@ -13,11 +13,11 @@ public class InformationTitleServiceImpl implements InformationTitleService{
     @Resource
     private InformationTitleMapper informationTitleMapper;
 
-    @Override
-    public List<InformationTitle> selectInformation() {
-        return informationTitleMapper.selectInformation();
-    }
 
+    @Override
+    public List<InformationTitle> selectInformation(Integer index, Integer pageSize) {
+        return informationTitleMapper.selectInformation(index,pageSize);
+    }
     @Override
     public List<InformationTitle> selectGroom() {
         return informationTitleMapper.selectGroom();

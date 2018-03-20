@@ -138,6 +138,20 @@ public class MainController {
         return js;
     }
 
+    //实现informationajax分页查询
+    @RequestMapping("informationPage")
+    @ResponseBody//必须加入的注解
+    public JSONArray informationPage(HttpServletRequest req,Model model){
+        String index=req.getParameter("index");
+        int indexs = Integer.parseInt(index);
+        pageUtils.setIndex(indexs);
+        pageUtils.getPageCount();
+        List<InformationTitle> InformationList=informationTitleService.selectInformation(pageUtils.getIndex(), pageUtils.getPageSize());
+        JSONArray ji = JSONArray.parseArray(JSON.toJSONString(InformationList));
+        model.addAttribute("pageUtils",pageUtils);
+        return ji;
+    }
+
     //去common
     @RequestMapping("common")
     public String common() {
@@ -302,10 +316,14 @@ public class MainController {
     //去资讯
     @RequestMapping("/information")
     public String information(Model model) {
-        List<InformationTitle> informationList = informationTitleService.selectInformation();
+        pageUtils.setPageSize(5);
+        pageUtils.setPageCount(otherTitleService.otherCount());
+        pageUtils.getPageCount();
+        List<InformationTitle> informationList = informationTitleService.selectInformation(pageUtils.getIndex(),pageUtils.getPageSize());
         List<InformationTitle> groomList = informationTitleService.selectGroom();
         model.addAttribute("informationList",informationList);
         model.addAttribute("groomList",groomList);
+        model.addAttribute("pageUtils",pageUtils);
         return "information";
     }
 
