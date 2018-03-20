@@ -5,7 +5,7 @@
 <mapper namespace="com.firstgun.dao.CstoGeniusMapper">
     <!--获取csto页面的热门领域和热门技术人才的头像和作者,此处根据作者同名、类型不同、时间排序来获取-->
     <select id="genius" resultType="CstoGenius" parameterType="int">
-        SELECT g.alogo,g.author FROM genius AS g,newstitle AS n WHERE g.author=n.nauthor AND g.atype=#{atype} ORDER BY n.ncreateTime DESC LIMIT 0,10;
+        SELECT g.alogo,g.author FROM genius AS g,newstitle AS n WHERE g.atype=#{atype} ORDER BY n.ncreateTime DESC LIMIT 0,10;
     </select>
     <!--获取最新项目-->
     <select id="LatestProject" resultType="CstoGenius">

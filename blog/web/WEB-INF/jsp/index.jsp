@@ -231,12 +231,12 @@ To change this template use File | Settings | File Templates.
                 </div>
             </div>
             <div class="feed-fix-box">
-                <div class="scroll-fixbar clearfix csdn-tracking-statistics" data-mod="popu_463" data-dsm="post">
+                <%--<div class="scroll-fixbar clearfix csdn-tracking-statistics" data-mod="popu_463" data-dsm="post">
                     <a class="txt txt-refrash-new">您有新的推荐内容，点击查看</a>
                     <button class="btn btn-nobg-noborder btn-nobg-noborder btn-close-fixbar">
                         <i class="icon-close"></i>
                     </button>
-                </div>
+                </div>--%>
             </div>
             <ul class="feedlist_mod" id="feedlist_id" shown-offset="1520902233852052">
                 <c:forEach items="${newsList}" var="newsList" varStatus="s">
