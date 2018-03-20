@@ -230,17 +230,17 @@ To change this template use File | Settings | File Templates.
                     <div class="update_counts"></div>
                 </div>
             </div>
-            <div class="feed-fix-box">
-                <%--<div class="scroll-fixbar clearfix csdn-tracking-statistics" data-mod="popu_463" data-dsm="post">
+           <%-- <div class="feed-fix-box">
+                <div class="scroll-fixbar clearfix csdn-tracking-statistics" data-mod="popu_463" data-dsm="post">
                     <a class="txt txt-refrash-new">您有新的推荐内容，点击查看</a>
                     <button class="btn btn-nobg-noborder btn-nobg-noborder btn-close-fixbar">
                         <i class="icon-close"></i>
                     </button>
-                </div>--%>
-            </div>
+                </div>
+            </div>--%>
             <ul class="feedlist_mod" id="feedlist_id" shown-offset="1520902233852052">
                 <c:forEach items="${newsList}" var="newsList" varStatus="s">
-                    <li class="clearfix" data-type="blog" data-id="79442462" id="new">
+                    <li class="clearfix" data-type="blog" data-id="79442462" id="newspaper">
                         <div class="list_con">
                             <div class="title">
                                 <h2 class="csdn-tracking-statistics" data-mod="popu_459" data-poputype="feed"
@@ -294,8 +294,121 @@ To change this template use File | Settings | File Templates.
                         </div>
                     </li>
                 </c:forEach>
+                <div id="gg"></div>
+                <li  id="last" style="font: 14px arial;color: red;width: 100%;text-align: center"><a style="font: 14px arial;color: red;width: 100%;text-align: center">刚刚阅读在这里，点击刷新</a>
+                    <%--<button type="button" class="txt btn-feed-refresh">刚刚阅读在这里，点击刷新</button>
+                    <div class="read-here csdn-tracking-statistics" data-mod="popu_464" data-dsm="post" id="last">
+                        <a>刚刚阅读在这里，点击刷新</a>
+                    </div>--%>
+                </li>
             </ul>
-            <jsp:include page="PageCommon.jsp" flush="true"></jsp:include>
+            <script type="text/javascript">
+                var pageInt=1;
+                var totalPage=${pageUtils.totalPage}
+                $(document).ready(function () {
+                    $("#last").on("click",function () {
+                        if(totalPage!=pageInt){
+                        pageInt=pageInt+1;
+                        $.ajax({
+                            "url": "/mainController/indexPage",//要提交的路径
+                            "Type": "get",//提交方式
+                            "data": "index=" + pageInt,//发送到服务器的数据
+                            "dataType": "json",//指定返回的数据格式
+                            // beforeSend: function () {
+                            //     $("#gg").html("<div class=\"feed_loading\">\n" +
+                            //         "                <img src=\"../../statics/picture/feedloading.gif\" alt=\"I'm loading\" title=\"I'm loading\">\n" +
+                            //         "            </div>");
+                            // }, //加载执行方法
+                            "success": function (data) {
+                                var newsList = eval(data); //数组
+                                var news = "";
+                                $.each(newsList, function (p) {
+                                    var nid = newsList[p].nid;
+                                    var ntitle = newsList[p].ntitle;
+                                    var ntab = newsList[p].ntab;
+                                    var nauthor = newsList[p].nauthor;
+                                    var ncreateTime = newsList[p].ncreateTime;
+                                    var nreads = newsList[p].nreads;
+                                    var npicture = newsList[p].npicture;
+
+
+                                    var newdemo = " <li class=\"clearfix\" data-type=\"blog\" data-id=\"79442462\" id=\"new\">\n" +
+                                        "        <div class=\"list_con\">\n" +
+                                        "            <div class=\"title\">\n" +
+                                        "                <h2 class=\"csdn-tracking-statistics\" data-mod=\"popu_459\" data-poputype=\"feed\"\n" +
+                                        "                    data-feed-show=\"false\" data-dsm=\"post\">\n" +
+                                        "                    <a strategy=\"recommend\" href=\"/personal/personblog?" + nid + "\" target=\"_blank\">" + ntitle + "</a>" +
+                                        " </h2> <div class=\"close_tag\">\n" +
+                                        "                    <div class=\"unin_reason_dialog_wrapper\">\n" +
+                                        "                        <i class=\"icon-close\"></i>\n" +
+                                        "                        <div class=\"unin_reason_dialog\">\n" +
+                                        "                        </div>\n" +
+                                        "                    </div>\n" +
+                                        "                </div>\n" +
+                                        "            </div>\n" +
+                                        "            <dl class=\"list_userbar\">\n" +
+                                        "                <dd class=\"tag\">\n" +
+                                        "                    <a href=\"/nav/blockchain\" target=\"_blank\">\n" +
+                                        "                        ntab </a>\n" +
+                                        "                </dd>\n" +
+                                        "                <dt>\n" +
+                                        "                    <a href=\"http://blog.csdn.net/wireless_com\" target=\"_blank\" class=\"user_img\">\n" +
+                                        "                        <img src="+npicture+" alt=\"\"\n" +
+                                        "                             title=\"wireless_com\">\n" +
+                                        "                    </a>\n" +
+                                        "                </dt>\n" +
+                                        "                <dd class=\"name\">\n" +
+                                        "                    <a href=\"http://blog.csdn.net/wireless_com\" target=\"_blank\">" + nauthor + "</a>" +
+                                        "</dd>" +
+                                        " <dd class=\"time csdn-tracking-statistics tracking-click\" data-poputype=\"feed\"\n" +
+                                        "                    data-mod=\"popu_459\">\n" +
+                                        "                    <a strategy=\"recommend\"\n" +
+                                        "                       href=\"http://blog.csdn.net/wireless_com/article/details/79442462\"\n" +
+                                        "                       target=\"_blank\">\n" + ncreateTime +
+                                        "</a> " +
+                                        "</dd>\n" +
+                                        "                <dd class=\"strategy\">\n" +
+                                        "                    运营精选\n" +
+                                        "                </dd>\n" +
+                                        "                <!--新增评论数+阅读 begin-->\n" +
+                                        "                <!--新增评论数+阅读 end-->\n" +
+                                        "            </dl>\n" +
+                                        "            <!--阅读 begin-->\n" +
+                                        "            <div class=\"read_num\">\n" +
+                                        "                <p class=\"num\">" + nreads +
+                                        "</p>" +
+                                        "<p class=\"text\">阅读量</p>\n" +
+                                        "            </div>\n" +
+                                        "            <!--阅读 end-->\n" +
+                                        "        </div>\n" +
+                                        "    </li>";
+                                     news=newdemo+news;
+                                    // alert(newdemo);
+
+                                });
+                                $("#gg").append(news);
+                            },//响应成功后要执行代码
+                            "error": function () { //请求失败后要执行代码
+                                alert("错误！");
+                            }
+                        });
+                        }else {
+                            $("#last").remove();
+                            alert("已经到头了");
+                        }
+                    });
+                });
+            //     $(document).ready(function () {
+            //         var pageInt=1;
+            //     $("#feedlist_id").on("click","li button",function () {
+            //         pageInt=pageInt+1;
+            //         alert("页:"+pageInt);
+            //
+            //         ajaxs(pageInt);
+            // });
+            //     });
+            </script>
+            <%--<jsp:include page="PageCommon.jsp" flush="true"></jsp:include>--%>
         </main>
         <!DOCTYPE html>
         <aside>

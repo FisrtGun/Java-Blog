@@ -123,6 +123,19 @@ public class MainController {
         model.addAttribute("pageUtils",pageUtils);
         return ja;
     }
+    //实现otherajax分页查询
+    @RequestMapping("otherPage")
+    @ResponseBody//必须加入的注解
+    public JSONArray otherPage(HttpServletRequest req,Model model){
+        String index=req.getParameter("index");
+        int indexs = Integer.parseInt(index);
+        pageUtils.setIndex(indexs);
+        pageUtils.getPageCount();
+        List<OtherTitle> OtherList=otherTitleService.getSelectOther(pageUtils.getIndex(), pageUtils.getPageSize());
+        JSONArray ja = JSONArray.parseArray(JSON.toJSONString(OtherList));
+        model.addAttribute("pageUtils",pageUtils);
+        return ja;
+    }
 
     //去common
     @RequestMapping("common")
@@ -166,7 +179,7 @@ public class MainController {
         int flag=2;
         for (int i = 0; i < list.size(); i++) {
             if (uname.equalsIgnoreCase(list.get(i).getUname())){;
-            flag=1;
+                flag=1;
             }
         }
         return flag;
@@ -274,7 +287,7 @@ public class MainController {
     //去其他
     @RequestMapping("other")
     public String other(Model model) {
-        List<OtherTitle> otherList = otherTitleService.getSelectOther();
+        List<OtherTitle> otherList = otherTitleService.getSelectOther(1,7);
         System.out.println(otherList);
         model.addAttribute("otherList", otherList);
         List<OtherTitle> groom = otherTitleService.getGroom();
@@ -371,7 +384,7 @@ public class MainController {
         }
         int indexs=Integer.parseInt(index);
         pageUtils.setIndex(indexs);
-        pageUtils.setPageSize(2);
+        pageUtils.setPageSize(5);
         pageUtils.setPageCount(dbService.getTotalCount());
         pageUtils.getPageCount();
         List<NewsTitle> newsList = dbService.getSelectNews(pageUtils.getIndex(),pageUtils.getPageSize());
@@ -382,9 +395,18 @@ public class MainController {
         return "db";
     }
 
-    //去数据库的“一个MySQL表”
+    //去数据库的第三层页面：点标题进入
     @RequestMapping("dbsub")
-    public String dbsub() {
+    public String dbsub(@RequestParam("nid")String nid,Model model) {
+        if (nid == null || nid=="") {
+
+        }else {
+            int nids = Integer.parseInt(nid);
+            NewsTitle =dbService.getNewsContent(nids);
+
+
+
+
         return "dbsub";
     }
 
@@ -394,11 +416,11 @@ public class MainController {
         if (nid == null || nid=="") {
 
         }else {
-        int nids = Integer.parseInt(nid);
-        OtherTitle otherConnet = otherTitleService.getOtherConnet(nids);
-        otherConnet.setNview(otherConnet.getNview()+1);
-        otherTitleService.updateNview(otherConnet.getNview(),otherConnet.getNid());
-        model.addAttribute("otherConnet",otherConnet);
+            int nids = Integer.parseInt(nid);
+            OtherTitle otherConnet = otherTitleService.getOtherConnet(nids);
+            otherConnet.setNview(otherConnet.getNview()+1);
+            otherTitleService.updateNview(otherConnet.getNview(),otherConnet.getNid());
+            model.addAttribute("otherConnet",otherConnet);
         }
         return "otherPage/Amazon";
     }
@@ -412,17 +434,17 @@ public class MainController {
     //跳转前端页面
     @RequestMapping("front")
     public String front(Model model) {
-       List<Front>  list= frontService.selectFront();
-       model.addAttribute("Flists",list);
+        List<Front>  list= frontService.selectFront();
+        model.addAttribute("Flists",list);
 
         return "front-end";
     }
 
-    //去个人中心
+  /*  //去个人中心
     @RequestMapping("mycenter")
     public String myCenter() {
         return "mycenter";
-    }
+    }*/
 
     //实现个人中心
     @RequestMapping("domycenter")
@@ -482,7 +504,8 @@ public class MainController {
         newsTitle.setNimg(nimg);
         int num=newsTitleService.inserNews(newsTitle);
         if (num>0){
-            return "mycenter";
+
+            return "redirect:domycenter";
         }else {
             return "writeblog";
         }
