@@ -17,7 +17,7 @@
     </select>
     <!--获取今日推荐的照片和标题-->
     <select id="getGroom" resultType="NewsTitle">
-        SELECT ntitle,npicture,nauthor FROM newstitle ORDER BY ncreateTime limit 0,10;
+        SELECT ntitle,npicture,nauthor,nid FROM newstitle ORDER BY ncreateTime limit 0,10;
     </select>
     <!--添加博主发布文章-->
     <insert id="inserNews">

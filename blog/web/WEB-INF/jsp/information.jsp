@@ -190,11 +190,11 @@
 
                         <c:forEach items="${groomList}" var="groom" varStatus="start">
                         <li>
-                            <div class="img_box"><a href=""
+                            <div class="img_box"><a href="/personal/personblog?nid=${groom.iid}"
                                                     target="_blank"><img
                                     src="${groom.iImg}" alt=""></a></div>
                             <div class="content">
-                                <h3 class="company_name"><a href=""
+                                <h3 class="company_name"><a href="/personal/personblog?nid=${groom.iid}"
                                                             target="_blank">${groom.iTitle}</a></h3>
                                 <%--<p class="txt oneline">${groom.iAuthor}</p>--%>
                             </div>

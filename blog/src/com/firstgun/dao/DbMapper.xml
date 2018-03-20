@@ -14,7 +14,7 @@
     </select>
     <!--获取今日推荐的照片和标题-->
     <select id="getGroom" resultType="NewsTitle">
-        SELECT ntitle,npicture FROM newstitle ORDER BY ncreateTime limit 0,15;
+        SELECT ntitle,npicture,nid FROM newstitle ORDER BY ncreateTime limit 0,15;
     </select>
 
 

@@ -447,10 +447,10 @@ To change this template use File | Settings | File Templates.
                     <ul class="company_list">
                         <c:forEach items="${groom}" var="groom" varStatus="s">
                             <li>
-                                <div class="img_box"><a href="http://mp.weixin.qq.com/s/ds82pMExGu9qjwk9Mx5YEQ"
+                                <div class="img_box"><a href="/personal/personblog?nid=${groom.nid}"
                                                         target="_blank"><img src="${groom.npicture}" alt=""></a></div>
                                 <div class="content">
-                                    <h3 class="company_name"><a href="http://mp.weixin.qq.com/s/ds82pMExGu9qjwk9Mx5YEQ"
+                                    <h3 class="company_name"><a href="/personal/personblog?nid=${groom.nid}"
                                                                 target="_blank">${groom.ntitle}</a></h3>
                                     <p class="txt oneline">${groom.nauthor}</p>
                                 </div>

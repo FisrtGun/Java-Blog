@@ -274,7 +274,7 @@ public class MainController {
         }
         int indexs = Integer.parseInt(index);
         pageUtils.setIndex(indexs);
-        pageUtils.setPageSize(20);
+        pageUtils.setPageSize(15);
         pageUtils.setPageCount(newsTitleService.newsCount());
         pageUtils.getPageCount();
         List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(), pageUtils.getPageSize());

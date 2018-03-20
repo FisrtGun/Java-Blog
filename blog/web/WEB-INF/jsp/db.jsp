@@ -2163,12 +2163,12 @@
                         <c:forEach items="${groom}" var="groom" varStatus="s">
                         <li>
                             <div class="img_box"><a
-                                    href="http://blog.csdn.net/blockchain_lemon/article/details/79466131"
+                                    href="/personal/personblog?nid=${groom.nid}"
                                     target="_blank"><img src="${groom.npicture}"
                                                          alt=""></a></div>
                             <div class="content">
                                 <h3 class="company_name"><a
-                                        href="http://blog.csdn.net/blockchain_lemon/article/details/79466131"
+                                        href="/personal/personblog?nid=${groom.nid}"
                                         target="_blank">${groom.ntitle}</a></h3>
                             </div>
                         </li>

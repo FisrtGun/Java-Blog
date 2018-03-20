@@ -32,8 +32,10 @@ public class Personal {
     public String personblog(@Param("nid")String nid,Model model){
         int nids=0;
         System.out.println(nid);
-        if (nid!=null){
+        if (nid!=null||nid!=""){
             nids=Integer.parseInt(nid);
+        }else{
+            return "index";
         }
         NewsTitle newsTitle=newsTitleService.getNewsTitle(nids);
         int getNview=newsTitle.getNview();
