@@ -482,7 +482,7 @@ public class MainController {
         newsTitle.setNimg(nimg);
         int num=newsTitleService.inserNews(newsTitle);
         if (num>0){
-            return "mycenter";
+            return "redirect:mycenter";
         }else {
             return "writeblog";
         }
