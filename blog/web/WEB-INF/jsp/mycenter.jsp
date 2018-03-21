@@ -15,7 +15,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- <script charset="utf-8" src="../../statics/myCenterJs/b.js"></script>-->
 
-    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <link href="../../statics/images/fg.png" rel="SHORTCUT ICON">
     <link rel="stylesheet" href="../../statics/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../statics/css/content_toolbar.css">
     <link rel="stylesheet" href="../../statics/css/common1.css">

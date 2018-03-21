@@ -133,17 +133,17 @@
         <div class="clearfix">
             <div class="nav_com">
                 <ul>
-                    <li class=""><a href="https://www.csdn.net/">推荐</a></li>
-                    <li class=""><a href="https://www.csdn.net/nav/newarticles">最新文章</a></li>
-                    <li class=""><a href="https://www.csdn.net/nav/news">资讯</a></li>
+                    <li class=""><a href="index">推荐</a></li>
+                    <li class=""><a href="newstitle">最新文章</a></li>
+                    <li class=""><a href="information">资讯</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/ai">人工智能</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/cloud">云计算/大数据</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/blockchain">区块链</a></li>
-                    <li class="active"><a href="https://www.csdn.net/nav/db">数据库</a></li>
+                    <li class="active"><a href="db">数据库</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/career">程序人生</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/game">游戏开发</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/engineering">研发管理</a></li>
-                    <li class=""><a href="https://www.csdn.net/nav/web">前端</a></li>
+                    <li class=""><a href="front">前端</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/mobile">移动开发</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/iot">物联网</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/ops">运维</a></li>
@@ -152,7 +152,7 @@
                     <li class=""><a href="https://www.csdn.net/nav/arch">架构</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/avi">音视频开发</a></li>
                     <li class=""><a href="https://www.csdn.net/nav/sec">安全</a></li>
-                    <li class=""><a href="https://www.csdn.net/nav/other">其他</a></li>
+                    <li class=""><a href="other">其他</a></li>
                 </ul>
 
             </div>
