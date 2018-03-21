@@ -191,7 +191,7 @@
                                                 "            <div class=\"title\">\n" +
                                                 "                <h2 class=\"csdn-tracking-statistics\" data-mod=\"popu_459\" data-poputype=\"feed\"\n" +
                                                 "                    data-feed-show=\"false\" data-dsm=\"post\">\n" +
-                                                "                    <a strategy=\"recommend\" href=\"/personal/personblog?" + nid + "\" target=\"_blank\">" + ntitle + "</a>" +
+                                                "                    <a strategy=\"recommend\" href=\"/personal/personblog?nid=" + nid + "\" target=\"_blank\">" + ntitle + "</a>" +
                                                 " </h2> <div class=\"close_tag\">\n" +
                                                 "                    <div class=\"unin_reason_dialog_wrapper\">\n" +
                                                 "                        <i class=\"icon-close\"></i>\n" +
