@@ -101,6 +101,7 @@ public class MainController {
         List<NewsTitle> newsList = newsTitleService.getSelectNews(pageUtils.getIndex(), pageUtils.getPageSize());
         model.addAttribute("pageUtils",pageUtils);
         model.addAttribute("newsList", newsList);
+
         //今日推荐
         List<NewsTitle> groom = newsTitleService.getGroom();
         model.addAttribute("groom", groom);
@@ -214,7 +215,7 @@ public class MainController {
             User OneUser = userService.getUser(user.getUname(), user.getUpwd());
             if (OneUser == null) {
                 req.getSession().setAttribute("error", true);
-                return "redirect:login";
+                return "login";
             } else {
                 req.getSession().setAttribute("users", OneUser);
                 req.getSession().setAttribute("error", false);
@@ -222,7 +223,7 @@ public class MainController {
             }
         } else {
             req.getSession().setAttribute("error", true);
-            return "redirect:login";
+            return "login";
         }
     }
 

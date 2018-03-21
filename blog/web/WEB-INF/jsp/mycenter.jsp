@@ -70,7 +70,7 @@
             display: none;
         }
     </style>
-    <title>我的CSDN</title>
+    <title>我的pg</title>
     <link ref="canonical" href="https://my.csdn.net/caibaozi0521">
     <!-- <script type="text/javascript" charset="utf-8" src="../../statics/myCenterJs/tracking-1.0.2.js"></script>
      <script type="text/javascript" charset="utf-8" src="../../statics/myCenterJs/main-1.0.2.js"></script>-->
